@@ -28,15 +28,27 @@
     "import/no-unresolved": 0,
     "import/prefer-default-export": 0,
     "import/extensions": 0,
+    "@typescript-eslint/explicit-function-return-type": 0,
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
     "spaced-comment": [2, "always", { "markers": ["/"] }]
   },
   "overrides": [
     {
-      "files": ["src/**/*.test.{ts,tsx}", "src/setupTests.ts"],
+      "files": [
+        "src/**/*.test.{ts,tsx}",
+        "src/setupProxy.js",
+        "src/setupTests.ts",
+        "src/shared/utils/testUtils.tsx"
+      ],
       "rules": {
         "import/no-extraneous-dependencies": 0
+      }
+    },
+    {
+      "files": ["src/setupProxy.js"],
+      "rules": {
+        "@typescript-eslint/no-var-requires": 0
       }
     }
   ],
