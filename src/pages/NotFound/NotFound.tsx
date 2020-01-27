@@ -1,9 +1,9 @@
-import React, { memo } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import Typography from '@material-ui/core/Typography';
 
-import routePaths from 'shared/settings/routePaths';
+import routePaths from 'constants/routePaths';
 
 const NotFound: React.FC = () => (
   <section data-testid="NotFound">
@@ -23,4 +23,4 @@ const NotFound: React.FC = () => (
   </section>
 );
 
-export default memo(NotFound);
+export default NotFound;

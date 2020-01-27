@@ -39,7 +39,7 @@
         "src/**/*.test.{ts,tsx}",
         "src/setupProxy.js",
         "src/setupTests.ts",
-        "src/shared/utils/testUtils.tsx"
+        "src/utils/testUtils.tsx"
       ],
       "rules": {
         "import/no-extraneous-dependencies": 0

@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import React from 'react';
 import { Helmet } from 'react-helmet';
 
 const Cars: React.FC = () => (
@@ -10,4 +10,4 @@ const Cars: React.FC = () => (
   </section>
 );
 
-export default memo(Cars);
+export default Cars;
