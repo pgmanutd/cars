@@ -8,6 +8,9 @@ const Cars = lazy(() => import(/* webpackChunkName: "Cars" */ 'pages/Cars'));
 const CarsDetails = lazy(() =>
   import(/* webpackChunkName: "CarsDetails" */ 'pages/CarsDetails'),
 );
+const Favorites = lazy(() =>
+  import(/* webpackChunkName: "Favorites" */ 'pages/Favorites'),
+);
 const NotFound = lazy(() =>
   import(/* webpackChunkName: "NotFound" */ 'pages/NotFound'),
 );
@@ -20,6 +23,7 @@ const App: React.FC = props => (
           <Switch>
             <Route path={routePaths.cars} exact component={Cars} />
             <Route path={routePaths.carDetails} exact component={CarsDetails} />
+            <Route path={routePaths.favorites} exact component={Favorites} />
             <Route component={NotFound} />
           </Switch>
         </Router>
