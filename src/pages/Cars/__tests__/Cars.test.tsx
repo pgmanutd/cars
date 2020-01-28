@@ -12,11 +12,17 @@ describe('<Cars />', () => {
     };
   };
 
-  it('should render document title "Cars"', async () => {
-    setup();
+  it('should render <CarsLoader /> when <CarsPage /> is loading', () => {
+    const { renderResult } = setup();
+
+    expect(renderResult.getByTestId('CarsLoader')).toBeInTheDocument();
+  });
+
+  it('should render <CarsPage /> when loaded', async () => {
+    const { renderResult } = setup();
 
     await waitForDomChange();
 
-    expect(document.title).toEqual('Cars');
+    expect(renderResult.getByTestId('CarsPage')).toBeInTheDocument();
   });
 });
