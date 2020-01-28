@@ -7,10 +7,8 @@ import routePaths from 'constants/routePaths';
 
 import Cars from 'pages/Cars';
 import CarDetails from 'pages/CarDetails';
+import Favorites from 'pages/Favorites';
 
-const Favorites = lazy(() =>
-  import(/* webpackChunkName: "Favorites" */ 'pages/Favorites'),
-);
 const NotFound = lazy(() =>
   import(/* webpackChunkName: "NotFound" */ 'pages/NotFound'),
 );

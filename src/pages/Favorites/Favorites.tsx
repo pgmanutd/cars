@@ -1,12 +1,15 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React, { lazy, Suspense } from 'react';
 
-const Favorites: React.FC = () => (
-  <section data-testid="Favorites">
-    <Helmet>
-      <title>Favorites</title>
-    </Helmet>
-  </section>
+import FavoritesLoader from './FavoritesLoader';
+
+const FavoritesPage = lazy(() =>
+  import(/* webpackChunkName: "FavoritesPage" */ './FavoritesPage'),
+);
+
+const Favorites: React.FC = props => (
+  <Suspense fallback={<FavoritesLoader />}>
+    <FavoritesPage {...props} />
+  </Suspense>
 );
 
 export default Favorites;
