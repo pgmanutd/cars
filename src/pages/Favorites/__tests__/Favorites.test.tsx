@@ -7,7 +7,7 @@ import Favorites from '../Favorites';
 
 describe('<Favorites />', () => {
   const setup = () => {
-    const renderResult = renderWithProviders(<Favorites />);
+    const { renderResult } = renderWithProviders(<Favorites />);
 
     return {
       renderResult,

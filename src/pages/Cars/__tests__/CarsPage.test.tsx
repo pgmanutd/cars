@@ -15,7 +15,7 @@ describe('<CarsPage />', () => {
       'filters.manufacturer': 'Audi',
       'filters.color': 'white',
     };
-    const renderResult = renderWithProviders(<CarsPage />, {
+    const { renderResult } = renderWithProviders(<CarsPage />, {
       routerConfig: {
         path: routePaths.cars,
         route: `/?${new URLSearchParams(query as Record<string, string>)}`,

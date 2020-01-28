@@ -7,7 +7,7 @@ import CarDetails from '../CarDetails';
 
 describe('<CarDetails />', () => {
   const setup = () => {
-    const renderResult = renderWithProviders(<CarDetails />);
+    const { renderResult } = renderWithProviders(<CarDetails />);
 
     return {
       renderResult,

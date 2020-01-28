@@ -16,7 +16,7 @@ export const renderWithProviders = (
     routerConfig: { path?: string; route?: string; history?: MemoryHistory };
   } = { routerConfig: {} },
 ) => ({
-  ...render(
+  renderResult: render(
     <HelmetProvider>
       <Router history={history}>
         <Route

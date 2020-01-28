@@ -12,7 +12,7 @@ describe('<CarDetailsPage />', () => {
     const params = {
       stockNumber: '1234',
     };
-    const renderResult = renderWithProviders(<CarDetailsPage />, {
+    const { renderResult } = renderWithProviders(<CarDetailsPage />, {
       routerConfig: {
         path: routePaths.carDetails,
         route: `/${params.stockNumber}`,

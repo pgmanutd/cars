@@ -7,7 +7,7 @@ import Cars from '../Cars';
 
 describe('<Cars />', () => {
   const setup = () => {
-    const renderResult = renderWithProviders(<Cars />);
+    const { renderResult } = renderWithProviders(<Cars />);
 
     return {
       renderResult,
