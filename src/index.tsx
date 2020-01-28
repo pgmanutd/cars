@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 
 import { unregister as unregisterServiceWorker } from './serviceWorker';
 
-import App from './features/App';
+import App from './pages/App';
 
 import './index.css';
 
