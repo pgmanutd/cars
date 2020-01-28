@@ -8,7 +8,6 @@ import routePaths from 'constants/routePaths';
 const NotFound: React.FC = () => (
   <section data-testid="NotFound">
     <Helmet>
-      <meta charSet="utf-8" />
       <title>404 - Not Found</title>
     </Helmet>
     <Typography variant="h4" gutterBottom>
