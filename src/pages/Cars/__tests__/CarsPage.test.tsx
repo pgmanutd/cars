@@ -1,5 +1,5 @@
 import React from 'react';
-import { waitForDomChange } from '@testing-library/react';
+import { wait } from '@testing-library/react';
 
 import { renderWithProviders } from 'utils/testUtils';
 
@@ -17,8 +17,6 @@ describe('<CarsPage />', () => {
   it('should render document title "Cars"', async () => {
     setup();
 
-    await waitForDomChange();
-
-    expect(document.title).toEqual('Cars');
+    await wait(() => expect(document.title).toEqual('Cars'));
   });
 });

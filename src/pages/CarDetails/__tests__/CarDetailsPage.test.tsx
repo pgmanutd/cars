@@ -1,5 +1,5 @@
 import React from 'react';
-import { waitForDomChange } from '@testing-library/react';
+import { wait } from '@testing-library/react';
 
 import routePaths from 'constants/routePaths';
 
@@ -37,9 +37,7 @@ describe('<CarDetailsPage />', () => {
   it('should render document title "Car Details"', async () => {
     setup();
 
-    await waitForDomChange();
-
-    expect(document.title).toEqual('Car Details');
+    await wait(() => expect(document.title).toEqual('Car Details'));
   });
 
   it('should render stockNumber param', () => {

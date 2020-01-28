@@ -1,5 +1,5 @@
 import React from 'react';
-import { waitForDomChange } from '@testing-library/react';
+import { wait } from '@testing-library/react';
 
 import { renderWithProviders } from 'utils/testUtils';
 
@@ -23,8 +23,8 @@ describe('<Cars />', () => {
   it('should render <CarsPage /> when loaded', async () => {
     const { renderResult } = setup();
 
-    await waitForDomChange();
-
-    expect(renderResult.getByTestId('CarsPage')).toBeInTheDocument();
+    await wait(() =>
+      expect(renderResult.getByTestId('CarsPage')).toBeInTheDocument(),
+    );
   });
 });
