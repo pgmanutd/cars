@@ -4,10 +4,9 @@ import LinearProgress from '@material-ui/core/LinearProgress';
 
 import routePaths from 'constants/routePaths';
 
+import CarDetails from 'pages/CarDetails';
+
 const Cars = lazy(() => import(/* webpackChunkName: "Cars" */ 'pages/Cars'));
-const CarsDetails = lazy(() =>
-  import(/* webpackChunkName: "CarsDetails" */ 'pages/CarsDetails'),
-);
 const Favorites = lazy(() =>
   import(/* webpackChunkName: "Favorites" */ 'pages/Favorites'),
 );
@@ -22,7 +21,7 @@ const App: React.FC = props => (
         <Router>
           <Switch>
             <Route path={routePaths.cars} exact component={Cars} />
-            <Route path={routePaths.carDetails} exact component={CarsDetails} />
+            <Route path={routePaths.carDetails} exact component={CarDetails} />
             <Route path={routePaths.favorites} exact component={Favorites} />
             <Route component={NotFound} />
           </Switch>
