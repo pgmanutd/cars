@@ -11,7 +11,7 @@ const CarDetailsPage: React.FC = () => {
   return (
     <section data-testid="CarDetailsPage">
       <Helmet>
-        <title>CarDetailsPage</title>
+        <title>Car Details</title>
       </Helmet>
       <span>{stockNumber}</span>
       <span>{query.get('sort')}</span>

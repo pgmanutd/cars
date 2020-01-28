@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet-async';
 const CarsPage: React.FC = () => (
   <section data-testid="CarsPage">
     <Helmet>
-      <title>CarsPage</title>
+      <title>Cars</title>
     </Helmet>
   </section>
 );

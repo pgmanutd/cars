@@ -14,11 +14,11 @@ describe('<CarsPage />', () => {
     };
   };
 
-  it('should render document title "CarsPage"', async () => {
+  it('should render document title "Cars"', async () => {
     setup();
 
     await waitForDomChange();
 
-    expect(document.title).toEqual('CarsPage');
+    expect(document.title).toEqual('Cars');
   });
 });

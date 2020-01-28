@@ -34,12 +34,12 @@ describe('<CarDetailsPage />', () => {
     };
   };
 
-  it('should render document title "CarDetailsPage"', async () => {
+  it('should render document title "Car Details"', async () => {
     setup();
 
     await waitForDomChange();
 
-    expect(document.title).toEqual('CarDetailsPage');
+    expect(document.title).toEqual('Car Details');
   });
 
   it('should render stockNumber param', () => {
