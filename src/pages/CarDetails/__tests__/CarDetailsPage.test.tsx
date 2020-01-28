@@ -12,25 +12,16 @@ describe('<CarDetailsPage />', () => {
     const params = {
       stockNumber: '1234',
     };
-    const query = {
-      sort: 'asc',
-      page: '1',
-      'filters.manufacturer': 'Audi',
-      'filters.color': 'white',
-    };
     const renderResult = renderWithProviders(<CarDetailsPage />, {
       routerConfig: {
         path: routePaths.carDetails,
-        route: `/${params.stockNumber}?${new URLSearchParams(
-          query as Record<string, string>,
-        )}`,
+        route: `/${params.stockNumber}`,
       },
     });
 
     return {
       renderResult,
       params,
-      query,
     };
   };
 
@@ -44,31 +35,5 @@ describe('<CarDetailsPage />', () => {
     const { renderResult, params } = setup();
 
     expect(renderResult.getByText(params.stockNumber)).toBeInTheDocument();
-  });
-
-  it('should render sort query', () => {
-    const { renderResult, query } = setup();
-
-    expect(renderResult.getByText(query.sort)).toBeInTheDocument();
-  });
-
-  it('should render page query', () => {
-    const { renderResult, query } = setup();
-
-    expect(renderResult.getByText(query.page)).toBeInTheDocument();
-  });
-
-  it('should render filters.manufacturer query', () => {
-    const { renderResult, query } = setup();
-
-    expect(
-      renderResult.getByText(query['filters.manufacturer']),
-    ).toBeInTheDocument();
-  });
-
-  it('should render filters.color query', () => {
-    const { renderResult, query } = setup();
-
-    expect(renderResult.getByText(query['filters.color'])).toBeInTheDocument();
   });
 });
