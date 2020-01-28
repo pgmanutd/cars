@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FavoritesLoader /> should render the component and matches it against stored snapshot 1`] = `
+<DocumentFragment>
+  <section
+    data-testid="FavoritesLoader"
+  >
+    Loading...
+  </section>
+</DocumentFragment>
+`;
