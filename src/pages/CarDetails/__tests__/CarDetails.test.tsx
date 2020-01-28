@@ -1,13 +1,13 @@
 import React from 'react';
 import { waitForDomChange } from '@testing-library/react';
 
-import { renderWithRouter } from 'utils/testUtils';
+import { renderWithProviders } from 'utils/testUtils';
 
 import CarDetails from '../CarDetails';
 
 describe('<CarDetails />', () => {
   const setup = () => {
-    const renderResult = renderWithRouter(<CarDetails />);
+    const renderResult = renderWithProviders(<CarDetails />);
 
     return {
       renderResult,

@@ -3,7 +3,7 @@ import { waitForDomChange } from '@testing-library/react';
 
 import routePaths from 'constants/routePaths';
 
-import { renderWithRouter } from 'utils/testUtils';
+import { renderWithProviders } from 'utils/testUtils';
 
 import CarDetailsPage from '../CarDetailsPage';
 
@@ -18,11 +18,13 @@ describe('<CarDetailsPage />', () => {
       'filters.manufacturer': 'Audi',
       'filters.color': 'white',
     };
-    const renderResult = renderWithRouter(<CarDetailsPage />, {
-      path: routePaths.carDetails,
-      route: `/${params.stockNumber}?${new URLSearchParams(
-        query as Record<string, string>,
-      )}`,
+    const renderResult = renderWithProviders(<CarDetailsPage />, {
+      routerConfig: {
+        path: routePaths.carDetails,
+        route: `/${params.stockNumber}?${new URLSearchParams(
+          query as Record<string, string>,
+        )}`,
+      },
     });
 
     return {
