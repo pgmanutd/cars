@@ -4,9 +4,9 @@ import LinearProgress from '@material-ui/core/LinearProgress';
 
 import routePaths from 'constants/routePaths';
 
+import Cars from 'pages/Cars';
 import CarDetails from 'pages/CarDetails';
 
-const Cars = lazy(() => import(/* webpackChunkName: "Cars" */ 'pages/Cars'));
 const Favorites = lazy(() =>
   import(/* webpackChunkName: "Favorites" */ 'pages/Favorites'),
 );
