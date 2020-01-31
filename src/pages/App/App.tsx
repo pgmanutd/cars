@@ -1,4 +1,4 @@
-import React, { lazy, Suspense } from 'react';
+import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import LinearProgress from '@material-ui/core/LinearProgress';
 import { HelmetProvider } from 'react-helmet-async';
@@ -8,10 +8,7 @@ import routePaths from 'constants/routePaths';
 import Cars from 'pages/Cars';
 import CarDetails from 'pages/CarDetails';
 import Favorites from 'pages/Favorites';
-
-const NotFound = lazy(() =>
-  import(/* webpackChunkName: "NotFound" */ 'pages/NotFound'),
-);
+import NotFound from 'pages/NotFound';
 
 const App: React.FC = props => (
   <div data-testid="App" {...props}>
@@ -27,7 +24,7 @@ const App: React.FC = props => (
                 component={CarDetails}
               />
               <Route path={routePaths.favorites} exact component={Favorites} />
-              <Route component={NotFound} />
+              <Route path={routePaths.notFound} component={NotFound} />
             </Switch>
           </Router>
         </Suspense>
