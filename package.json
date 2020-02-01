@@ -86,5 +86,16 @@
     "src/**/*.{js,jsx,ts,tsx}": [
       "yarn format"
     ]
+  },
+  "jest": {
+    "coveragePathIgnorePatterns": [
+      "node_modules",
+      "src/index.tsx",
+      "src/pages/App/index.ts",
+      "src/setupProxy.js",
+      "src/setupTests.ts",
+      "src/serviceWorker.ts",
+      "src/utils/testUtils.tsx"
+    ]
   }
 }
