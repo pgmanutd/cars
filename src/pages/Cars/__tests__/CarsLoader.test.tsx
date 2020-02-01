@@ -1,11 +1,12 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+
+import { renderWithProviders } from 'utils/testUtils';
 
 import CarsLoader from '../CarsLoader';
 
 describe('<CarsLoader />', () => {
   const setup = () => {
-    const renderResult = render(<CarsLoader />);
+    const { renderResult } = renderWithProviders(<CarsLoader />);
 
     return {
       renderResult,

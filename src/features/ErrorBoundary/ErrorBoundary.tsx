@@ -2,6 +2,8 @@ import React, { ErrorInfo } from 'react';
 import Typography from '@material-ui/core/Typography';
 import _noop from 'lodash/fp/noop';
 
+import { TranslateContext } from 'features/Translate';
+
 export type ErrorBoundaryProps = {};
 
 export interface ErrorBoundaryState {
@@ -30,11 +32,10 @@ class ErrorBoundary extends React.PureComponent<
       return (
         <section data-testid="ErrorBoundary">
           <Typography variant="h4" gutterBottom>
-            Something went wrong.
+            {this.context.translate('features.ErrorBoundary.headerText')}
           </Typography>
           <Typography variant="body1">
-            Refresh the page or try again later. If this error persists, Please
-            contact the administrator.
+            {this.context.translate('features.ErrorBoundary.bodyText')}
           </Typography>
         </section>
       );
@@ -43,5 +44,7 @@ class ErrorBoundary extends React.PureComponent<
     return this.props.children;
   }
 }
+
+ErrorBoundary.contextType = TranslateContext;
 
 export default ErrorBoundary;

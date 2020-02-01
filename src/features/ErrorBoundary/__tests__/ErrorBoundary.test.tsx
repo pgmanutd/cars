@@ -1,5 +1,6 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+
+import { renderWithProviders } from 'utils/testUtils';
 
 import ErrorBoundary from '../ErrorBoundary';
 
@@ -9,7 +10,7 @@ describe('<ErrorBoundary />', () => {
       throw new Error('I crashed!');
     };
 
-    const renderResult = render(
+    const { renderResult } = renderWithProviders(
       <ErrorBoundary>
         {shouldRenderChildComponentWithError && <ErrorThrower />}
         <div>Some child component</div>

@@ -1,11 +1,12 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+
+import { renderWithProviders } from 'utils/testUtils';
 
 import FavoritesLoader from '../FavoritesLoader';
 
 describe('<FavoritesLoader />', () => {
   const setup = () => {
-    const renderResult = render(<FavoritesLoader />);
+    const { renderResult } = renderWithProviders(<FavoritesLoader />);
 
     return {
       renderResult,

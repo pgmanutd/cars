@@ -15,8 +15,8 @@ import ErrorBoundary from 'features/ErrorBoundary';
 
 const App: React.FC = () => (
   <div data-testid="App">
-    <ErrorBoundary>
-      <TranslateProvider language="en">
+    <TranslateProvider language="en">
+      <ErrorBoundary>
         <main>
           <HelmetProvider>
             <Suspense fallback={<LinearProgress />}>
@@ -39,8 +39,8 @@ const App: React.FC = () => (
             </Suspense>
           </HelmetProvider>
         </main>
-      </TranslateProvider>
-    </ErrorBoundary>
+      </ErrorBoundary>
+    </TranslateProvider>
   </div>
 );
 

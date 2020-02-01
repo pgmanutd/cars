@@ -3,13 +3,16 @@ import { Helmet } from 'react-helmet-async';
 
 import useQuery from 'hooks/useQuery';
 
+import { useTranslate } from 'features/Translate';
+
 const CarsPage: React.FC = () => {
   const query = useQuery();
+  const { translate } = useTranslate();
 
   return (
     <section data-testid="CarsPage">
       <Helmet>
-        <title>Cars</title>
+        <title>{translate('pages.Cars.documentTitle')}</title>
       </Helmet>
       <span>{query.get('sort')}</span>
       <span>{query.get('page')}</span>
