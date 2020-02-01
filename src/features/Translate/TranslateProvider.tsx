@@ -1,4 +1,4 @@
-import React, { useCallback, useMemo } from 'react';
+import React, { memo, useCallback, useMemo } from 'react';
 import _pathOr from 'lodash/fp/pathOr';
 
 import TranslateContext from './TranslateContext';
@@ -10,6 +10,7 @@ const languages = {
 };
 
 export interface TranslateProviderProps {
+  children: React.ReactNode;
   language?: keyof typeof languages;
 }
 
@@ -34,4 +35,4 @@ const TranslateProvider: React.FC<TranslateProviderProps> = ({
   );
 };
 
-export default TranslateProvider;
+export default memo(TranslateProvider);

@@ -4,7 +4,9 @@ import _noop from 'lodash/fp/noop';
 
 import { TranslateContext } from 'features/Translate';
 
-export type ErrorBoundaryProps = {};
+export interface ErrorBoundaryProps {
+  children: React.ReactNode;
+}
 
 export interface ErrorBoundaryState {
   hasError: boolean;
