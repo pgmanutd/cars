@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ErrorBoundary /> render the component and matches it against stored snapshot when no error is thrown from any child component 1`] = `
+<DocumentFragment>
+  <div>
+    Some child component
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<ErrorBoundary /> render the component and matches it against stored snapshot when some error is thrown from any child component 1`] = `
+<DocumentFragment>
+  <section
+    data-testid="ErrorBoundary"
+  >
+    <h4
+      class="MuiTypography-root MuiTypography-h4 MuiTypography-gutterBottom"
+    >
+      Something went wrong.
+    </h4>
+    <p
+      class="MuiTypography-root MuiTypography-body1"
+    >
+      Refresh the page or try again later. If this error persists, Please contact the administrator.
+    </p>
+  </section>
+</DocumentFragment>
+`;
