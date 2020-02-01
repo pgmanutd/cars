@@ -5,21 +5,31 @@ import Typography from '@material-ui/core/Typography';
 
 import routePaths from 'constants/routePaths';
 
-const NotFound: React.FC = () => (
-  <section data-testid="NotFound">
-    <Helmet>
-      <title>404 - Not Found</title>
-    </Helmet>
-    <Typography variant="h4" gutterBottom>
-      404 - Not Found
-    </Typography>
-    <Typography variant="body1" gutterBottom>
-      Sorry, the page you are looking for does not exist.
-    </Typography>
-    <Typography variant="body1" gutterBottom>
-      You can always go back to the <Link to={routePaths.cars}>homepage</Link>.
-    </Typography>
-  </section>
-);
+import { useTranslate } from 'features/Translate';
+
+const NotFound: React.FC = () => {
+  const { translate } = useTranslate();
+
+  return (
+    <section data-testid="NotFound">
+      <Helmet>
+        <title>{translate('pages.NotFound.documentTitle')}</title>
+      </Helmet>
+      <Typography variant="h4" gutterBottom>
+        {translate('pages.NotFound.headerText')}
+      </Typography>
+      <Typography variant="body1" gutterBottom>
+        {translate('pages.NotFound.bodyText')}
+      </Typography>
+      <Typography variant="body1" gutterBottom>
+        {translate('pages.NotFound.redirect.text')}{' '}
+        <Link to={routePaths.cars}>
+          {translate('pages.NotFound.redirect.link')}
+        </Link>
+        .
+      </Typography>
+    </section>
+  );
+};
 
 export default NotFound;

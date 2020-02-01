@@ -24,7 +24,7 @@
     "format": "yarn lint --fix",
     "typecheck": "tsc --noEmit -p ./tsconfig.json",
     "test": "react-scripts test --passWithNoTests",
-    "check": "yarn lint && yarn typecheck && cross-env CI=true yarn test",
+    "check": "yarn lint && yarn typecheck && cross-env CI=true yarn test --coverage",
     "build": "yarn run check && react-scripts build",
     "eject": "react-scripts eject"
   },
@@ -98,6 +98,14 @@
       "src/setupTests.ts",
       "src/serviceWorker.ts",
       "src/utils/testUtils.tsx"
-    ]
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 100,
+        "functions": 100,
+        "lines": 100,
+        "statements": 100
+      }
+    }
   }
 }

@@ -10,33 +10,36 @@ import CarDetails from 'pages/CarDetails';
 import Favorites from 'pages/Favorites';
 import NotFound from 'pages/NotFound';
 
+import { TranslateProvider } from 'features/Translate';
 import ErrorBoundary from 'features/ErrorBoundary';
 
 const App: React.FC = () => (
   <div data-testid="App">
     <ErrorBoundary>
-      <main>
-        <HelmetProvider>
-          <Suspense fallback={<LinearProgress />}>
-            <Router>
-              <Switch>
-                <Route path={routePaths.cars} exact component={Cars} />
-                <Route
-                  path={routePaths.carDetails}
-                  exact
-                  component={CarDetails}
-                />
-                <Route
-                  path={routePaths.favorites}
-                  exact
-                  component={Favorites}
-                />
-                <Route path={routePaths.notFound} component={NotFound} />
-              </Switch>
-            </Router>
-          </Suspense>
-        </HelmetProvider>
-      </main>
+      <TranslateProvider language="en">
+        <main>
+          <HelmetProvider>
+            <Suspense fallback={<LinearProgress />}>
+              <Router>
+                <Switch>
+                  <Route path={routePaths.cars} exact component={Cars} />
+                  <Route
+                    path={routePaths.carDetails}
+                    exact
+                    component={CarDetails}
+                  />
+                  <Route
+                    path={routePaths.favorites}
+                    exact
+                    component={Favorites}
+                  />
+                  <Route path={routePaths.notFound} component={NotFound} />
+                </Switch>
+              </Router>
+            </Suspense>
+          </HelmetProvider>
+        </main>
+      </TranslateProvider>
     </ErrorBoundary>
   </div>
 );

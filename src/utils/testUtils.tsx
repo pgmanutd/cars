@@ -4,6 +4,8 @@ import { createMemoryHistory, MemoryHistory } from 'history';
 import { HelmetProvider } from 'react-helmet-async';
 import { render } from '@testing-library/react';
 
+import { TranslateProvider } from 'features/Translate';
+
 export const renderWithProviders = (
   ui: React.ReactElement,
   {
@@ -17,14 +19,16 @@ export const renderWithProviders = (
   } = { routerConfig: {} },
 ) => ({
   renderResult: render(
-    <HelmetProvider>
-      <Router history={history}>
-        <Route
-          path={path}
-          render={routeProps => React.cloneElement(ui, { ...routeProps })}
-        />
-      </Router>
-    </HelmetProvider>,
+    <TranslateProvider>
+      <HelmetProvider>
+        <Router history={history}>
+          <Route
+            path={path}
+            render={routeProps => React.cloneElement(ui, { ...routeProps })}
+          />
+        </Router>
+      </HelmetProvider>
+    </TranslateProvider>,
   ),
   history,
 });
