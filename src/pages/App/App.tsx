@@ -12,8 +12,8 @@ import NotFound from 'pages/NotFound';
 
 import ErrorBoundary from 'features/ErrorBoundary';
 
-const App: React.FC = props => (
-  <div data-testid="App" {...props}>
+const App: React.FC = () => (
+  <div data-testid="App">
     <ErrorBoundary>
       <main>
         <HelmetProvider>
