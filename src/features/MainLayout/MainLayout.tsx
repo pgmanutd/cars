@@ -11,9 +11,18 @@ import CarDetails from 'pages/CarDetails';
 import Favorites from 'pages/Favorites';
 import NotFound from 'pages/NotFound';
 
-const MainLayout: React.FC = props => (
-  <Box data-testid="MainLayout" {...props}>
-    <main>
+import { useStyles } from './mainLayoutStyles';
+
+const MainLayout: React.FC = props => {
+  const classes = useStyles();
+
+  return (
+    <Box
+      data-testid="MainLayout"
+      {...props}
+      component="main"
+      className={classes.root}
+    >
       <HelmetProvider>
         <Suspense fallback={<LinearProgress />}>
           <Router>
@@ -30,8 +39,8 @@ const MainLayout: React.FC = props => (
           </Router>
         </Suspense>
       </HelmetProvider>
-    </main>
-  </Box>
-);
+    </Box>
+  );
+};
 
 export default MainLayout;
