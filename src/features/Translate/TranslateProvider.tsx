@@ -1,5 +1,4 @@
 import React, { memo, useCallback, useMemo } from 'react';
-import _pathOr from 'lodash/fp/pathOr';
 
 import TranslateContext from './TranslateContext';
 
@@ -20,10 +19,12 @@ const TranslateProvider: React.FC<TranslateProviderProps> = ({
   language = 'en',
   children,
 }) => {
-  const translations = languages[language];
+  const translations = languages[language] as {
+    [key: string]: string;
+  };
 
   const translate = useCallback<(translateKey: string) => string>(
-    translateKey => _pathOr(translateKey, translateKey, translations),
+    translateKey => translations?.[translateKey] ?? translateKey,
     [translations],
   );
   const providerValue = useMemo(() => ({ translate }), [translate]);
