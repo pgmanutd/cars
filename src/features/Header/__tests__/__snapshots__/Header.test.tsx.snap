@@ -13,10 +13,11 @@ exports[`<Header /> should render the component and matches it against stored sn
         class="MuiTypography-root MuiLink-root MuiLink-underlineHover makeStyles-toolbarLogo-3 MuiTypography-colorTextPrimary"
         href="/"
       >
-        <img
-          alt="AppLogo"
+        <div
+          class="MuiCardMedia-root makeStyles-root-82"
           data-testid="AppLogo"
-          src="logo.png"
+          style="background-image: url(logo.png);"
+          title="AppLogo"
         />
       </a>
       <nav>

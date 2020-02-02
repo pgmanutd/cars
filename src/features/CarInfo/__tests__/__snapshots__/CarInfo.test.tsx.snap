@@ -1,0 +1,101 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CarInfo /> should render the component and matches it against stored snapshot for blank response 1`] = `
+<DocumentFragment>
+  <section
+    class="MuiContainer-root makeStyles-root-155 MuiContainer-maxWidthLg"
+    data-testid="CarInfo"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
+      >
+        <span
+          class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-pulse"
+          data-testid="CarInfoImageSkeleton"
+          style="height: 200px;"
+        />
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6"
+      >
+        <span
+          class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-pulse"
+          style="width: 50%; height: 50px;"
+        />
+        <span
+          class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-pulse"
+          style="height: 50px;"
+        />
+        <span
+          class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-pulse"
+          style="height: 150px;"
+        />
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6"
+      >
+        <span
+          class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-pulse"
+          style="height: 150px;"
+        />
+      </div>
+    </div>
+  </section>
+</DocumentFragment>
+`;
+
+exports[`<CarInfo /> should render the component and matches it against stored snapshot for success response 1`] = `
+<DocumentFragment>
+  <section
+    class="MuiContainer-root makeStyles-root-1 MuiContainer-maxWidthLg"
+    data-testid="CarInfo"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
+      >
+        <div
+          class="MuiBox-root MuiBox-root-123 makeStyles-carImageContainer-2"
+        >
+          <img
+            alt="Sedici"
+            src="https://dummyimage.com/300/09f/fff.png"
+          />
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6"
+      >
+        <div
+          class="MuiBox-root MuiBox-root-124"
+          data-testid="CarInfoFeatures"
+        >
+          <h3
+            class="MuiTypography-root MuiTypography-h3 MuiTypography-gutterBottom"
+          >
+            Fiat Sedici
+          </h3>
+          <p
+            class="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom"
+          >
+            Stock #78924 - 141474 km - Diesel - white
+          </p>
+          <p
+            class="MuiTypography-root MuiTypography-body2"
+          >
+            This car is currently available and can be delivered as soon as tomorrow morning. Please be aware that delivery times shown in this page are not definitive and may change due to bad weather conditions.
+          </p>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6"
+      />
+    </div>
+  </section>
+</DocumentFragment>
+`;

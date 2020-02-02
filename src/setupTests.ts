@@ -4,4 +4,9 @@
 // learn more: https://github.com/testing-library/jest-dom
 import '@testing-library/jest-dom/extend-expect';
 
-require('jest-fetch-mock').enableMocks();
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const jestFetchMock = require('jest-fetch-mock');
+
+jestFetchMock.enableMocks();
+
+jestFetchMock.mockResponse(JSON.stringify({}));

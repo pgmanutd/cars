@@ -1,5 +1,6 @@
 import React from 'react';
-import { wait } from '@testing-library/react';
+import { wait, waitForElement } from '@testing-library/react';
+import { Route } from 'react-router-dom';
 
 import routePaths from 'constants/routePaths';
 
@@ -12,12 +13,16 @@ describe('<CarDetailsPage />', () => {
     const params = {
       stockNumber: '1234',
     };
-    const { renderResult } = renderWithProviders(<CarDetailsPage />, {
-      routerConfig: {
-        path: routePaths.carDetails,
-        route: `/${params.stockNumber}`,
+    const { renderResult } = renderWithProviders(
+      <Route path={routePaths.carDetails}>
+        <CarDetailsPage />
+      </Route>,
+      {
+        routerConfig: {
+          route: `/details/${params.stockNumber}`,
+        },
       },
-    });
+    );
 
     return {
       renderResult,
@@ -31,9 +36,11 @@ describe('<CarDetailsPage />', () => {
     await wait(() => expect(document.title).toEqual('Car Details'));
   });
 
-  it('should render stockNumber param', () => {
-    const { renderResult, params } = setup();
+  it('should render <CarInfo />', async () => {
+    const { renderResult } = setup();
 
-    expect(renderResult.getByText(params.stockNumber)).toBeInTheDocument();
+    await waitForElement(() => renderResult.queryByTestId('CarInfoFeatures'));
+
+    expect(renderResult.getByTestId('CarInfo')).toBeInTheDocument();
   });
 });

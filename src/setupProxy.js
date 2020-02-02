@@ -1,4 +1,6 @@
+/* eslint-disable import/no-extraneous-dependencies, @typescript-eslint/no-var-requires */
 const proxy = require('http-proxy-middleware');
+/* eslint-enable import/no-extraneous-dependencies, @typescript-eslint/no-var-requires */
 
 const API_BASE_PATH = '/api';
 

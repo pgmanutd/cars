@@ -2,10 +2,11 @@
 
 exports[`<AppLogo /> should render the component and matches it against stored snapshot 1`] = `
 <DocumentFragment>
-  <img
-    alt="AppLogo"
+  <div
+    class="MuiCardMedia-root makeStyles-root-1"
     data-testid="AppLogo"
-    src="logo.png"
+    style="background-image: url(logo.png);"
+    title="AppLogo"
   />
 </DocumentFragment>
 `;

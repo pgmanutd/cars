@@ -1,8 +1,8 @@
 const routePaths = {
   cars: '/',
-  carDetails: '/:stockNumber',
+  carDetails: '/details/:stockNumber',
   favorites: '/favorites',
-  notFound: '*',
+  notFound: '/not-found',
 };
 
 export default routePaths;

@@ -4,9 +4,10 @@ import { useParams } from 'react-router-dom';
 import Box from '@material-ui/core/Box';
 
 import { useTranslate } from 'features/Translate';
+import CarInfo from 'features/CarInfo';
 
 const CarDetailsPage: React.FC = () => {
-  const { stockNumber } = useParams();
+  const { stockNumber = '' } = useParams();
   const { translate } = useTranslate();
 
   return (
@@ -14,7 +15,7 @@ const CarDetailsPage: React.FC = () => {
       <Helmet>
         <title>{translate('pages.CarDetails.documentTitle')}</title>
       </Helmet>
-      <span>{stockNumber}</span>
+      <CarInfo stockNumber={stockNumber} />
     </Box>
   );
 };

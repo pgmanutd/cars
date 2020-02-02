@@ -1,5 +1,6 @@
 import React from 'react';
 import { wait } from '@testing-library/react';
+import { Route } from 'react-router-dom';
 
 import routePaths from 'constants/routePaths';
 
@@ -15,12 +16,16 @@ describe('<CarsPage />', () => {
       'filters.manufacturer': 'Audi',
       'filters.color': 'white',
     };
-    const { renderResult } = renderWithProviders(<CarsPage />, {
-      routerConfig: {
-        path: routePaths.cars,
-        route: `/?${new URLSearchParams(query as Record<string, string>)}`,
+    const { renderResult } = renderWithProviders(
+      <Route path={routePaths.cars}>
+        <CarsPage />
+      </Route>,
+      {
+        routerConfig: {
+          route: `/?${new URLSearchParams(query as Record<string, string>)}`,
+        },
       },
-    });
+    );
 
     return {
       renderResult,

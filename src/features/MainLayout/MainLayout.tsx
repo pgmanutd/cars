@@ -35,6 +35,7 @@ const MainLayout: React.FC = props => {
               />
               <Route path={routePaths.favorites} exact component={Favorites} />
               <Route path={routePaths.notFound} component={NotFound} />
+              <Route component={NotFound} />
             </Switch>
           </Router>
         </Suspense>

@@ -3,7 +3,8 @@ import { makeStyles, createStyles } from '@material-ui/core/styles';
 export const useStyles = makeStyles(() =>
   createStyles({
     root: {
-      minHeight: `calc(100vh - 160px)`,
+      width: 64,
+      height: 64,
     },
   }),
 );

@@ -6,6 +6,8 @@
   "features.Header.purchaseNavLinkText": "Purchase",
   "features.Header.myOrdersNavLinkText": "My Orders",
   "features.Header.sellNavLinkText": "Sell",
+  "features.CarInfo.stockNumberPrefix": "Stock #",
+  "features.CarInfo.description": "This car is currently available and can be delivered as soon as tomorrow morning. Please be aware that delivery times shown in this page are not definitive and may change due to bad weather conditions.",
   "pages.NotFound.documentTitle": "404 - Not Found",
   "pages.NotFound.headerText": "404 - Not Found",
   "pages.NotFound.bodyText": "Sorry, the page you are looking for does not exist.",

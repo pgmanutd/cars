@@ -3,7 +3,7 @@ import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
 export const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
-      height: theme.spacing(10),
+      height: 80,
       borderBottom: `1px solid ${theme.palette.divider}`,
     },
     toolbar: {

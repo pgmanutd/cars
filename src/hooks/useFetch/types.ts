@@ -4,8 +4,8 @@ import {
   FETCH_ERROR,
 } from './useFetchActionTypes';
 
-export interface FetchState {
-  data: null;
+export interface FetchState<T = {}> {
+  data: T | null;
   isLoading: boolean;
   error: Error | null;
 }

@@ -1,4 +1,4 @@
-import { useState, useReducer, useEffect } from 'react';
+import React, { useState, useReducer, useEffect } from 'react';
 
 import { FetchState, FetchActionTypes } from './types';
 import {
@@ -34,7 +34,7 @@ const reducer = (state: FetchState, action: FetchActionTypes) => {
   }
 };
 
-const useFetch = ({ initialUrl }: { initialUrl: string }) => {
+const useFetch = <T = {}>({ initialUrl }: { initialUrl: string }) => {
   const [url, setUrl] = useState(initialUrl);
   const [state, dispatch] = useReducer(reducer, initialState);
 
@@ -63,7 +63,10 @@ const useFetch = ({ initialUrl }: { initialUrl: string }) => {
     };
   }, [url]);
 
-  return [state, setUrl];
+  return [state, setUrl] as [
+    FetchState<T>,
+    React.Dispatch<React.SetStateAction<string>>,
+  ];
 };
 
 export default useFetch;

@@ -8,6 +8,8 @@ export const useStyles = makeStyles((theme: Theme) =>
       textAlign: 'center',
     },
     appLogoContainer: {
+      display: 'flex',
+      justifyContent: 'center',
       marginBottom: theme.spacing(2),
     },
   }),

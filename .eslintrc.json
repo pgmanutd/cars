@@ -38,19 +38,12 @@
     {
       "files": [
         "src/**/*.test.{ts,tsx}",
-        "src/setupProxy.js",
         "src/setupTests.ts",
         "src/utils/testUtils.tsx",
         "typings/globals.d.ts"
       ],
       "rules": {
         "import/no-extraneous-dependencies": 0
-      }
-    },
-    {
-      "files": ["src/setupProxy.js"],
-      "rules": {
-        "@typescript-eslint/no-var-requires": 0
       }
     }
   ],

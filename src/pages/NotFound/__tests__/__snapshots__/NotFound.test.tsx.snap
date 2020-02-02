@@ -9,10 +9,11 @@ exports[`<NotFound /> should render the component and matches it against stored 
     <div
       class="MuiBox-root MuiBox-root-12 makeStyles-appLogoContainer-2"
     >
-      <img
-        alt="AppLogo"
+      <div
+        class="MuiCardMedia-root makeStyles-root-13"
         data-testid="AppLogo"
-        src="logo.png"
+        style="background-image: url(logo.png);"
+        title="AppLogo"
       />
     </div>
     <h4
