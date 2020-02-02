@@ -5,8 +5,6 @@ import { renderWithProviders } from 'utils/testUtils';
 
 import App from '../App';
 
-jest.mock('features/Translate/translations/en.json', () => ({}));
-
 describe('<App />', () => {
   const setup = () => {
     const { renderResult } = renderWithProviders(<App />);
