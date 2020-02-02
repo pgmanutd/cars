@@ -7,5 +7,8 @@ export const useStyles = makeStyles((theme: Theme) =>
       paddingBottom: theme.spacing(7),
       textAlign: 'center',
     },
+    appLogoContainer: {
+      marginBottom: theme.spacing(2),
+    },
   }),
 );

@@ -2,11 +2,13 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
+import Box from '@material-ui/core/Box';
 import Link from '@material-ui/core/Link';
 
 import routePaths from 'constants/routePaths';
 
 import { useTranslate } from 'features/Translate';
+import AppLogo from 'features/AppLogo';
 
 import { useStyles } from './notFoundStyles';
 
@@ -24,6 +26,9 @@ const NotFound: React.FC = () => {
       <Helmet>
         <title>{translate('pages.NotFound.documentTitle')}</title>
       </Helmet>
+      <Box className={classes.appLogoContainer}>
+        <AppLogo />
+      </Box>
       <Typography variant="h4" gutterBottom>
         {translate('pages.NotFound.headerText')}
       </Typography>

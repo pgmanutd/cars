@@ -6,6 +6,15 @@ exports[`<NotFound /> should render the component and matches it against stored 
     class="MuiContainer-root makeStyles-root-1 MuiContainer-maxWidthXs"
     data-testid="NotFound"
   >
+    <div
+      class="MuiBox-root MuiBox-root-12 makeStyles-appLogoContainer-2"
+    >
+      <img
+        alt="AppLogo"
+        data-testid="AppLogo"
+        src="logo.png"
+      />
+    </div>
     <h4
       class="MuiTypography-root MuiTypography-h4 MuiTypography-gutterBottom"
     >
