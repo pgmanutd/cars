@@ -3,10 +3,13 @@
 exports[`<FavoritesLoader /> should render the component and matches it against stored snapshot 1`] = `
 <DocumentFragment>
   <section
-    class="MuiBox-root MuiBox-root-2"
+    class="MuiContainer-root makeStyles-root-1 MuiContainer-maxWidthLg"
     data-testid="FavoritesLoader"
   >
-    Loading...
+    <span
+      class="MuiSkeleton-root MuiSkeleton-rect MuiSkeleton-pulse"
+      style="height: 400px;"
+    />
   </section>
 </DocumentFragment>
 `;

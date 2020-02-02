@@ -4,6 +4,7 @@ import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 import Box from '@material-ui/core/Box';
 import Link from '@material-ui/core/Link';
+import { Link as RouterLink } from 'react-router-dom';
 
 import routePaths from 'constants/routePaths';
 
@@ -20,7 +21,6 @@ const NotFound: React.FC = () => {
     <Container
       data-testid="NotFound"
       component="section"
-      maxWidth="xs"
       className={classes.root}
     >
       <Helmet>
@@ -37,7 +37,7 @@ const NotFound: React.FC = () => {
       </Typography>
       <Typography variant="body1" gutterBottom>
         {translate('pages.NotFound.redirect.text')}{' '}
-        <Link href={routePaths.cars} color="textSecondary">
+        <Link component={RouterLink} to={routePaths.cars} color="textSecondary">
           {translate('pages.NotFound.redirect.link')}
         </Link>
         .

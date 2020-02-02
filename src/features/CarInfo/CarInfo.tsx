@@ -1,6 +1,5 @@
-import React from 'react';
+import React, { memo } from 'react';
 import Typography from '@material-ui/core/Typography';
-import Container from '@material-ui/core/Container';
 import Box from '@material-ui/core/Box';
 import Grid from '@material-ui/core/Grid';
 import Skeleton from '@material-ui/lab/Skeleton';
@@ -37,53 +36,56 @@ const CarInfo: React.FC<CarInfoProps> = ({ stockNumber, ...restProps }) => {
   const car = data?.car ?? ({} as Car);
 
   return (
-    <Container
+    <Grid
       data-testid="CarInfo"
       {...restProps}
       component="section"
-      className={classes.root}
+      container
+      spacing={2}
     >
-      <Grid container spacing={2}>
-        <Grid item xs={12}>
-          {isCarInfoLoading ? (
-            <Skeleton data-testid="CarInfoImageSkeleton" height={200} />
-          ) : (
-            <Box className={classes.carImageContainer}>
-              <img src={car.pictureUrl} alt={car.modelName} />
-            </Box>
-          )}
-        </Grid>
-        <Grid item xs={6}>
-          {isCarInfoLoading ? (
-            <>
-              <Skeleton height={50} width="50%" />
-              <Skeleton height={50} />
-              <Skeleton height={150} />
-            </>
-          ) : (
-            <Box data-testid="CarInfoFeatures">
-              <Typography variant="h3" gutterBottom>
-                {getCarName(car)}
-              </Typography>
-              <Typography variant="body1" gutterBottom>
-                {getCarFeatures(car, {
-                  stockNumberPrefix: translate(
-                    'features.CarInfo.stockNumberPrefix',
-                  ),
-                })}
-              </Typography>
-              <Typography variant="body2">
-                {translate('features.CarInfo.description')}
-              </Typography>
-            </Box>
-          )}
-        </Grid>
-        <Grid item xs={6}>
-          {isCarInfoLoading ? <Skeleton height={150} /> : null}
-        </Grid>
+      <Grid item xs={12}>
+        {isCarInfoLoading ? (
+          <Skeleton
+            data-testid="CarInfoImageSkeleton"
+            variant="rect"
+            height={200}
+          />
+        ) : (
+          <Box className={classes.carImageContainer}>
+            <img src={car.pictureUrl} alt={car.modelName} />
+          </Box>
+        )}
       </Grid>
-    </Container>
+      <Grid item xs={6}>
+        {isCarInfoLoading ? (
+          <>
+            <Skeleton height={50} width="50%" />
+            <Skeleton height={50} />
+            <Skeleton variant="rect" height={150} />
+          </>
+        ) : (
+          <Box data-testid="CarInfoFeatures">
+            <Typography variant="h3" gutterBottom>
+              {getCarName(car)}
+            </Typography>
+            <Typography variant="body1" gutterBottom>
+              {getCarFeatures(car, {
+                stockNumberPrefix: translate(
+                  'features.CarInfo.stockNumberPrefix',
+                ),
+              })}
+            </Typography>
+            <Typography variant="body2">
+              {translate('features.CarInfo.description')}
+            </Typography>
+          </Box>
+        )}
+      </Grid>
+      <Grid item xs={6}>
+        {isCarInfoLoading ? <Skeleton height={150} /> : null}
+      </Grid>
+    </Grid>
   );
 };
 
-export default CarInfo;
+export default memo(CarInfo);

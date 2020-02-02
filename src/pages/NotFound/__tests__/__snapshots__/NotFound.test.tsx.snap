@@ -3,7 +3,7 @@
 exports[`<NotFound /> should render the component and matches it against stored snapshot 1`] = `
 <DocumentFragment>
   <section
-    class="MuiContainer-root makeStyles-root-1 MuiContainer-maxWidthXs"
+    class="MuiContainer-root makeStyles-root-1 MuiContainer-maxWidthLg"
     data-testid="NotFound"
   >
     <div

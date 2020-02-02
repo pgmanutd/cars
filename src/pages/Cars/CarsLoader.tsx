@@ -1,10 +1,29 @@
 import React from 'react';
-import Box from '@material-ui/core/Box';
+import Container from '@material-ui/core/Container';
+import Skeleton from '@material-ui/lab/Skeleton';
+import Grid from '@material-ui/core/Grid';
 
-const CarsLoader: React.FC = () => (
-  <Box component="section" data-testid="CarsLoader">
-    Loading...
-  </Box>
-);
+import { useStyles } from './carsPageStyles';
+
+const CarsLoader: React.FC = () => {
+  const classes = useStyles();
+
+  return (
+    <Container
+      data-testid="CarsLoader"
+      component="section"
+      className={classes.root}
+    >
+      <Grid container spacing={2}>
+        <Grid item xs={3}>
+          <Skeleton variant="rect" height={200} />
+        </Grid>
+        <Grid item xs={9}>
+          <Skeleton variant="rect" height={400} />
+        </Grid>
+      </Grid>
+    </Container>
+  );
+};
 
 export default CarsLoader;

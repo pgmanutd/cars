@@ -1,10 +1,21 @@
 import React from 'react';
-import Box from '@material-ui/core/Box';
+import Skeleton from '@material-ui/lab/Skeleton';
+import Container from '@material-ui/core/Container';
 
-const CarDetailsLoader: React.FC = () => (
-  <Box component="section" data-testid="CarDetailsLoader">
-    Loading...
-  </Box>
-);
+import { useStyles } from './carsDetailsStyles';
+
+const CarDetailsLoader: React.FC = () => {
+  const classes = useStyles();
+
+  return (
+    <Container
+      data-testid="CarDetailsLoader"
+      component="section"
+      className={classes.root}
+    >
+      <Skeleton variant="rect" height={400} />
+    </Container>
+  );
+};
 
 export default CarDetailsLoader;

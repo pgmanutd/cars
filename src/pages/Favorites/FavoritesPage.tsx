@@ -1,18 +1,25 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import Box from '@material-ui/core/Box';
+import Container from '@material-ui/core/Container';
 
 import { useTranslate } from 'features/Translate';
 
+import { useStyles } from './favoritesStyles';
+
 const FavoritesPage: React.FC = () => {
+  const classes = useStyles();
   const { translate } = useTranslate();
 
   return (
-    <Box component="section" data-testid="FavoritesPage">
+    <Container
+      data-testid="FavoritesPage"
+      component="section"
+      className={classes.root}
+    >
       <Helmet>
         <title>{translate('pages.Favorites.documentTitle')}</title>
       </Helmet>
-    </Box>
+    </Container>
   );
 };
 

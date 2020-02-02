@@ -3,10 +3,29 @@
 exports[`<CarsLoader /> should render the component and matches it against stored snapshot 1`] = `
 <DocumentFragment>
   <section
-    class="MuiBox-root MuiBox-root-2"
+    class="MuiContainer-root makeStyles-root-1 MuiContainer-maxWidthLg"
     data-testid="CarsLoader"
   >
-    Loading...
+    <div
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-3"
+      >
+        <span
+          class="MuiSkeleton-root MuiSkeleton-rect MuiSkeleton-pulse"
+          style="height: 200px;"
+        />
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-9"
+      >
+        <span
+          class="MuiSkeleton-root MuiSkeleton-rect MuiSkeleton-pulse"
+          style="height: 400px;"
+        />
+      </div>
+    </div>
   </section>
 </DocumentFragment>
 `;

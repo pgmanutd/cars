@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { StrictMode } from 'react';
 import Box from '@material-ui/core/Box';
 
 import { TranslateProvider } from 'features/Translate';
@@ -9,13 +9,15 @@ import Footer from 'features/Footer';
 
 const App: React.FC = () => (
   <Box data-testid="App">
-    <TranslateProvider language="en">
-      <ErrorBoundary>
-        <Header />
-        <MainLayout />
-        <Footer />
-      </ErrorBoundary>
-    </TranslateProvider>
+    <StrictMode>
+      <TranslateProvider language="en">
+        <ErrorBoundary>
+          <Header />
+          <MainLayout />
+          <Footer />
+        </ErrorBoundary>
+      </TranslateProvider>
+    </StrictMode>
   </Box>
 );
 
