@@ -40,7 +40,8 @@
         "src/**/*.test.{ts,tsx}",
         "src/setupProxy.js",
         "src/setupTests.ts",
-        "src/utils/testUtils.tsx"
+        "src/utils/testUtils.tsx",
+        "typings/globals.d.ts"
       ],
       "rules": {
         "import/no-extraneous-dependencies": 0
