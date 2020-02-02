@@ -3,22 +3,22 @@ import { wait } from '@testing-library/react';
 
 import { renderWithProviders } from 'utils/testUtils';
 
-import App from '../App';
+import MainLayout from '../MainLayout';
 
-describe('<App />', () => {
+describe('<MainLayout />', () => {
   const setup = () => {
-    const { renderResult } = renderWithProviders(<App />);
+    const { renderResult } = renderWithProviders(<MainLayout />);
 
     return {
       renderResult,
     };
   };
 
-  it('should render <MainLayout />', async () => {
+  it('should render <CarsPage /> initially', async () => {
     const { renderResult } = setup();
 
     await wait(() =>
-      expect(renderResult.getByTestId('MainLayout')).toBeInTheDocument(),
+      expect(renderResult.getByTestId('CarsPage')).toBeInTheDocument(),
     );
   });
 });
