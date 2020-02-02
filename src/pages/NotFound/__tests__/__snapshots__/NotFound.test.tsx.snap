@@ -3,7 +3,7 @@
 exports[`<NotFound /> should render the component and matches it against stored snapshot 1`] = `
 <DocumentFragment>
   <section
-    class="MuiBox-root MuiBox-root-2"
+    class="MuiContainer-root makeStyles-root-1 MuiContainer-maxWidthXs"
     data-testid="NotFound"
   >
     <h4
@@ -21,7 +21,7 @@ exports[`<NotFound /> should render the component and matches it against stored 
     >
       You can always go back to the 
       <a
-        class="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
+        class="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorTextSecondary"
         href="/"
       >
         homepage

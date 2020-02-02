@@ -32,28 +32,17 @@ const Header: React.FC = props => {
           <AppLogo />
         </Link>
         <nav>
-          <Link
-            variant="button"
-            color="textPrimary"
-            href="#"
-            className={classes.link}
-          >
+          <Link color="textPrimary" href="#" className={classes.link}>
             {translate('features.Header.purchaseNavLinkText')}
           </Link>
           <Link
-            variant="button"
             color="textPrimary"
             href={routePaths.favorites}
             className={classes.link}
           >
             {translate('features.Header.myOrdersNavLinkText')}
           </Link>
-          <Link
-            variant="button"
-            color="textPrimary"
-            href="#"
-            className={classes.link}
-          >
+          <Link color="textPrimary" href="#" className={classes.link}>
             {translate('features.Header.sellNavLinkText')}
           </Link>
         </nav>

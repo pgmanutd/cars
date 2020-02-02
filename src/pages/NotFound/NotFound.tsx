@@ -1,18 +1,26 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Typography from '@material-ui/core/Typography';
-import Box from '@material-ui/core/Box';
+import Container from '@material-ui/core/Container';
 import Link from '@material-ui/core/Link';
 
 import routePaths from 'constants/routePaths';
 
 import { useTranslate } from 'features/Translate';
 
+import { useStyles } from './notFoundStyles';
+
 const NotFound: React.FC = () => {
+  const classes = useStyles();
   const { translate } = useTranslate();
 
   return (
-    <Box component="section" data-testid="NotFound">
+    <Container
+      data-testid="NotFound"
+      component="section"
+      maxWidth="xs"
+      className={classes.root}
+    >
       <Helmet>
         <title>{translate('pages.NotFound.documentTitle')}</title>
       </Helmet>
@@ -24,12 +32,12 @@ const NotFound: React.FC = () => {
       </Typography>
       <Typography variant="body1" gutterBottom>
         {translate('pages.NotFound.redirect.text')}{' '}
-        <Link href={routePaths.cars}>
+        <Link href={routePaths.cars} color="textSecondary">
           {translate('pages.NotFound.redirect.link')}
         </Link>
         .
       </Typography>
-    </Box>
+    </Container>
   );
 };
 

@@ -21,19 +21,19 @@ exports[`<Header /> should render the component and matches it against stored sn
       </a>
       <nav>
         <a
-          class="MuiTypography-root MuiLink-root MuiLink-underlineHover makeStyles-link-4 MuiTypography-button MuiTypography-colorTextPrimary"
+          class="MuiTypography-root MuiLink-root MuiLink-underlineHover makeStyles-link-4 MuiTypography-colorTextPrimary"
           href="#"
         >
           Purchase
         </a>
         <a
-          class="MuiTypography-root MuiLink-root MuiLink-underlineHover makeStyles-link-4 MuiTypography-button MuiTypography-colorTextPrimary"
+          class="MuiTypography-root MuiLink-root MuiLink-underlineHover makeStyles-link-4 MuiTypography-colorTextPrimary"
           href="/favorites"
         >
           My Orders
         </a>
         <a
-          class="MuiTypography-root MuiLink-root MuiLink-underlineHover makeStyles-link-4 MuiTypography-button MuiTypography-colorTextPrimary"
+          class="MuiTypography-root MuiLink-root MuiLink-underlineHover makeStyles-link-4 MuiTypography-colorTextPrimary"
           href="#"
         >
           Sell
