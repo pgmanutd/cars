@@ -1,13 +1,13 @@
 import React from 'react';
 import { wait } from '@testing-library/react';
 
-import { renderWithProviders } from 'utils/testUtils';
+import { renderWithTranslate } from 'utils/testUtils';
 
 import MainLayout from '../MainLayout';
 
 describe('<MainLayout />', () => {
   const setup = () => {
-    const { renderResult } = renderWithProviders(<MainLayout />);
+    const { renderResult } = renderWithTranslate(<MainLayout />);
 
     return {
       renderResult,

@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Header /> should render the component and matches it against stored snapshot 1`] = `
+<DocumentFragment>
+  <header
+    class="MuiPaper-root MuiAppBar-root MuiAppBar-positionStatic makeStyles-root-1 MuiAppBar-colorDefault MuiPaper-elevation0"
+    data-testid="Header"
+  >
+    <div
+      class="MuiToolbar-root MuiToolbar-regular makeStyles-toolbar-2 MuiToolbar-gutters"
+    >
+      <a
+        class="MuiTypography-root MuiLink-root MuiLink-underlineHover makeStyles-toolbarLogo-3 MuiTypography-colorTextPrimary"
+        href="/"
+      >
+        <img
+          alt="AppLogo"
+          data-testid="AppLogo"
+          src="logo.png"
+        />
+      </a>
+      <nav>
+        <a
+          class="MuiTypography-root MuiLink-root MuiLink-underlineHover makeStyles-link-4 MuiTypography-button MuiTypography-colorTextPrimary"
+          href="#"
+        >
+          Purchase
+        </a>
+        <a
+          class="MuiTypography-root MuiLink-root MuiLink-underlineHover makeStyles-link-4 MuiTypography-button MuiTypography-colorTextPrimary"
+          href="/favorites"
+        >
+          My Orders
+        </a>
+        <a
+          class="MuiTypography-root MuiLink-root MuiLink-underlineHover makeStyles-link-4 MuiTypography-button MuiTypography-colorTextPrimary"
+          href="#"
+        >
+          Sell
+        </a>
+      </nav>
+    </div>
+  </header>
+</DocumentFragment>
+`;

@@ -9,12 +9,17 @@ import { useTranslate } from 'features/Translate';
 
 import { useStyles } from './footerStyles';
 
-const Footer: React.FC = () => {
+const Footer: React.FC = props => {
   const classes = useStyles();
   const { translate } = useTranslate();
 
   return (
-    <Box data-testid="Footer" component="footer" className={classes.root}>
+    <Box
+      data-testid="Footer"
+      {...props}
+      component="footer"
+      className={classes.root}
+    >
       <Typography variant="body2" color="textPrimary" align="center">
         {translate('features.Footer.copyright')}{' '}
         <Link color="inherit" href={routePaths.cars}>

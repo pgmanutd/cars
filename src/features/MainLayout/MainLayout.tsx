@@ -11,8 +11,8 @@ import CarDetails from 'pages/CarDetails';
 import Favorites from 'pages/Favorites';
 import NotFound from 'pages/NotFound';
 
-const MainLayout: React.FC = () => (
-  <Box data-testid="MainLayout">
+const MainLayout: React.FC = props => (
+  <Box data-testid="MainLayout" {...props}>
     <main>
       <HelmetProvider>
         <Suspense fallback={<LinearProgress />}>

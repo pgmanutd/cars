@@ -2,11 +2,11 @@ import React from 'react';
 
 import { renderWithTranslate } from 'utils/testUtils';
 
-import Footer from '../Footer';
+import Header from '../Header';
 
-describe('<Footer />', () => {
+describe('<Header />', () => {
   const setup = () => {
-    const { renderResult } = renderWithTranslate(<Footer />);
+    const { renderResult } = renderWithTranslate(<Header />);
 
     return {
       renderResult,

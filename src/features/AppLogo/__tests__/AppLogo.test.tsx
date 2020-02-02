@@ -2,11 +2,11 @@ import React from 'react';
 
 import { renderWithTranslate } from 'utils/testUtils';
 
-import Footer from '../Footer';
+import AppLogo from '../AppLogo';
 
-describe('<Footer />', () => {
+describe('<AppLogo />', () => {
   const setup = () => {
-    const { renderResult } = renderWithTranslate(<Footer />);
+    const { renderResult } = renderWithTranslate(<AppLogo />);
 
     return {
       renderResult,

@@ -1,8 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
+import Link from '@material-ui/core/Link';
 
 import routePaths from 'constants/routePaths';
 
@@ -24,7 +24,7 @@ const NotFound: React.FC = () => {
       </Typography>
       <Typography variant="body1" gutterBottom>
         {translate('pages.NotFound.redirect.text')}{' '}
-        <Link to={routePaths.cars}>
+        <Link href={routePaths.cars}>
           {translate('pages.NotFound.redirect.link')}
         </Link>
         .

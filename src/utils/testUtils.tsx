@@ -32,3 +32,7 @@ export const renderWithProviders = (
   ),
   history,
 });
+
+export const renderWithTranslate = (ui: React.ReactElement) => ({
+  renderResult: render(<TranslateProvider>{ui}</TranslateProvider>),
+});

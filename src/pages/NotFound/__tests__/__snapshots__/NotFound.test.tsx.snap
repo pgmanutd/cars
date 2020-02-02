@@ -21,6 +21,7 @@ exports[`<NotFound /> should render the component and matches it against stored 
     >
       You can always go back to the 
       <a
+        class="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
         href="/"
       >
         homepage
