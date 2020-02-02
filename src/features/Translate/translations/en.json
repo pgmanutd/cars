@@ -1,6 +1,8 @@
 {
   "features.ErrorBoundary.headerText": "Something went wrong.",
   "features.ErrorBoundary.bodyText": "Refresh the page or try again later. If this error persists, Please contact the administrator.",
+  "features.Footer.copyright": "©",
+  "features.Footer.homeLinkText": "Cars",
   "pages.NotFound.documentTitle": "404 - Not Found",
   "pages.NotFound.headerText": "404 - Not Found",
   "pages.NotFound.bodyText": "Sorry, the page you are looking for does not exist.",

@@ -21,4 +21,12 @@ describe('<App />', () => {
       expect(renderResult.getByTestId('MainLayout')).toBeInTheDocument(),
     );
   });
+
+  it('should render <Footer />', async () => {
+    const { renderResult } = setup();
+
+    await wait(() =>
+      expect(renderResult.getByTestId('Footer')).toBeInTheDocument(),
+    );
+  });
 });
