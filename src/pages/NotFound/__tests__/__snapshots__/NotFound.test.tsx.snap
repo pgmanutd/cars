@@ -3,6 +3,7 @@
 exports[`<NotFound /> should render the component and matches it against stored snapshot 1`] = `
 <DocumentFragment>
   <section
+    class="MuiBox-root MuiBox-root-2"
     data-testid="NotFound"
   >
     <h4

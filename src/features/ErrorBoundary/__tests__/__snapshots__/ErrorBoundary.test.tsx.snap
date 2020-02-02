@@ -11,6 +11,7 @@ exports[`<ErrorBoundary /> render the component and matches it against stored sn
 exports[`<ErrorBoundary /> render the component and matches it against stored snapshot when some error is thrown from any child component 1`] = `
 <DocumentFragment>
   <section
+    class="MuiBox-root MuiBox-root-2"
     data-testid="ErrorBoundary"
   >
     <h4

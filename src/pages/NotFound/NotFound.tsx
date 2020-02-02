@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import Typography from '@material-ui/core/Typography';
+import Box from '@material-ui/core/Box';
 
 import routePaths from 'constants/routePaths';
 
@@ -11,7 +12,7 @@ const NotFound: React.FC = () => {
   const { translate } = useTranslate();
 
   return (
-    <section data-testid="NotFound">
+    <Box component="section" data-testid="NotFound">
       <Helmet>
         <title>{translate('pages.NotFound.documentTitle')}</title>
       </Helmet>
@@ -28,7 +29,7 @@ const NotFound: React.FC = () => {
         </Link>
         .
       </Typography>
-    </section>
+    </Box>
   );
 };
 

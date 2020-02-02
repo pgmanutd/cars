@@ -1,5 +1,6 @@
 import React, { ErrorInfo } from 'react';
 import Typography from '@material-ui/core/Typography';
+import Box from '@material-ui/core/Box';
 import _noop from 'lodash/fp/noop';
 
 import { TranslateContext } from 'features/Translate';
@@ -32,14 +33,14 @@ class ErrorBoundary extends React.PureComponent<
   render() {
     if (this.state.hasError) {
       return (
-        <section data-testid="ErrorBoundary">
+        <Box component="section" data-testid="ErrorBoundary">
           <Typography variant="h4" gutterBottom>
             {this.context.translate('features.ErrorBoundary.headerText')}
           </Typography>
           <Typography variant="body1">
             {this.context.translate('features.ErrorBoundary.bodyText')}
           </Typography>
-        </section>
+        </Box>
       );
     }
 

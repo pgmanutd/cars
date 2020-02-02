@@ -1,6 +1,7 @@
 import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import LinearProgress from '@material-ui/core/LinearProgress';
+import Box from '@material-ui/core/Box';
 import { HelmetProvider } from 'react-helmet-async';
 
 import routePaths from 'constants/routePaths';
@@ -14,7 +15,7 @@ import { TranslateProvider } from 'features/Translate';
 import ErrorBoundary from 'features/ErrorBoundary';
 
 const App: React.FC = () => (
-  <div data-testid="App">
+  <Box data-testid="App">
     <TranslateProvider language="en">
       <ErrorBoundary>
         <main>
@@ -41,7 +42,7 @@ const App: React.FC = () => (
         </main>
       </ErrorBoundary>
     </TranslateProvider>
-  </div>
+  </Box>
 );
 
 export default App;
