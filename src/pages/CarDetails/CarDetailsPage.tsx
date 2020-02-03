@@ -3,6 +3,8 @@ import { Helmet } from 'react-helmet-async';
 import { useParams } from 'react-router-dom';
 import Container from '@material-ui/core/Container';
 
+import { DEFAULT_PARAM_VALUES } from 'constants/appConstants';
+
 import { useTranslate } from 'features/Translate';
 import CarInfo from 'features/CarInfo';
 
@@ -10,7 +12,7 @@ import { useStyles } from './carsDetailsStyles';
 
 const CarDetailsPage: React.FC = () => {
   const classes = useStyles();
-  const { stockNumber = '' } = useParams();
+  const { stockNumber = DEFAULT_PARAM_VALUES.stockNumber } = useParams();
   const { translate } = useTranslate();
 
   return (
