@@ -13,7 +13,7 @@ describe('<CarCardsLoader />', () => {
     };
   };
 
-  it('should render the component and matches it against stored snapshot', () => {
+  it('should render <CarCardLoader />', () => {
     const { renderResult } = setup();
 
     expect(renderResult.getAllByTestId('CarCardLoader')).toHaveLength(5);

@@ -111,7 +111,7 @@ describe('<NavFilter />', () => {
 
     const searchParams = new URLSearchParams(history.location.search);
 
-    expect(searchParams.toString()).toStrictEqual(
+    expect(searchParams.toString()).toBe(
       `filters.color=${color}&filters.manufacturer=${manufacturer}`,
     );
   });
