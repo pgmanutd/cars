@@ -7,46 +7,81 @@ import { Link as RouterLink } from 'react-router-dom';
 import { useTranslate } from 'features/Translate';
 
 import { DEFAULT_PAGE_NUMBER } from './paginationConstants';
-import { getPaginationLinksAttrs } from './paginationUtils';
+import usePagination from './usePagination';
+import { useStyles } from './paginationStyles';
 
 export interface PaginationProps {
   currentPage?: number;
   totalPage?: number;
-  href?: string;
+  basePath?: string;
+  queryKey?: string;
 }
 
 const Pagination: React.FC<PaginationProps> = ({
   currentPage = DEFAULT_PAGE_NUMBER,
   totalPage = DEFAULT_PAGE_NUMBER,
-  href = `/?${new URLSearchParams({ page: '' })}`,
+  basePath = '/',
+  queryKey = 'page',
   ...restProps
 }) => {
+  const classes = useStyles();
   const { translate } = useTranslate();
 
-  const { first, previous, next, last } = getPaginationLinksAttrs({
+  const { first, previous, next, last } = usePagination({
     currentPage,
     totalPage,
-    href,
+    basePath,
+    queryKey,
   });
 
   return (
-    <Box data-testid="Pagination" {...restProps} component="section">
-      <Button component={RouterLink} color="primary" {...first}>
+    <Box
+      data-testid="Pagination"
+      {...restProps}
+      component="section"
+      className={classes.root}
+    >
+      <Button
+        component={RouterLink}
+        color="primary"
+        className={classes.text}
+        {...first}
+      >
         {translate('features.Pagination.firstLinkText')}
       </Button>
-      <Button component={RouterLink} color="primary" {...previous}>
+      <Button
+        component={RouterLink}
+        color="primary"
+        className={classes.text}
+        {...previous}
+      >
         {translate('features.Pagination.previousLinkText')}
       </Button>
-      <Typography variant="body2" display="inline" color="textPrimary">
+      <Typography
+        variant="body2"
+        display="inline"
+        color="textPrimary"
+        className={classes.text}
+      >
         {translate('features.Pagination.description', {
           CURRENT_PAGE: currentPage?.toString(),
           TOTAL_PAGE: totalPage?.toString(),
         })}
       </Typography>
-      <Button component={RouterLink} color="primary" {...next}>
+      <Button
+        component={RouterLink}
+        color="primary"
+        className={classes.text}
+        {...next}
+      >
         {translate('features.Pagination.nextLinkText')}
       </Button>
-      <Button component={RouterLink} color="primary" {...last}>
+      <Button
+        component={RouterLink}
+        color="primary"
+        className={classes.text}
+        {...last}
+      >
         {translate('features.Pagination.lastLinkText')}
       </Button>
     </Box>

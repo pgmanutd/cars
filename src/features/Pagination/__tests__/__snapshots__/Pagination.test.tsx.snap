@@ -3,12 +3,12 @@
 exports[`<Pagination /> should render the component and matches it against stored snapshot for currentPage: 1, totalPage: 1 1`] = `
 <DocumentFragment>
   <section
-    class="MuiBox-root MuiBox-root-2"
+    class="MuiBox-root MuiBox-root-4 makeStyles-root-1"
     data-testid="Pagination"
   >
     <a
       aria-disabled="true"
-      class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary Mui-disabled Mui-disabled"
+      class="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-text-2 MuiButton-textPrimary Mui-disabled Mui-disabled"
       href="/?page=1"
       role="button"
       tabindex="-1"
@@ -21,7 +21,7 @@ exports[`<Pagination /> should render the component and matches it against store
     </a>
     <a
       aria-disabled="true"
-      class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary Mui-disabled Mui-disabled"
+      class="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-text-2 MuiButton-textPrimary Mui-disabled Mui-disabled"
       href="/?page=0"
       role="button"
       tabindex="-1"
@@ -33,13 +33,13 @@ exports[`<Pagination /> should render the component and matches it against store
       </span>
     </a>
     <p
-      class="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextPrimary MuiTypography-displayInline"
+      class="MuiTypography-root makeStyles-text-2 MuiTypography-body2 MuiTypography-colorTextPrimary MuiTypography-displayInline"
     >
       Page 1 of 1
     </p>
     <a
       aria-disabled="true"
-      class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary Mui-disabled Mui-disabled"
+      class="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-text-2 MuiButton-textPrimary Mui-disabled Mui-disabled"
       href="/?page=2"
       role="button"
       tabindex="-1"
@@ -52,7 +52,7 @@ exports[`<Pagination /> should render the component and matches it against store
     </a>
     <a
       aria-disabled="true"
-      class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary Mui-disabled Mui-disabled"
+      class="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-text-2 MuiButton-textPrimary Mui-disabled Mui-disabled"
       href="/?page=1"
       role="button"
       tabindex="-1"
@@ -70,12 +70,12 @@ exports[`<Pagination /> should render the component and matches it against store
 exports[`<Pagination /> should render the component and matches it against stored snapshot for currentPage: 1, totalPage: 3 1`] = `
 <DocumentFragment>
   <section
-    class="MuiBox-root MuiBox-root-66"
+    class="MuiBox-root MuiBox-root-70 makeStyles-root-67"
     data-testid="Pagination"
   >
     <a
       aria-disabled="true"
-      class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary Mui-disabled Mui-disabled"
+      class="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-text-68 MuiButton-textPrimary Mui-disabled Mui-disabled"
       href="/?page=1"
       role="button"
       tabindex="-1"
@@ -88,7 +88,7 @@ exports[`<Pagination /> should render the component and matches it against store
     </a>
     <a
       aria-disabled="true"
-      class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary Mui-disabled Mui-disabled"
+      class="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-text-68 MuiButton-textPrimary Mui-disabled Mui-disabled"
       href="/?page=0"
       role="button"
       tabindex="-1"
@@ -100,13 +100,13 @@ exports[`<Pagination /> should render the component and matches it against store
       </span>
     </a>
     <p
-      class="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextPrimary MuiTypography-displayInline"
+      class="MuiTypography-root makeStyles-text-68 MuiTypography-body2 MuiTypography-colorTextPrimary MuiTypography-displayInline"
     >
       Page 1 of 3
     </p>
     <a
       aria-disabled="false"
-      class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary"
+      class="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-text-68 MuiButton-textPrimary"
       href="/?page=2"
       role="button"
       tabindex="0"
@@ -122,7 +122,7 @@ exports[`<Pagination /> should render the component and matches it against store
     </a>
     <a
       aria-disabled="false"
-      class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary"
+      class="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-text-68 MuiButton-textPrimary"
       href="/?page=3"
       role="button"
       tabindex="0"
@@ -143,12 +143,12 @@ exports[`<Pagination /> should render the component and matches it against store
 exports[`<Pagination /> should render the component and matches it against stored snapshot for currentPage: 2, totalPage: 3 1`] = `
 <DocumentFragment>
   <section
-    class="MuiBox-root MuiBox-root-140"
+    class="MuiBox-root MuiBox-root-146 makeStyles-root-143"
     data-testid="Pagination"
   >
     <a
       aria-disabled="false"
-      class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary"
+      class="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-text-144 MuiButton-textPrimary"
       href="/?page=1"
       role="button"
       tabindex="0"
@@ -164,7 +164,7 @@ exports[`<Pagination /> should render the component and matches it against store
     </a>
     <a
       aria-disabled="false"
-      class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary"
+      class="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-text-144 MuiButton-textPrimary"
       href="/?page=1"
       role="button"
       tabindex="0"
@@ -179,13 +179,13 @@ exports[`<Pagination /> should render the component and matches it against store
       />
     </a>
     <p
-      class="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextPrimary MuiTypography-displayInline"
+      class="MuiTypography-root makeStyles-text-144 MuiTypography-body2 MuiTypography-colorTextPrimary MuiTypography-displayInline"
     >
       Page 2 of 3
     </p>
     <a
       aria-disabled="false"
-      class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary"
+      class="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-text-144 MuiButton-textPrimary"
       href="/?page=3"
       role="button"
       tabindex="0"
@@ -201,7 +201,7 @@ exports[`<Pagination /> should render the component and matches it against store
     </a>
     <a
       aria-disabled="false"
-      class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary"
+      class="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-text-144 MuiButton-textPrimary"
       href="/?page=3"
       role="button"
       tabindex="0"
@@ -222,12 +222,12 @@ exports[`<Pagination /> should render the component and matches it against store
 exports[`<Pagination /> should render the component and matches it against stored snapshot for currentPage: 3, totalPage: 3 1`] = `
 <DocumentFragment>
   <section
-    class="MuiBox-root MuiBox-root-214"
+    class="MuiBox-root MuiBox-root-222 makeStyles-root-219"
     data-testid="Pagination"
   >
     <a
       aria-disabled="false"
-      class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary"
+      class="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-text-220 MuiButton-textPrimary"
       href="/?page=1"
       role="button"
       tabindex="0"
@@ -243,7 +243,7 @@ exports[`<Pagination /> should render the component and matches it against store
     </a>
     <a
       aria-disabled="false"
-      class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary"
+      class="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-text-220 MuiButton-textPrimary"
       href="/?page=2"
       role="button"
       tabindex="0"
@@ -258,13 +258,13 @@ exports[`<Pagination /> should render the component and matches it against store
       />
     </a>
     <p
-      class="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextPrimary MuiTypography-displayInline"
+      class="MuiTypography-root makeStyles-text-220 MuiTypography-body2 MuiTypography-colorTextPrimary MuiTypography-displayInline"
     >
       Page 3 of 3
     </p>
     <a
       aria-disabled="true"
-      class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary Mui-disabled Mui-disabled"
+      class="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-text-220 MuiButton-textPrimary Mui-disabled Mui-disabled"
       href="/?page=4"
       role="button"
       tabindex="-1"
@@ -277,7 +277,7 @@ exports[`<Pagination /> should render the component and matches it against store
     </a>
     <a
       aria-disabled="true"
-      class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary Mui-disabled Mui-disabled"
+      class="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-text-220 MuiButton-textPrimary Mui-disabled Mui-disabled"
       href="/?page=3"
       role="button"
       tabindex="-1"
