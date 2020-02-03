@@ -6,44 +6,8 @@ import { Link as RouterLink } from 'react-router-dom';
 
 import { useTranslate } from 'features/Translate';
 
-const defaultPageNumber = 1;
-
-const getPaginationLinksAttrs = ({
-  currentPage,
-  totalPage,
-  href,
-}: {
-  currentPage: number;
-  totalPage: number;
-  href: string;
-}) => {
-  const first = {
-    to: `${href}${defaultPageNumber}`,
-    disabled: currentPage === defaultPageNumber,
-  };
-
-  const previous = {
-    to: `${href}${currentPage - 1}`,
-    disabled: currentPage === defaultPageNumber,
-  };
-
-  const next = {
-    to: `${href}${currentPage + 1}`,
-    disabled: currentPage === totalPage,
-  };
-
-  const last = {
-    to: `${href}${totalPage}`,
-    disabled: currentPage === totalPage,
-  };
-
-  return {
-    first,
-    previous,
-    next,
-    last,
-  };
-};
+import { DEFAULT_PAGE_NUMBER } from './paginationConstants';
+import { getPaginationLinksAttrs } from './paginationUtils';
 
 export interface PaginationProps {
   currentPage?: number;
@@ -52,8 +16,8 @@ export interface PaginationProps {
 }
 
 const Pagination: React.FC<PaginationProps> = ({
-  currentPage = defaultPageNumber,
-  totalPage = defaultPageNumber,
+  currentPage = DEFAULT_PAGE_NUMBER,
+  totalPage = DEFAULT_PAGE_NUMBER,
   href = `/?${new URLSearchParams({ page: '' })}`,
   ...restProps
 }) => {
