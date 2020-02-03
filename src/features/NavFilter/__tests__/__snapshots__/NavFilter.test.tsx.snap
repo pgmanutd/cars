@@ -3,8 +3,8 @@
 exports[`<NavFilter /> should render the component and matches it against stored snapshot for failed response 1`] = `
 <DocumentFragment>
   <aside
-    class="MuiBox-root MuiBox-root-325 makeStyles-root-320"
-    data-testid="NavFilter"
+    class="MuiBox-root MuiBox-root-329 makeStyles-root-324"
+    data-testid="NavFilterLoader"
   >
     <span
       class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-pulse"
@@ -17,7 +17,7 @@ exports[`<NavFilter /> should render the component and matches it against stored
       style="height: 48px;"
     />
     <div
-      class="MuiBox-root MuiBox-root-334 makeStyles-filterButtonContainer-323"
+      class="MuiBox-root MuiBox-root-338 makeStyles-filterButtonContainer-327"
     >
       <span
         class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-pulse"
@@ -32,7 +32,7 @@ exports[`<NavFilter /> should render the component and matches it against stored
 exports[`<NavFilter /> should render the component and matches it against stored snapshot for success response 1`] = `
 <DocumentFragment>
   <aside
-    class="MuiBox-root MuiBox-root-6 makeStyles-root-1"
+    class="MuiBox-root MuiBox-root-16 makeStyles-root-1"
     data-testid="NavFilter"
   >
     <div
@@ -122,7 +122,7 @@ exports[`<NavFilter /> should render the component and matches it against stored
       </div>
     </div>
     <div
-      class="MuiBox-root MuiBox-root-15 makeStyles-filterButtonContainer-4"
+      class="MuiBox-root MuiBox-root-96 makeStyles-filterButtonContainer-4"
     >
       <a
         aria-disabled="false"

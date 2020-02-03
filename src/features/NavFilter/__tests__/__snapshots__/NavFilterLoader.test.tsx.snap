@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<NavFilterLoader /> should render the component and matches it against stored snapshot 1`] = `
+<DocumentFragment>
+  <aside
+    class="MuiBox-root MuiBox-root-6 makeStyles-root-1"
+    data-testid="NavFilterLoader"
+  >
+    <span
+      class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-pulse"
+      data-testid="NavFilterColorSkeleton"
+      style="height: 48px;"
+    />
+    <span
+      class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-pulse"
+      data-testid="NavFilterManufacturerSkeleton"
+      style="height: 48px;"
+    />
+    <div
+      class="MuiBox-root MuiBox-root-15 makeStyles-filterButtonContainer-4"
+    >
+      <span
+        class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-pulse"
+        data-testid="NavFilterButtonSkeleton"
+        style="width: 92px; height: 70px;"
+      />
+    </div>
+  </aside>
+</DocumentFragment>
+`;

@@ -15,18 +15,22 @@ const useNavFilterResponses = () => {
   });
 
   // NOTE: Not handling error case as of now. Showing skeleton instead in case of error.
-  const areColorsResponseLoading =
-    colorsResponse.isLoading || !colorsResponse.data || colorsResponse.error;
+  const areColorsResponseLoading = !!(
+    colorsResponse.isLoading ||
+    !colorsResponse.data ||
+    colorsResponse.error
+  );
   const colorsResponseValue = colorsResponse.data?.colors ?? ([] as Colors);
 
   const [manufacturersResponse] = useFetch<ManufacturersResponse>({
     initialUrl: apiPaths.manufacturers(),
   });
 
-  const areManufacturersResponseLoading =
+  const areManufacturersResponseLoading = !!(
     manufacturersResponse.isLoading ||
     !manufacturersResponse.data ||
-    manufacturersResponse.error;
+    manufacturersResponse.error
+  );
   const manufacturersResponseValue =
     manufacturersResponse.data?.manufacturers ?? ([] as Manufacturers);
 
