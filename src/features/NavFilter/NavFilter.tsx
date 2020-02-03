@@ -54,7 +54,7 @@ const NavFilter: React.FC<NavFilterProps> = ({
     <Box
       data-testid="NavFilter"
       {...restProps}
-      component="section"
+      component="aside"
       className={classes.root}
     >
       {areColorsResponseLoading ? (

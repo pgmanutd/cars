@@ -14,7 +14,7 @@ describe('<CarDetailsPage />', () => {
       stockNumber: '1234',
     };
     const { renderResult } = renderWithProviders(
-      <Route path={routePaths.carDetails}>
+      <Route path={routePaths.carDetails.path}>
         <CarDetailsPage />
       </Route>,
       {

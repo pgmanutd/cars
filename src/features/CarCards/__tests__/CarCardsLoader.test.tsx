@@ -2,11 +2,11 @@ import React from 'react';
 
 import { renderWithTranslate } from 'utils/testUtils';
 
-import CarDetailsLoader from '../CarDetailsLoader';
+import CarCardsLoader from '../CarCardsLoader';
 
-describe('<CarDetailsLoader />', () => {
+describe('<CarCardsLoader />', () => {
   const setup = () => {
-    const { renderResult } = renderWithTranslate(<CarDetailsLoader />);
+    const { renderResult } = renderWithTranslate(<CarCardsLoader />);
 
     return {
       renderResult,
@@ -16,6 +16,6 @@ describe('<CarDetailsLoader />', () => {
   it('should render the component and matches it against stored snapshot', () => {
     const { renderResult } = setup();
 
-    expect(renderResult.asFragment()).toMatchSnapshot();
+    expect(renderResult.getAllByTestId('CarCardLoader')).toHaveLength(5);
   });
 });

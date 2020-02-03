@@ -77,7 +77,7 @@ exports[`<CarInfo /> should render the component and matches it against stored s
         <p
           class="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom"
         >
-          Stock #78924 - 141474 km - Diesel - white
+          Stock #78924 - 141474 KM - Diesel - White
         </p>
         <p
           class="MuiTypography-root MuiTypography-body2"

@@ -1,3 +1,6 @@
+import _toUpper from 'lodash/fp/toUpper';
+import _upperFirst from 'lodash/fp/upperFirst';
+
 import { Car } from 'features/CarInfo/types';
 
 export const getCarName = ({ manufacturerName, modelName }: Car) =>
@@ -9,4 +12,6 @@ export const getCarFeatures = (
     stockNumberPrefix: '',
   },
 ) =>
-  `${stockNumberPrefix}${stockNumber} - ${mileage?.number} ${mileage?.unit} - ${fuelType} - ${color}`;
+  `${stockNumberPrefix}${stockNumber} - ${mileage?.number} ${_toUpper(
+    mileage?.unit,
+  )} - ${_upperFirst(fuelType)} - ${_upperFirst(color)}`;

@@ -13,9 +13,9 @@ describe('#carUtils', () => {
   describe('#getCarFeatures', () => {
     test.each`
       car                                                                                                     | stockNumberPrefix | output
-      ${{ stockNumber: 1234, mileage: { number: 5678, unit: 'unit' }, fuelType: 'fuelType', color: 'color' }} | ${undefined}      | ${'1234 - 5678 unit - fuelType - color'}
-      ${{ stockNumber: 1234, mileage: { number: 5678, unit: 'unit' }, fuelType: 'fuelType', color: 'color' }} | ${'Stock #'}      | ${'Stock #1234 - 5678 unit - fuelType - color'}
-      ${{ stockNumber: 1234, mileage: null, fuelType: 'fuelType', color: 'color' }}                           | ${'Stock #'}      | ${'Stock #1234 - undefined undefined - fuelType - color'}
+      ${{ stockNumber: 1234, mileage: { number: 5678, unit: 'unit' }, fuelType: 'fuelType', color: 'color' }} | ${undefined}      | ${'1234 - 5678 UNIT - FuelType - Color'}
+      ${{ stockNumber: 1234, mileage: { number: 5678, unit: 'unit' }, fuelType: 'fuelType', color: 'color' }} | ${'Stock #'}      | ${'Stock #1234 - 5678 UNIT - FuelType - Color'}
+      ${{ stockNumber: 1234, mileage: null, fuelType: 'fuelType', color: 'color' }}                           | ${'Stock #'}      | ${'Stock #1234 - undefined  - FuelType - Color'}
     `(
       'should return $output for input car: $car, stockNumberPrefix: $stockNumberPrefix',
       ({ car, stockNumberPrefix, output }) => {

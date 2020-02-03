@@ -1,12 +1,12 @@
 import React from 'react';
 
-import { renderWithProviders } from 'utils/testUtils';
+import { renderWithTranslate } from 'utils/testUtils';
 
 import FavoritesLoader from '../FavoritesLoader';
 
 describe('<FavoritesLoader />', () => {
   const setup = () => {
-    const { renderResult } = renderWithProviders(<FavoritesLoader />);
+    const { renderResult } = renderWithTranslate(<FavoritesLoader />);
 
     return {
       renderResult,

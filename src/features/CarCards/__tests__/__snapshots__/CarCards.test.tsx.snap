@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CarCards /> should render the component and matches it against stored snapshot 1`] = `
+<DocumentFragment>
+  <section
+    class="MuiBox-root MuiBox-root-5"
+    data-testid="CarCards"
+  >
+    <section
+      class="MuiGrid-root makeStyles-carContainer-3 MuiGrid-container MuiGrid-spacing-xs-2"
+      data-testid="CarCard"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2"
+      >
+        <div
+          class="MuiBox-root MuiBox-root-109 makeStyles-carImageContainer-1"
+        >
+          <div
+            class="MuiCardMedia-root makeStyles-carImage-2"
+            style="background-image: url(image.svg);"
+            title="Abcd"
+          />
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10"
+      >
+        <h6
+          class="MuiTypography-root MuiTypography-h6 MuiTypography-gutterBottom"
+        >
+          Audi Abcd
+        </h6>
+        <p
+          class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom"
+        >
+          Stock #1234 - 1234 KM - Petrol - White
+        </p>
+        <a
+          class="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-body2 MuiTypography-colorTextSecondary"
+          href="/details/1234"
+        >
+          View details
+        </a>
+      </div>
+    </section>
+  </section>
+</DocumentFragment>
+`;

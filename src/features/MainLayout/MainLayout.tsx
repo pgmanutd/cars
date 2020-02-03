@@ -29,7 +29,7 @@ const MainLayout: React.FC = props => {
             <Switch>
               <Route path={routePaths.cars} exact component={Cars} />
               <Route
-                path={routePaths.carDetails}
+                path={routePaths.carDetails.path}
                 exact
                 component={CarDetails}
               />

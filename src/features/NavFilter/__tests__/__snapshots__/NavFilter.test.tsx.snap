@@ -2,7 +2,7 @@
 
 exports[`<NavFilter /> should render the component and matches it against stored snapshot for failed response 1`] = `
 <DocumentFragment>
-  <section
+  <aside
     class="MuiBox-root MuiBox-root-325 makeStyles-root-320"
     data-testid="NavFilter"
   >
@@ -25,13 +25,13 @@ exports[`<NavFilter /> should render the component and matches it against stored
         style="width: 92px; height: 70px;"
       />
     </div>
-  </section>
+  </aside>
 </DocumentFragment>
 `;
 
 exports[`<NavFilter /> should render the component and matches it against stored snapshot for success response 1`] = `
 <DocumentFragment>
-  <section
+  <aside
     class="MuiBox-root MuiBox-root-6 makeStyles-root-1"
     data-testid="NavFilter"
   >
@@ -142,6 +142,6 @@ exports[`<NavFilter /> should render the component and matches it against stored
         />
       </a>
     </div>
-  </section>
+  </aside>
 </DocumentFragment>
 `;
