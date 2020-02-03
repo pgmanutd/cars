@@ -1,0 +1,243 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CarListLoader /> should render the component and matches it against stored snapshot 1`] = `
+<DocumentFragment>
+  <section
+    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2"
+    data-testid="CarListLoader"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
+    >
+      <span
+        class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-pulse"
+        style="width: 30%; height: 40px;"
+      />
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8"
+    >
+      <span
+        class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-pulse"
+        style="width: 50%; height: 40px;"
+      />
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-4"
+    >
+      <span
+        class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-pulse"
+        style="height: 80px;"
+      />
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
+    >
+      <section
+        class="MuiBox-root MuiBox-root-116"
+        data-testid="CarCardsLoader"
+      >
+        <section
+          class="MuiGrid-root makeStyles-carContainer-114 MuiGrid-container MuiGrid-spacing-xs-2"
+          data-testid="CarCardLoader"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2"
+          >
+            <span
+              class="MuiSkeleton-root MuiSkeleton-rect MuiSkeleton-pulse"
+              style="width: 100px; height: 85px;"
+            />
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5"
+          >
+            <span
+              class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-pulse"
+              style="width: 80%; height: 32px;"
+            />
+            <span
+              class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-pulse"
+              style="width: 80%; height: 20px;"
+            />
+            <span
+              class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-pulse"
+              style="width: 30%; height: 16px;"
+            />
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5"
+          >
+            <span
+              class="MuiSkeleton-root MuiSkeleton-rect MuiSkeleton-pulse"
+              style="height: 150px;"
+            />
+          </div>
+        </section>
+        <section
+          class="MuiGrid-root makeStyles-carContainer-114 MuiGrid-container MuiGrid-spacing-xs-2"
+          data-testid="CarCardLoader"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2"
+          >
+            <span
+              class="MuiSkeleton-root MuiSkeleton-rect MuiSkeleton-pulse"
+              style="width: 100px; height: 85px;"
+            />
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5"
+          >
+            <span
+              class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-pulse"
+              style="width: 80%; height: 32px;"
+            />
+            <span
+              class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-pulse"
+              style="width: 80%; height: 20px;"
+            />
+            <span
+              class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-pulse"
+              style="width: 30%; height: 16px;"
+            />
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5"
+          >
+            <span
+              class="MuiSkeleton-root MuiSkeleton-rect MuiSkeleton-pulse"
+              style="height: 150px;"
+            />
+          </div>
+        </section>
+        <section
+          class="MuiGrid-root makeStyles-carContainer-114 MuiGrid-container MuiGrid-spacing-xs-2"
+          data-testid="CarCardLoader"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2"
+          >
+            <span
+              class="MuiSkeleton-root MuiSkeleton-rect MuiSkeleton-pulse"
+              style="width: 100px; height: 85px;"
+            />
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5"
+          >
+            <span
+              class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-pulse"
+              style="width: 80%; height: 32px;"
+            />
+            <span
+              class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-pulse"
+              style="width: 80%; height: 20px;"
+            />
+            <span
+              class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-pulse"
+              style="width: 30%; height: 16px;"
+            />
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5"
+          >
+            <span
+              class="MuiSkeleton-root MuiSkeleton-rect MuiSkeleton-pulse"
+              style="height: 150px;"
+            />
+          </div>
+        </section>
+        <section
+          class="MuiGrid-root makeStyles-carContainer-114 MuiGrid-container MuiGrid-spacing-xs-2"
+          data-testid="CarCardLoader"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2"
+          >
+            <span
+              class="MuiSkeleton-root MuiSkeleton-rect MuiSkeleton-pulse"
+              style="width: 100px; height: 85px;"
+            />
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5"
+          >
+            <span
+              class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-pulse"
+              style="width: 80%; height: 32px;"
+            />
+            <span
+              class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-pulse"
+              style="width: 80%; height: 20px;"
+            />
+            <span
+              class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-pulse"
+              style="width: 30%; height: 16px;"
+            />
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5"
+          >
+            <span
+              class="MuiSkeleton-root MuiSkeleton-rect MuiSkeleton-pulse"
+              style="height: 150px;"
+            />
+          </div>
+        </section>
+        <section
+          class="MuiGrid-root makeStyles-carContainer-114 MuiGrid-container MuiGrid-spacing-xs-2"
+          data-testid="CarCardLoader"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2"
+          >
+            <span
+              class="MuiSkeleton-root MuiSkeleton-rect MuiSkeleton-pulse"
+              style="width: 100px; height: 85px;"
+            />
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5"
+          >
+            <span
+              class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-pulse"
+              style="width: 80%; height: 32px;"
+            />
+            <span
+              class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-pulse"
+              style="width: 80%; height: 20px;"
+            />
+            <span
+              class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-pulse"
+              style="width: 30%; height: 16px;"
+            />
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5"
+          >
+            <span
+              class="MuiSkeleton-root MuiSkeleton-rect MuiSkeleton-pulse"
+              style="height: 150px;"
+            />
+          </div>
+        </section>
+      </section>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2"
+    />
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8"
+    >
+      <span
+        class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-pulse"
+        style="height: 40px;"
+      />
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2"
+    />
+  </section>
+</DocumentFragment>
+`;
