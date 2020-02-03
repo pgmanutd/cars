@@ -1,11 +1,7 @@
-import React, { useState, useReducer, useEffect } from 'react';
+import { useReducer, useEffect } from 'react';
 
 import { FetchState, FetchActionTypes } from './types';
-import {
-  FETCH_PENDING,
-  FETCH_SUCCESS,
-  FETCH_ERROR,
-} from './useFetchActionTypes';
+import { FETCH_PENDING, FETCH_SUCCESS, FETCH_ERROR } from './fetchActionTypes';
 
 const initialState: FetchState = { data: null, isLoading: false, error: null };
 
@@ -34,8 +30,7 @@ const reducer = (state: FetchState, action: FetchActionTypes) => {
   }
 };
 
-const useFetch = <T = {}>({ initialUrl }: { initialUrl: string }) => {
-  const [url, setUrl] = useState(initialUrl);
+const useFetch = <T = {}>({ url }: { url: string }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   useEffect(() => {
@@ -63,10 +58,7 @@ const useFetch = <T = {}>({ initialUrl }: { initialUrl: string }) => {
     };
   }, [url]);
 
-  return [state, setUrl] as [
-    FetchState<T>,
-    React.Dispatch<React.SetStateAction<string>>,
-  ];
+  return [state] as [FetchState<T>];
 };
 
 export default useFetch;

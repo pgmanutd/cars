@@ -1,8 +1,4 @@
-import {
-  FETCH_PENDING,
-  FETCH_SUCCESS,
-  FETCH_ERROR,
-} from './useFetchActionTypes';
+import { FETCH_PENDING, FETCH_SUCCESS, FETCH_ERROR } from './fetchActionTypes';
 
 export interface FetchState<T = {}> {
   data: T | null;

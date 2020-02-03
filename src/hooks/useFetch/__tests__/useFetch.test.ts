@@ -8,9 +8,7 @@ describe('#useFetch', () => {
   });
 
   const setup = ({ url }: { url: string }) => {
-    const { result, waitForNextUpdate } = renderHook(() =>
-      useFetch({ initialUrl: url }),
-    );
+    const { result, waitForNextUpdate } = renderHook(() => useFetch({ url }));
 
     return {
       result,
