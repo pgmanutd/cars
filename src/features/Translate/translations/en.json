@@ -31,5 +31,7 @@
   "pages.NotFound.redirect.link": "homepage",
   "pages.CarDetails.documentTitle": "Car Details",
   "pages.Cars.documentTitle": "Cars",
-  "pages.Favorites.documentTitle": "Favorites"
+  "pages.Favorites.documentTitle": "Favorites",
+  "pages.Favorites.headerText": "Favorite Cars",
+  "pages.Favorites.noFavoriteCarsText": "No favorite cars present."
 }

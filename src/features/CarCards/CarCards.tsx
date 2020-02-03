@@ -71,7 +71,7 @@ const CarCards: React.FC<CarCardsProps> = ({
             <Link
               component={RouterLink}
               to={routePaths.carDetails.pathWithParams({
-                stockNumber: car.stockNumber.toString(),
+                stockNumber: car.stockNumber?.toString(),
               })}
               color="textSecondary"
               variant="body2"

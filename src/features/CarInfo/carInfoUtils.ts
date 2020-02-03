@@ -1,4 +1,4 @@
-import { Car, CarResponse } from './types';
+import { Car, CarResponse, FavoriteCars } from './types';
 
 export const getCarInfo = ({
   isLoading,
@@ -7,7 +7,7 @@ export const getCarInfo = ({
 }: {
   isLoading: boolean;
   data: CarResponse | null;
-  favoriteCars: { [key: string]: {} };
+  favoriteCars: FavoriteCars;
 }) => {
   const isCarInfoLoading = isLoading || !data;
   const car = data?.car ?? ({} as Car);

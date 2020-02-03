@@ -19,7 +19,7 @@ import useLocalStorage from 'hooks/useLocalStorage';
 
 import { useTranslate } from 'features/Translate';
 
-import { StockNumberParam, CarResponse } from './types';
+import { StockNumberParam, CarResponse, FavoriteCars } from './types';
 import { getCarInfo } from './carInfoUtils';
 import { useStyles } from './carInfoStyles';
 
@@ -33,7 +33,7 @@ const CarInfo: React.FC<CarInfoProps> = ({ stockNumber, ...restProps }) => {
   const [{ isLoading, data, error }] = useFetch<CarResponse>({
     initialUrl: apiPaths.carDetails({ stockNumber }),
   });
-  const [favoriteCars, setFavoriteCars] = useLocalStorage(
+  const [favoriteCars, setFavoriteCars] = useLocalStorage<FavoriteCars>(
     LOCAL_STORAGE_KEYS.favoriteCars,
     {},
   );

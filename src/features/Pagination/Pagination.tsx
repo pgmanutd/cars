@@ -75,8 +75,8 @@ const Pagination: React.FC<PaginationProps> = ({
       </Button>
       <Typography variant="body2" display="inline" color="textPrimary">
         {translate('features.Pagination.description', {
-          CURRENT_PAGE: currentPage.toString(),
-          TOTAL_PAGE: totalPage.toString(),
+          CURRENT_PAGE: currentPage?.toString(),
+          TOTAL_PAGE: totalPage?.toString(),
         })}
       </Typography>
       <Button component={RouterLink} color="primary" {...next}>

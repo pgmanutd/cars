@@ -16,3 +16,7 @@ export interface Car {
 export interface CarResponse {
   car: Car;
 }
+
+export interface FavoriteCars {
+  [stockNumber: string]: Car;
+}

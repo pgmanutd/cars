@@ -69,7 +69,11 @@ const useLocalStorage = <T = {}>(
     );
   };
 
-  return [storedItem, setItem, removeItem];
+  return [storedItem, setItem, removeItem] as [
+    T,
+    (item: T) => void,
+    () => void,
+  ];
 };
 
 export default useLocalStorage;
