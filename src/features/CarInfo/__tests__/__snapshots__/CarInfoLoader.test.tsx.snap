@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CarInfoLoader /> should render the component and matches it against stored snapshot 1`] = `
+<DocumentFragment>
+  <section
+    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2"
+    data-testid="CarInfoLoader"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
+    >
+      <span
+        class="MuiSkeleton-root MuiSkeleton-rect MuiSkeleton-pulse"
+        data-testid="CarInfoImageSkeleton"
+        style="height: 200px;"
+      />
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-7"
+    >
+      <span
+        class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-pulse"
+        style="width: 50%; height: 50px;"
+      />
+      <span
+        class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-pulse"
+        style="height: 50px;"
+      />
+      <span
+        class="MuiSkeleton-root MuiSkeleton-rect MuiSkeleton-pulse"
+        style="height: 150px;"
+      />
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5"
+    >
+      <span
+        class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-pulse"
+        style="height: 250px;"
+      />
+    </div>
+  </section>
+</DocumentFragment>
+`;

@@ -4,7 +4,7 @@ exports[`<CarInfo /> should render the component and matches it against stored s
 <DocumentFragment>
   <section
     class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2"
-    data-testid="CarInfo"
+    data-testid="CarInfoLoader"
   >
     <div
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"

@@ -3,7 +3,6 @@ import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import Grid from '@material-ui/core/Grid';
 import CardMedia from '@material-ui/core/CardMedia';
-import Skeleton from '@material-ui/lab/Skeleton';
 import Button from '@material-ui/core/Button';
 import { Redirect } from 'react-router-dom';
 import _omit from 'lodash/fp/omit';
@@ -20,6 +19,7 @@ import useLocalStorage from 'hooks/useLocalStorage';
 import { useTranslate } from 'features/Translate';
 
 import { StockNumberParam, CarResponse, FavoriteCars } from './types';
+import CarInfoLoader from './CarInfoLoader';
 import { getCarInfo } from './carInfoUtils';
 import { useStyles } from './carInfoStyles';
 
@@ -59,6 +59,10 @@ const CarInfo: React.FC<CarInfoProps> = ({ stockNumber, ...restProps }) => {
     return <Redirect to={routePaths.notFound} />;
   }
 
+  if (isCarInfoLoading) {
+    return <CarInfoLoader />;
+  }
+
   return (
     <Grid
       data-testid="CarInfo"
@@ -68,74 +72,54 @@ const CarInfo: React.FC<CarInfoProps> = ({ stockNumber, ...restProps }) => {
       spacing={2}
     >
       <Grid item xs={12}>
-        {isCarInfoLoading ? (
-          <Skeleton
-            data-testid="CarInfoImageSkeleton"
-            variant="rect"
-            height={200}
-          />
-        ) : (
-          <Box className={classes.carImageContainer}>
-            {car.pictureUrl ? (
-              <CardMedia
-                image={car.pictureUrl}
-                title={car.modelName}
-                className={classes.carImage}
-              />
-            ) : (
-              car.modelName
-            )}
-          </Box>
-        )}
+        <Box className={classes.carImageContainer}>
+          {car.pictureUrl ? (
+            <CardMedia
+              image={car.pictureUrl}
+              title={car.modelName}
+              className={classes.carImage}
+            />
+          ) : (
+            car.modelName
+          )}
+        </Box>
       </Grid>
       <Grid item xs={7}>
-        {isCarInfoLoading ? (
-          <>
-            <Skeleton height={50} width="50%" />
-            <Skeleton height={50} />
-            <Skeleton variant="rect" height={150} />
-          </>
-        ) : (
-          <Box data-testid="CarInfoFeatures">
-            <Typography variant="h3" gutterBottom>
-              {getCarName(car)}
-            </Typography>
-            <Typography variant="body1" gutterBottom>
-              {getCarFeatures(car, {
-                stockNumberPrefix: translate(
-                  'features.CarInfo.stockNumberPrefix',
-                ),
-              })}
-            </Typography>
-            <Typography variant="body2">
-              {translate('features.CarInfo.description')}
-            </Typography>
-          </Box>
-        )}
+        <Box data-testid="CarInfoFeatures">
+          <Typography variant="h3" gutterBottom>
+            {getCarName(car)}
+          </Typography>
+          <Typography variant="body1" gutterBottom>
+            {getCarFeatures(car, {
+              stockNumberPrefix: translate(
+                'features.CarInfo.stockNumberPrefix',
+              ),
+            })}
+          </Typography>
+          <Typography variant="body2">
+            {translate('features.CarInfo.description')}
+          </Typography>
+        </Box>
       </Grid>
       <Grid item xs={5}>
-        {isCarInfoLoading ? (
-          <Skeleton height={250} />
-        ) : (
-          <Box className={classes.favoriteBox}>
-            <Typography variant="body2">
+        <Box className={classes.favoriteBox}>
+          <Typography variant="body2">
+            {isCarSetAsFavorite
+              ? translate('features.CarInfo.unFavoriteCarsDescription')
+              : translate('features.CarInfo.favoriteCarsDescription')}
+          </Typography>
+          <Box className={classes.favoriteButtonContainer}>
+            <Button
+              variant="contained"
+              color="primary"
+              onClick={handleFavoriteCars}
+            >
               {isCarSetAsFavorite
-                ? translate('features.CarInfo.unFavoriteCarsDescription')
-                : translate('features.CarInfo.favoriteCarsDescription')}
-            </Typography>
-            <Box className={classes.favoriteButtonContainer}>
-              <Button
-                variant="contained"
-                color="primary"
-                onClick={handleFavoriteCars}
-              >
-                {isCarSetAsFavorite
-                  ? translate('features.CarInfo.removeFavoriteButton')
-                  : translate('features.CarInfo.saveFavoriteButton')}
-              </Button>
-            </Box>
+                ? translate('features.CarInfo.removeFavoriteButton')
+                : translate('features.CarInfo.saveFavoriteButton')}
+            </Button>
           </Box>
-        )}
+        </Box>
       </Grid>
     </Grid>
   );
