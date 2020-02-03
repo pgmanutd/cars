@@ -4,3 +4,7 @@ export const QUERY_VALUES = {
   colorFilter: 'filters.color',
   manufacturerFilter: 'filters.manufacturer',
 };
+
+export const LOCAL_STORAGE_KEYS = {
+  favoriteCars: 'favoriteCars',
+};

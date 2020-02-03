@@ -21,7 +21,10 @@ const getItemFromLocalStorage = <T>(key: string, fallbackValue: T) => {
   return parseJSON<T>(localStorage.getItem(key), fallbackValue);
 };
 
-const useLocalStorage = <T = {}>(key: string, initialValue = null) => {
+const useLocalStorage = <T = {}>(
+  key: string,
+  initialValue: T | null = null,
+) => {
   const [storedItem, setStoredItem] = useState(() => {
     return getItemFromLocalStorage(key, initialValue);
   });

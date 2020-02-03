@@ -1,5 +1,6 @@
 import React from 'react';
 import { waitForElement } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import { Route } from 'react-router-dom';
 
 import { renderWithProviders } from 'utils/testUtils';
@@ -13,6 +14,8 @@ import CarInfo from '../CarInfo';
 describe('<CarInfo />', () => {
   beforeEach(() => {
     fetchMock.resetMocks();
+
+    localStorage.clear();
   });
 
   const setup = ({ stockNumber }: { stockNumber: StockNumberParam }) => {
@@ -40,7 +43,7 @@ describe('<CarInfo />', () => {
     };
   };
 
-  it('should render the component and matches it against stored snapshot for success response', async () => {
+  const setupForSuccessResponse = async () => {
     const stockNumber = '1234';
     const successResponse = {
       car: {
@@ -62,7 +65,30 @@ describe('<CarInfo />', () => {
 
     await waitForElement(() => renderResult.queryByTestId('CarInfoFeatures'));
 
+    return { renderResult, stockNumber };
+  };
+
+  it('should render the component and matches it against stored snapshot for success response', async () => {
+    const { renderResult } = await setupForSuccessResponse();
+
     expect(renderResult.asFragment()).toMatchSnapshot();
+  });
+
+  it('should add car to local storage and show "Remove" button', async () => {
+    const { renderResult } = await setupForSuccessResponse();
+
+    userEvent.click(renderResult.getByText('Save'));
+
+    expect(renderResult.getByText('Remove')).toBeInTheDocument();
+  });
+
+  it('should remove car from local storage and show "Save" button', async () => {
+    const { renderResult } = await setupForSuccessResponse();
+
+    userEvent.click(renderResult.getByText('Save'));
+    userEvent.click(renderResult.getByText('Remove'));
+
+    expect(renderResult.getByText('Save')).toBeInTheDocument();
   });
 
   it('should render the component and matches it against stored snapshot for blank response', async () => {
