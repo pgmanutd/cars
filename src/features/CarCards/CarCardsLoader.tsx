@@ -23,12 +23,15 @@ const CarCardsLoader: React.FC = () => {
             className={classes.carContainer}
           >
             <Grid item xs={2}>
-              <Skeleton height={80} width={80} variant="rect" />
+              <Skeleton height={85} width={100} variant="rect" />
             </Grid>
-            <Grid item xs={10}>
-              <Skeleton height={32} width="30%" />
-              <Skeleton height={20} width="50%" />
-              <Skeleton height={16} width="10%" />
+            <Grid item xs={5}>
+              <Skeleton height={32} width="80%" />
+              <Skeleton height={20} width="80%" />
+              <Skeleton height={16} width="30%" />
+            </Grid>
+            <Grid item xs={5}>
+              <Skeleton height={150} variant="rect" />
             </Grid>
           </Grid>
         ))}

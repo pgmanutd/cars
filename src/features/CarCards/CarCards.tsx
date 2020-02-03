@@ -11,6 +11,7 @@ import routePaths from 'constants/routePaths';
 import { getCarName, getCarFeatures } from 'utils/carUtils';
 
 import { useTranslate } from 'features/Translate';
+import AddFavoriteCar from 'features/AddFavoriteCar';
 
 import { Car } from 'features/CarInfo/types';
 
@@ -57,7 +58,7 @@ const CarCards: React.FC<CarCardsProps> = ({
               )}
             </Box>
           </Grid>
-          <Grid item xs={10}>
+          <Grid item xs={5}>
             <Typography variant="h6" gutterBottom>
               {getCarName(car)}
             </Typography>
@@ -78,6 +79,9 @@ const CarCards: React.FC<CarCardsProps> = ({
             >
               {translate('features.CarCards.viewDetailsLinkText')}
             </Link>
+          </Grid>
+          <Grid item xs={5}>
+            <AddFavoriteCar car={car} />
           </Grid>
         </Grid>
       ))}

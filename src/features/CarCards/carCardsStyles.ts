@@ -8,8 +8,8 @@ export const useStyles = makeStyles((theme: Theme) =>
       alignItems: 'center',
     },
     carImage: {
-      height: 80,
-      width: 80,
+      height: 85,
+      width: 100,
     },
     carContainer: {
       border: `1px solid ${theme.palette.divider}`,
