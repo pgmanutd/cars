@@ -6,6 +6,8 @@ import { HelmetProvider } from 'react-helmet-async';
 
 import routePaths from 'constants/routePaths';
 
+import ScrollToTop from 'features/ScrollToTop';
+
 import Cars from 'pages/Cars';
 import CarDetails from 'pages/CarDetails';
 import Favorites from 'pages/Favorites';
@@ -26,6 +28,7 @@ const MainLayout: React.FC = props => {
       <HelmetProvider>
         <Suspense fallback={<LinearProgress />}>
           <Router>
+            <ScrollToTop />
             <Switch>
               <Route path={routePaths.cars} exact component={Cars} />
               <Route
