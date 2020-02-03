@@ -16,9 +16,7 @@ export const getFilterButtonHref = ({
     [QUERY_VALUES.manufacturerFilter]: selectedManufacturer,
   };
 
-  return `${routePaths.cars}?${new URLSearchParams(
-    query as Record<string, string>,
-  )}`;
+  return `${routePaths.cars}?${new URLSearchParams(query)}`;
 };
 
 export const pickTargetValue = (event: React.ChangeEvent<{ value: unknown }>) =>

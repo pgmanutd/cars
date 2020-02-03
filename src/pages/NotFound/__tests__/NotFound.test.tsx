@@ -7,11 +7,10 @@ import NotFound from '../NotFound';
 
 describe('<NotFound />', () => {
   const setup = () => {
-    const { renderResult, history } = renderWithProviders(<NotFound />);
+    const { renderResult } = renderWithProviders(<NotFound />);
 
     return {
       renderResult,
-      history,
     };
   };
 

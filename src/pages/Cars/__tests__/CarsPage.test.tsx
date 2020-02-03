@@ -23,7 +23,7 @@ describe('<CarsPage />', () => {
       </Route>,
       {
         routerConfig: {
-          route: `/?${new URLSearchParams(query as Record<string, string>)}`,
+          route: `/?${new URLSearchParams(query)}`,
         },
       },
     );

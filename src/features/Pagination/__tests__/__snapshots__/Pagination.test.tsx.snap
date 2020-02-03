@@ -1,0 +1,293 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Pagination /> should render the component and matches it against stored snapshot for currentPage: 1, totalPage: 1 1`] = `
+<DocumentFragment>
+  <section
+    class="MuiBox-root MuiBox-root-2"
+    data-testid="Pagination"
+  >
+    <a
+      aria-disabled="true"
+      class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary Mui-disabled Mui-disabled"
+      href="/?page=1"
+      role="button"
+      tabindex="-1"
+    >
+      <span
+        class="MuiButton-label"
+      >
+        First
+      </span>
+    </a>
+    <a
+      aria-disabled="true"
+      class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary Mui-disabled Mui-disabled"
+      href="/?page=0"
+      role="button"
+      tabindex="-1"
+    >
+      <span
+        class="MuiButton-label"
+      >
+        Previous
+      </span>
+    </a>
+    <p
+      class="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextPrimary MuiTypography-displayInline"
+    >
+      Page 1 of 1
+    </p>
+    <a
+      aria-disabled="true"
+      class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary Mui-disabled Mui-disabled"
+      href="/?page=2"
+      role="button"
+      tabindex="-1"
+    >
+      <span
+        class="MuiButton-label"
+      >
+        Next
+      </span>
+    </a>
+    <a
+      aria-disabled="true"
+      class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary Mui-disabled Mui-disabled"
+      href="/?page=1"
+      role="button"
+      tabindex="-1"
+    >
+      <span
+        class="MuiButton-label"
+      >
+        Last
+      </span>
+    </a>
+  </section>
+</DocumentFragment>
+`;
+
+exports[`<Pagination /> should render the component and matches it against stored snapshot for currentPage: 1, totalPage: 3 1`] = `
+<DocumentFragment>
+  <section
+    class="MuiBox-root MuiBox-root-66"
+    data-testid="Pagination"
+  >
+    <a
+      aria-disabled="true"
+      class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary Mui-disabled Mui-disabled"
+      href="/?page=1"
+      role="button"
+      tabindex="-1"
+    >
+      <span
+        class="MuiButton-label"
+      >
+        First
+      </span>
+    </a>
+    <a
+      aria-disabled="true"
+      class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary Mui-disabled Mui-disabled"
+      href="/?page=0"
+      role="button"
+      tabindex="-1"
+    >
+      <span
+        class="MuiButton-label"
+      >
+        Previous
+      </span>
+    </a>
+    <p
+      class="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextPrimary MuiTypography-displayInline"
+    >
+      Page 1 of 3
+    </p>
+    <a
+      aria-disabled="false"
+      class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary"
+      href="/?page=2"
+      role="button"
+      tabindex="0"
+    >
+      <span
+        class="MuiButton-label"
+      >
+        Next
+      </span>
+      <span
+        class="MuiTouchRipple-root"
+      />
+    </a>
+    <a
+      aria-disabled="false"
+      class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary"
+      href="/?page=3"
+      role="button"
+      tabindex="0"
+    >
+      <span
+        class="MuiButton-label"
+      >
+        Last
+      </span>
+      <span
+        class="MuiTouchRipple-root"
+      />
+    </a>
+  </section>
+</DocumentFragment>
+`;
+
+exports[`<Pagination /> should render the component and matches it against stored snapshot for currentPage: 2, totalPage: 3 1`] = `
+<DocumentFragment>
+  <section
+    class="MuiBox-root MuiBox-root-140"
+    data-testid="Pagination"
+  >
+    <a
+      aria-disabled="false"
+      class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary"
+      href="/?page=1"
+      role="button"
+      tabindex="0"
+    >
+      <span
+        class="MuiButton-label"
+      >
+        First
+      </span>
+      <span
+        class="MuiTouchRipple-root"
+      />
+    </a>
+    <a
+      aria-disabled="false"
+      class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary"
+      href="/?page=1"
+      role="button"
+      tabindex="0"
+    >
+      <span
+        class="MuiButton-label"
+      >
+        Previous
+      </span>
+      <span
+        class="MuiTouchRipple-root"
+      />
+    </a>
+    <p
+      class="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextPrimary MuiTypography-displayInline"
+    >
+      Page 2 of 3
+    </p>
+    <a
+      aria-disabled="false"
+      class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary"
+      href="/?page=3"
+      role="button"
+      tabindex="0"
+    >
+      <span
+        class="MuiButton-label"
+      >
+        Next
+      </span>
+      <span
+        class="MuiTouchRipple-root"
+      />
+    </a>
+    <a
+      aria-disabled="false"
+      class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary"
+      href="/?page=3"
+      role="button"
+      tabindex="0"
+    >
+      <span
+        class="MuiButton-label"
+      >
+        Last
+      </span>
+      <span
+        class="MuiTouchRipple-root"
+      />
+    </a>
+  </section>
+</DocumentFragment>
+`;
+
+exports[`<Pagination /> should render the component and matches it against stored snapshot for currentPage: 3, totalPage: 3 1`] = `
+<DocumentFragment>
+  <section
+    class="MuiBox-root MuiBox-root-214"
+    data-testid="Pagination"
+  >
+    <a
+      aria-disabled="false"
+      class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary"
+      href="/?page=1"
+      role="button"
+      tabindex="0"
+    >
+      <span
+        class="MuiButton-label"
+      >
+        First
+      </span>
+      <span
+        class="MuiTouchRipple-root"
+      />
+    </a>
+    <a
+      aria-disabled="false"
+      class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary"
+      href="/?page=2"
+      role="button"
+      tabindex="0"
+    >
+      <span
+        class="MuiButton-label"
+      >
+        Previous
+      </span>
+      <span
+        class="MuiTouchRipple-root"
+      />
+    </a>
+    <p
+      class="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextPrimary MuiTypography-displayInline"
+    >
+      Page 3 of 3
+    </p>
+    <a
+      aria-disabled="true"
+      class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary Mui-disabled Mui-disabled"
+      href="/?page=4"
+      role="button"
+      tabindex="-1"
+    >
+      <span
+        class="MuiButton-label"
+      >
+        Next
+      </span>
+    </a>
+    <a
+      aria-disabled="true"
+      class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary Mui-disabled Mui-disabled"
+      href="/?page=3"
+      role="button"
+      tabindex="-1"
+    >
+      <span
+        class="MuiButton-label"
+      >
+        Last
+      </span>
+    </a>
+  </section>
+</DocumentFragment>
+`;

@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react';
+import React, { memo, useState, useCallback } from 'react';
 import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
 import FormControl from '@material-ui/core/FormControl';
@@ -142,4 +142,4 @@ const NavFilter: React.FC<NavFilterProps> = ({
   );
 };
 
-export default NavFilter;
+export default memo(NavFilter);

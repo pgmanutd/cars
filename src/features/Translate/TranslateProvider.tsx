@@ -1,5 +1,7 @@
 import React, { memo, useCallback, useMemo } from 'react';
 
+import replaceAllUtils from 'utils/replaceAllUtils';
+
 import TranslateContext from './TranslateContext';
 
 import enLanguage from './translations/en.json';
@@ -23,8 +25,14 @@ const TranslateProvider: React.FC<TranslateProviderProps> = ({
     [key: string]: string;
   };
 
-  const translate = useCallback<(translateKey: string) => string>(
-    translateKey => translations?.[translateKey] ?? translateKey,
+  const translate = useCallback<
+    (translateKey: string, mappedObject?: { [key: string]: string }) => string
+  >(
+    (translateKey, mappedObject = {}) =>
+      replaceAllUtils(
+        translations?.[translateKey] ?? translateKey,
+        mappedObject,
+      ),
     [translations],
   );
   const providerValue = useMemo(() => ({ translate }), [translate]);
