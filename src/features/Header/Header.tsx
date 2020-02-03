@@ -18,7 +18,6 @@ const Header: React.FC = props => {
     <AppBar
       data-testid="Header"
       {...props}
-      position="static"
       color="default"
       elevation={0}
       className={classes.root}

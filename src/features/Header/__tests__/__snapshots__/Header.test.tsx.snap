@@ -3,7 +3,7 @@
 exports[`<Header /> should render the component and matches it against stored snapshot 1`] = `
 <DocumentFragment>
   <header
-    class="MuiPaper-root MuiAppBar-root MuiAppBar-positionStatic makeStyles-root-1 MuiAppBar-colorDefault MuiPaper-elevation0"
+    class="MuiPaper-root MuiAppBar-root MuiAppBar-positionFixed makeStyles-root-1 MuiAppBar-colorDefault mui-fixed MuiPaper-elevation0"
     data-testid="Header"
   >
     <div
