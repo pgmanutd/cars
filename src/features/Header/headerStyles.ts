@@ -1,9 +1,11 @@
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
 
+import { HEADER_HEIGHT } from 'constants/styleConstants';
+
 export const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
-      height: 80,
+      height: HEADER_HEIGHT,
       position: 'sticky',
       borderBottom: `1px solid ${theme.palette.divider}`,
     },
