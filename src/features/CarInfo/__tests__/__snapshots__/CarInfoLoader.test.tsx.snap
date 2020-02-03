@@ -3,7 +3,7 @@
 exports[`<CarInfoLoader /> should render the component and matches it against stored snapshot 1`] = `
 <DocumentFragment>
   <section
-    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2"
+    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4"
     data-testid="CarInfoLoader"
   >
     <div
@@ -20,7 +20,7 @@ exports[`<CarInfoLoader /> should render the component and matches it against st
     >
       <span
         class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-pulse"
-        style="width: 50%; height: 50px;"
+        style="width: 70%; height: 100px;"
       />
       <span
         class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-pulse"
@@ -28,7 +28,7 @@ exports[`<CarInfoLoader /> should render the component and matches it against st
       />
       <span
         class="MuiSkeleton-root MuiSkeleton-rect MuiSkeleton-pulse"
-        style="height: 150px;"
+        style="height: 100px;"
       />
     </div>
     <div
