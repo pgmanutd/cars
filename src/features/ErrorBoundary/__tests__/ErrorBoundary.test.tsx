@@ -5,6 +5,10 @@ import { renderWithTranslate } from 'utils/testUtils';
 import ErrorBoundary from '../ErrorBoundary';
 
 describe('<ErrorBoundary />', () => {
+  beforeEach(() => {
+    spyOn(console, 'error');
+  });
+
   const setup = ({ shouldRenderChildComponentWithError = true } = {}) => {
     const ErrorThrower = () => {
       throw new Error('I crashed!');
@@ -22,10 +26,6 @@ describe('<ErrorBoundary />', () => {
       ErrorThrower,
     };
   };
-
-  beforeEach(() => {
-    spyOn(console, 'error');
-  });
 
   describe('render the component and matches it against stored snapshot', () => {
     it('when some error is thrown from any child component', () => {

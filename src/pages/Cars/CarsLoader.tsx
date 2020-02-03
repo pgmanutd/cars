@@ -15,10 +15,10 @@ const CarsLoader: React.FC = () => {
       className={classes.root}
     >
       <Grid container spacing={2}>
-        <Grid item xs={3}>
+        <Grid item xs={4}>
           <Skeleton variant="rect" height={200} />
         </Grid>
-        <Grid item xs={9}>
+        <Grid item xs={8}>
           <Skeleton variant="rect" height={400} />
         </Grid>
       </Grid>

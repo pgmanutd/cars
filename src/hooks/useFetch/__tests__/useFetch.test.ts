@@ -3,6 +3,10 @@ import { renderHook } from '@testing-library/react-hooks';
 import useFetch from '../useFetch';
 
 describe('#useQuery', () => {
+  beforeEach(() => {
+    fetchMock.resetMocks();
+  });
+
   const setup = ({ url }: { url: string }) => {
     const { result, waitForNextUpdate } = renderHook(() =>
       useFetch({ initialUrl: url }),
@@ -13,10 +17,6 @@ describe('#useQuery', () => {
       waitForNextUpdate,
     };
   };
-
-  beforeEach(() => {
-    fetchMock.resetMocks();
-  });
 
   it('should use fetch and gets the success response', async () => {
     const url = '/some-url';

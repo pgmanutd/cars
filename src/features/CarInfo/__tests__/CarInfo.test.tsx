@@ -11,6 +11,10 @@ import { StockNumberParam } from '../types';
 import CarInfo from '../CarInfo';
 
 describe('<CarInfo />', () => {
+  beforeEach(() => {
+    fetchMock.resetMocks();
+  });
+
   const setup = ({ stockNumber }: { stockNumber: StockNumberParam }) => {
     const initialRoute = `/details/${stockNumber}`;
 
@@ -35,10 +39,6 @@ describe('<CarInfo />', () => {
       history,
     };
   };
-
-  beforeEach(() => {
-    fetchMock.resetMocks();
-  });
 
   it('should render the component and matches it against stored snapshot for success response', async () => {
     const stockNumber = '1234';

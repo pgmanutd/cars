@@ -1,0 +1,147 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<NavFilter /> should render the component and matches it against stored snapshot for failed response 1`] = `
+<DocumentFragment>
+  <section
+    class="MuiBox-root MuiBox-root-325 makeStyles-root-320"
+    data-testid="NavFilter"
+  >
+    <span
+      class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-pulse"
+      data-testid="NavFilterColorSkeleton"
+      style="height: 48px;"
+    />
+    <span
+      class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-pulse"
+      data-testid="NavFilterManufacturerSkeleton"
+      style="height: 48px;"
+    />
+    <div
+      class="MuiBox-root MuiBox-root-334 makeStyles-filterButtonContainer-323"
+    >
+      <span
+        class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-pulse"
+        data-testid="NavFilterButtonSkeleton"
+        style="width: 92px; height: 70px;"
+      />
+    </div>
+  </section>
+</DocumentFragment>
+`;
+
+exports[`<NavFilter /> should render the component and matches it against stored snapshot for success response 1`] = `
+<DocumentFragment>
+  <section
+    class="MuiBox-root MuiBox-root-6 makeStyles-root-1"
+    data-testid="NavFilter"
+  >
+    <div
+      class="MuiFormControl-root makeStyles-formControl-2"
+      data-testid="NavFilterColor"
+    >
+      <label
+        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink"
+        data-shrink="true"
+        id="NavFilterColorLabel"
+      >
+        Color
+      </label>
+      <div
+        class="MuiInputBase-root MuiInput-root MuiInput-underline makeStyles-selectEmpty-3 MuiInputBase-formControl MuiInput-formControl"
+      >
+        <div
+          aria-haspopup="listbox"
+          aria-labelledby="NavFilterColorLabel NavFilterColorLabelSelect"
+          class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
+          id="NavFilterColorLabelSelect"
+          role="button"
+          tabindex="0"
+        >
+          <em>
+            All car colors
+          </em>
+        </div>
+        <input
+          type="hidden"
+          value=""
+        />
+        <svg
+          aria-hidden="true"
+          class="MuiSvgIcon-root MuiSelect-icon"
+          focusable="false"
+          role="presentation"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M7 10l5 5 5-5z"
+          />
+        </svg>
+      </div>
+    </div>
+    <div
+      class="MuiFormControl-root makeStyles-formControl-2"
+      data-testid="NavFilterColorManufacturer"
+    >
+      <label
+        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink"
+        data-shrink="true"
+        id="NavFilterManufacturerLabel"
+      >
+        Manufacturer
+      </label>
+      <div
+        class="MuiInputBase-root MuiInput-root MuiInput-underline makeStyles-selectEmpty-3 MuiInputBase-formControl MuiInput-formControl"
+      >
+        <div
+          aria-haspopup="listbox"
+          aria-labelledby="NavFilterManufacturerLabel NavFilterManufacturerLabelSelect"
+          class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
+          id="NavFilterManufacturerLabelSelect"
+          role="button"
+          tabindex="0"
+        >
+          <em>
+            All manufacturers
+          </em>
+        </div>
+        <input
+          type="hidden"
+          value=""
+        />
+        <svg
+          aria-hidden="true"
+          class="MuiSvgIcon-root MuiSelect-icon"
+          focusable="false"
+          role="presentation"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M7 10l5 5 5-5z"
+          />
+        </svg>
+      </div>
+    </div>
+    <div
+      class="MuiBox-root MuiBox-root-15 makeStyles-filterButtonContainer-4"
+    >
+      <a
+        aria-disabled="false"
+        class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-containedSizeLarge MuiButton-sizeLarge"
+        data-testid="NavFilterButton"
+        href="/?filters.color=&filters.manufacturer="
+        role="button"
+        tabindex="0"
+      >
+        <span
+          class="MuiButton-label"
+        >
+          Filter
+        </span>
+        <span
+          class="MuiTouchRipple-root"
+        />
+      </a>
+    </div>
+  </section>
+</DocumentFragment>
+`;

@@ -53,11 +53,12 @@ exports[`<CarInfo /> should render the component and matches it against stored s
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
     >
       <div
-        class="MuiBox-root MuiBox-root-114 makeStyles-carImageContainer-1"
+        class="MuiBox-root MuiBox-root-115 makeStyles-carImageContainer-1"
       >
-        <img
-          alt="Sedici"
-          src="https://dummyimage.com/300/09f/fff.png"
+        <div
+          class="MuiCardMedia-root makeStyles-carImage-2"
+          style="background-image: url(https://dummyimage.com/300/09f/fff.png);"
+          title="Sedici"
         />
       </div>
     </div>
@@ -65,7 +66,7 @@ exports[`<CarInfo /> should render the component and matches it against stored s
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6"
     >
       <div
-        class="MuiBox-root MuiBox-root-115"
+        class="MuiBox-root MuiBox-root-119"
         data-testid="CarInfoFeatures"
       >
         <h3

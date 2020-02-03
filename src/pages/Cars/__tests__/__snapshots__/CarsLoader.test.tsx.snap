@@ -10,7 +10,7 @@ exports[`<CarsLoader /> should render the component and matches it against store
       class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2"
     >
       <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-3"
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-4"
       >
         <span
           class="MuiSkeleton-root MuiSkeleton-rect MuiSkeleton-pulse"
@@ -18,7 +18,7 @@ exports[`<CarsLoader /> should render the component and matches it against store
         />
       </div>
       <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-9"
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8"
       >
         <span
           class="MuiSkeleton-root MuiSkeleton-rect MuiSkeleton-pulse"

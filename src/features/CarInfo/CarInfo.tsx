@@ -2,6 +2,7 @@ import React, { memo } from 'react';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import Grid from '@material-ui/core/Grid';
+import CardMedia from '@material-ui/core/CardMedia';
 import Skeleton from '@material-ui/lab/Skeleton';
 import { Redirect } from 'react-router-dom';
 
@@ -52,7 +53,15 @@ const CarInfo: React.FC<CarInfoProps> = ({ stockNumber, ...restProps }) => {
           />
         ) : (
           <Box className={classes.carImageContainer}>
-            <img src={car.pictureUrl} alt={car.modelName} />
+            {car.pictureUrl ? (
+              <CardMedia
+                image={car.pictureUrl}
+                title={car.modelName}
+                className={classes.carImage}
+              />
+            ) : (
+              car.modelName
+            )}
           </Box>
         )}
       </Grid>

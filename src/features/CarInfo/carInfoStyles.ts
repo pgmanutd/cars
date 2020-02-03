@@ -3,8 +3,12 @@ import { makeStyles, createStyles } from '@material-ui/core/styles';
 export const useStyles = makeStyles(() =>
   createStyles({
     carImageContainer: {
-      textAlign: 'center',
-      minHeight: 280,
+      display: 'flex',
+      justifyContent: 'center',
+    },
+    carImage: {
+      height: 250,
+      width: 300,
     },
   }),
 );
