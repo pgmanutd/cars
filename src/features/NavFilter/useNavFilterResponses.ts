@@ -11,7 +11,7 @@ import {
 
 const useNavFilterResponses = () => {
   const [colorsResponse] = useFetch<ColorsResponse>({
-    initialUrl: apiPaths.colors(),
+    url: apiPaths.colors(),
   });
 
   // NOTE: Not handling error case as of now. Showing skeleton instead in case of error.
@@ -23,7 +23,7 @@ const useNavFilterResponses = () => {
   const colorsResponseValue = colorsResponse.data?.colors ?? ([] as Colors);
 
   const [manufacturersResponse] = useFetch<ManufacturersResponse>({
-    initialUrl: apiPaths.manufacturers(),
+    url: apiPaths.manufacturers(),
   });
 
   const areManufacturersResponseLoading = !!(

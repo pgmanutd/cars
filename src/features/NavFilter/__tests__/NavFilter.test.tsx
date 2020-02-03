@@ -5,7 +5,6 @@ import { Route } from 'react-router-dom';
 
 import apiPaths from 'constants/apiPaths';
 import routePaths from 'constants/routePaths';
-import { QUERY_VALUES } from 'constants/appConstants';
 
 import { renderWithProviders } from 'utils/testUtils';
 
@@ -18,20 +17,17 @@ describe('<NavFilter />', () => {
   });
 
   const setup = ({
-    selectedColor,
-    selectedManufacturer,
+    color,
+    manufacturer,
   }: {
-    selectedColor: ColorQuery;
-    selectedManufacturer: ManufacturerQuery;
+    color: ColorQuery;
+    manufacturer: ManufacturerQuery;
   }) => {
     const initialRoute = routePaths.cars;
 
     const { renderResult, history } = renderWithProviders(
       <Route path={initialRoute}>
-        <NavFilter
-          selectedColor={selectedColor}
-          selectedManufacturer={selectedManufacturer}
-        />
+        <NavFilter color={color} manufacturer={manufacturer} />
       </Route>,
       {
         routerConfig: {
@@ -47,12 +43,12 @@ describe('<NavFilter />', () => {
   };
 
   const setupForSuccessResponse = async () => {
-    const selectedColor = '';
+    const color = '';
     const successColorsResponse = {
       colors: ['white'],
     };
 
-    const selectedManufacturer = '';
+    const manufacturer = '';
     const successManufacturerResponse = {
       manufacturers: [
         {
@@ -75,8 +71,8 @@ describe('<NavFilter />', () => {
       .mockResponseOnce(JSON.stringify(successManufacturerResponse));
 
     const { renderResult, history } = setup({
-      selectedColor,
-      selectedManufacturer,
+      color,
+      manufacturer,
     });
 
     await waitForElement(() => renderResult.queryByTestId('NavFilterButton'));
@@ -115,15 +111,14 @@ describe('<NavFilter />', () => {
 
     const searchParams = new URLSearchParams(history.location.search);
 
-    expect([
-      searchParams.get(QUERY_VALUES.colorFilter),
-      searchParams.get(QUERY_VALUES.manufacturerFilter),
-    ]).toStrictEqual([color, manufacturer]);
+    expect(searchParams.toString()).toStrictEqual(
+      `filters.color=${color}&filters.manufacturer=${manufacturer}`,
+    );
   });
 
   it('should render the component and matches it against stored snapshot for failed response', async () => {
-    const selectedColor = 'white';
-    const selectedManufacturer = 'Audi';
+    const color = 'white';
+    const manufacturer = 'Audi';
     const errorResponse = new Error('Some error');
 
     fetchMock.doMockOnceIf(apiPaths.colors()).mockRejectOnce(errorResponse);
@@ -132,8 +127,8 @@ describe('<NavFilter />', () => {
       .mockRejectOnce(errorResponse);
 
     const { renderResult } = setup({
-      selectedColor,
-      selectedManufacturer,
+      color,
+      manufacturer,
     });
 
     await waitForElement(() =>

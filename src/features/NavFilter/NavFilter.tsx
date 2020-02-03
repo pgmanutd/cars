@@ -8,37 +8,44 @@ import Button from '@material-ui/core/Button';
 import { Link as RouterLink } from 'react-router-dom';
 import _compose from 'lodash/fp/compose';
 
+import { QUERY_KEYS } from 'constants/appConstants';
+import routePaths from 'constants/routePaths';
+
+import appendBasePath from 'utils/appendBasePath';
+import pickTargetValue from 'utils/pickTargetValue';
+
+import useSetURLQuery from 'hooks/useSetURLQuery';
+
 import { useTranslate } from 'features/Translate';
 
 import { ColorQuery, ManufacturerQuery } from './types';
 import NavFilterLoader from './NavFilterLoader';
-import { getFilterButtonHref, pickTargetValue } from './navFilterUtils';
 import useNavFilterResponses from './useNavFilterResponses';
 import { useStyles } from './navFilterStyles';
 
 export interface NavFilterProps {
-  selectedColor: ColorQuery;
-  selectedManufacturer: ManufacturerQuery;
+  color: ColorQuery;
+  manufacturer: ManufacturerQuery;
 }
 
 const NavFilter: React.FC<NavFilterProps> = ({
-  selectedColor,
-  selectedManufacturer,
+  color,
+  manufacturer,
   ...restProps
 }) => {
   const classes = useStyles();
   const { translate } = useTranslate();
 
-  const [color, setColor] = useState(selectedColor);
-  const [manufacturer, setManufacturer] = useState(selectedManufacturer);
+  const [currentColor, setCurrentColor] = useState(color);
+  const [currentManufacturer, setCurrentManufacturer] = useState(manufacturer);
 
-  const handleColorChange = useCallback(
-    _compose(setColor, pickTargetValue),
+  const handleCurrentColorChange = useCallback(
+    _compose(setCurrentColor, pickTargetValue),
     [],
   );
 
-  const handleManufacturerChange = useCallback(
-    _compose(setManufacturer, pickTargetValue),
+  const handleCurrentManufacturerChange = useCallback(
+    _compose(setCurrentManufacturer, pickTargetValue),
     [],
   );
 
@@ -49,6 +56,14 @@ const NavFilter: React.FC<NavFilterProps> = ({
     manufacturersResponseValue,
     areNavFiltersResponseLoading,
   } = useNavFilterResponses();
+
+  const filterButtonParams = useSetURLQuery(
+    {
+      [QUERY_KEYS.colorFilter]: currentColor,
+      [QUERY_KEYS.manufacturerFilter]: currentManufacturer,
+    },
+    { replaceExistingQuery: true },
+  );
 
   if (areNavFiltersResponseLoading) {
     return (
@@ -74,8 +89,8 @@ const NavFilter: React.FC<NavFilterProps> = ({
         <Select
           labelId="NavFilterColorLabel"
           id="NavFilterColorLabelSelect"
-          value={color}
-          onChange={handleColorChange}
+          value={currentColor}
+          onChange={handleCurrentColorChange}
           displayEmpty
           className={classes.selectEmpty}
         >
@@ -89,7 +104,6 @@ const NavFilter: React.FC<NavFilterProps> = ({
           ))}
         </Select>
       </FormControl>
-
       <FormControl
         data-testid="NavFilterColorManufacturer"
         className={classes.formControl}
@@ -100,8 +114,8 @@ const NavFilter: React.FC<NavFilterProps> = ({
         <Select
           labelId="NavFilterManufacturerLabel"
           id="NavFilterManufacturerLabelSelect"
-          value={manufacturer}
-          onChange={handleManufacturerChange}
+          value={currentManufacturer}
+          onChange={handleCurrentManufacturerChange}
           displayEmpty
           className={classes.selectEmpty}
         >
@@ -122,10 +136,7 @@ const NavFilter: React.FC<NavFilterProps> = ({
           variant="contained"
           color="primary"
           size="large"
-          to={`${getFilterButtonHref({
-            selectedColor: color,
-            selectedManufacturer: manufacturer,
-          })}`}
+          to={appendBasePath(routePaths.cars, filterButtonParams)}
         >
           {translate('features.NavFilter.filterButtonText')}
         </Button>
