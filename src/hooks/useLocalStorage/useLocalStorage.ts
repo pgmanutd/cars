@@ -2,12 +2,7 @@ import { useState, useEffect } from 'react';
 
 import parseJSON from 'utils/parseJSON';
 
-export interface LocalStorageChangeValue<T> {
-  key: string;
-  item: T | null;
-}
-
-const eventListenerName = 'onLocalStorageChange';
+const eventListenerName = 'storage';
 
 const removeItemFromLocalStorage = (key: string) => {
   localStorage.removeItem(key);
@@ -30,11 +25,9 @@ const useLocalStorage = <T = {}>(
   });
 
   useEffect(() => {
-    const storageListener = ({
-      detail,
-    }: CustomEventInit<LocalStorageChangeValue<T>>) => {
-      if (detail?.key === key) {
-        setStoredItem(detail.item);
+    const storageListener = ({ key: storageKey, newValue }: StorageEvent) => {
+      if (storageKey === key) {
+        setStoredItem(parseJSON(newValue, initialValue));
       }
     };
 
@@ -49,24 +42,12 @@ const useLocalStorage = <T = {}>(
     setStoredItem(item);
 
     addItemToLocalStorage(key, item);
-
-    window.dispatchEvent(
-      new CustomEvent<LocalStorageChangeValue<T>>(eventListenerName, {
-        detail: { key, item },
-      }),
-    );
   };
 
   const removeItem = () => {
     setStoredItem(initialValue);
 
     removeItemFromLocalStorage(key);
-
-    window.dispatchEvent(
-      new CustomEvent<LocalStorageChangeValue<T>>(eventListenerName, {
-        detail: { key, item: initialValue },
-      }),
-    );
   };
 
   return [storedItem, setItem, removeItem] as [
