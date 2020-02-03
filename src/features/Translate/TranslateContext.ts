@@ -1,12 +1,12 @@
 import React from 'react';
 
-import replaceAllUtils from 'utils/replaceAllUtils';
+import replaceAll from 'utils/replaceAll';
 
 const TranslateContext = React.createContext({
   translate: (
     translateKey: string,
     mappedObject: { [key: string]: string } = {},
-  ) => replaceAllUtils(translateKey, mappedObject),
+  ) => replaceAll(translateKey, mappedObject),
 });
 
 export default TranslateContext;

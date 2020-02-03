@@ -1,6 +1,6 @@
 import React, { memo, useCallback, useMemo } from 'react';
 
-import replaceAllUtils from 'utils/replaceAllUtils';
+import replaceAll from 'utils/replaceAll';
 
 import TranslateContext from './TranslateContext';
 
@@ -29,10 +29,7 @@ const TranslateProvider: React.FC<TranslateProviderProps> = ({
     (translateKey: string, mappedObject?: { [key: string]: string }) => string
   >(
     (translateKey, mappedObject = {}) =>
-      replaceAllUtils(
-        translations?.[translateKey] ?? translateKey,
-        mappedObject,
-      ),
+      replaceAll(translations?.[translateKey] ?? translateKey, mappedObject),
     [translations],
   );
   const providerValue = useMemo(() => ({ translate }), [translate]);

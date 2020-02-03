@@ -2,7 +2,7 @@ import { renderHook } from '@testing-library/react-hooks';
 
 import useFetch from '../useFetch';
 
-describe('#useQuery', () => {
+describe('#useFetch', () => {
   beforeEach(() => {
     fetchMock.resetMocks();
   });

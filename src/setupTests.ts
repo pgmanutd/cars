@@ -4,6 +4,8 @@
 // learn more: https://github.com/testing-library/jest-dom
 import '@testing-library/jest-dom/extend-expect';
 
+require('jest-localstorage-mock');
+
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const jestFetchMock = require('jest-fetch-mock');
 

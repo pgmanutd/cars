@@ -1,4 +1,4 @@
-const replaceAllUtils = (
+const replaceAll = (
   value: string,
   mappedObject: { [key: string]: string } = {},
 ) => {
@@ -15,4 +15,4 @@ const replaceAllUtils = (
   });
 };
 
-export default replaceAllUtils;
+export default replaceAll;
