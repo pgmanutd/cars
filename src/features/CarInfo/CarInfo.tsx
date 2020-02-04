@@ -13,7 +13,7 @@ import { getCarName, getCarFeatures } from 'utils/carUtils';
 import useFetch from 'hooks/useFetch';
 
 import { useTranslate } from 'features/Translate';
-import AddFavoriteCar from 'features/AddFavoriteCar';
+import ToggleFavoriteCar from 'features/ToggleFavoriteCar';
 
 import { StockNumberParam, CarResponse } from './types';
 import CarInfoLoader from './CarInfoLoader';
@@ -83,7 +83,7 @@ const CarInfo: React.FC<CarInfoProps> = ({ stockNumber, ...restProps }) => {
         </Box>
       </Grid>
       <Grid item md={5} xs={12}>
-        <AddFavoriteCar car={car} />
+        <ToggleFavoriteCar car={car} />
       </Grid>
     </Grid>
   );

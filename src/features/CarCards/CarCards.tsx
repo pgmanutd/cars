@@ -11,7 +11,7 @@ import routePaths from 'constants/routePaths';
 import { getCarName, getCarFeatures } from 'utils/carUtils';
 
 import { useTranslate } from 'features/Translate';
-import AddFavoriteCar from 'features/AddFavoriteCar';
+import ToggleFavoriteCar from 'features/ToggleFavoriteCar';
 
 import { Car } from 'features/CarInfo/types';
 
@@ -83,7 +83,7 @@ const CarCards: React.FC<CarCardsProps> = ({
             </Link>
           </Grid>
           <Grid item md={5} xs={12}>
-            <AddFavoriteCar car={car} />
+            <ToggleFavoriteCar car={car} />
           </Grid>
         </Grid>
       ))}

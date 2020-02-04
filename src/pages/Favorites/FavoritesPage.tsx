@@ -7,7 +7,7 @@ import { LOCAL_STORAGE_KEYS } from 'constants/appConstants';
 
 import useLocalStorage from 'hooks/useLocalStorage';
 
-import { FavoriteCars } from 'features/AddFavoriteCar/types';
+import { FavoriteCars } from 'features/ToggleFavoriteCar/types';
 import { useTranslate } from 'features/Translate';
 import CarCards from 'features/CarCards';
 

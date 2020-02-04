@@ -3,9 +3,9 @@ import userEvent from '@testing-library/user-event';
 
 import { renderWithTranslate } from 'utils/testUtils';
 
-import AddFavoriteCar from '../AddFavoriteCar';
+import ToggleFavoriteCar from '../ToggleFavoriteCar';
 
-describe('<AddFavoriteCar />', () => {
+describe('<ToggleFavoriteCar />', () => {
   beforeEach(() => {
     localStorage.clear();
   });
@@ -20,7 +20,9 @@ describe('<AddFavoriteCar />', () => {
       fuelType: 'Diesel',
       pictureUrl: 'https://dummyimage.com/300/09f/fff.png',
     };
-    const { renderResult } = renderWithTranslate(<AddFavoriteCar car={car} />);
+    const { renderResult } = renderWithTranslate(
+      <ToggleFavoriteCar car={car} />,
+    );
 
     return {
       renderResult,

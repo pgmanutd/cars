@@ -48,7 +48,7 @@ exports[`<CarCards /> should render the component and matches it against stored 
       >
         <div
           class="MuiBox-root MuiBox-root-151 makeStyles-root-149"
-          data-testid="AddFavoriteCar"
+          data-testid="ToggleFavoriteCar"
         >
           <p
             class="MuiTypography-root MuiTypography-body2"

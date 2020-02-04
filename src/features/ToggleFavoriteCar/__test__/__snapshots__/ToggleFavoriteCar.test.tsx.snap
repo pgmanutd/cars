@@ -1,10 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<AddFavoriteCar /> should render the component and matches it against stored snapshot 1`] = `
+exports[`<ToggleFavoriteCar /> should render the component and matches it against stored snapshot 1`] = `
 <DocumentFragment>
   <div
     class="MuiBox-root MuiBox-root-4 makeStyles-root-1"
-    data-testid="AddFavoriteCar"
+    data-testid="ToggleFavoriteCar"
   >
     <p
       class="MuiTypography-root MuiTypography-body2"
