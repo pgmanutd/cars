@@ -5,9 +5,11 @@ import replaceAll from 'utils/replaceAll';
 import TranslateContext from './TranslateContext';
 
 import enLanguage from './translations/en.json';
+import deLanguage from './translations/de.json';
 
 const languages = {
   en: enLanguage,
+  de: deLanguage,
 };
 
 export interface TranslateProviderProps {
