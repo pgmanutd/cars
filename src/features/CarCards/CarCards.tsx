@@ -31,9 +31,11 @@ const CarCards: React.FC<CarCardsProps> = ({
   const classes = useStyles();
   const { translate } = useTranslate();
 
-  return isLoading ? (
-    <CarCardsLoader />
-  ) : (
+  if (isLoading) {
+    return <CarCardsLoader />;
+  }
+
+  return (
     <Box data-testid="CarCards" {...restProps} component="section">
       {cars.map(car => (
         <Grid
