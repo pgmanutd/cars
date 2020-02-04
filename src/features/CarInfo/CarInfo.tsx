@@ -52,7 +52,7 @@ const CarInfo: React.FC<CarInfoProps> = ({ stockNumber, ...restProps }) => {
       container
       spacing={4}
     >
-      <Grid item xs={12}>
+      <Grid item md={12} xs={12}>
         <Box className={classes.carImageContainer}>
           {car.pictureUrl ? (
             <CardMedia
@@ -65,7 +65,7 @@ const CarInfo: React.FC<CarInfoProps> = ({ stockNumber, ...restProps }) => {
           )}
         </Box>
       </Grid>
-      <Grid item xs={7}>
+      <Grid item md={7} xs={12}>
         <Box data-testid="CarInfoFeatures">
           <Typography variant="h3" gutterBottom>
             {getCarName(car)}
@@ -82,7 +82,7 @@ const CarInfo: React.FC<CarInfoProps> = ({ stockNumber, ...restProps }) => {
           </Typography>
         </Box>
       </Grid>
-      <Grid item xs={5}>
+      <Grid item md={5} xs={12}>
         <AddFavoriteCar car={car} />
       </Grid>
     </Grid>

@@ -11,7 +11,7 @@ exports[`<CarCards /> should render the component and matches it against stored 
       data-testid="CarCard"
     >
       <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2"
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-2"
       >
         <div
           class="MuiBox-root MuiBox-root-109 makeStyles-carImageContainer-1"
@@ -24,7 +24,7 @@ exports[`<CarCards /> should render the component and matches it against stored 
         </div>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5"
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-5"
       >
         <h6
           class="MuiTypography-root MuiTypography-h6 MuiTypography-gutterBottom"
@@ -44,7 +44,7 @@ exports[`<CarCards /> should render the component and matches it against stored 
         </a>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5"
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-5"
       >
         <div
           class="MuiBox-root MuiBox-root-151 makeStyles-root-149"

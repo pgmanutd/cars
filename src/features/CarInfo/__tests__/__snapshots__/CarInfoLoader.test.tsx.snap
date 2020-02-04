@@ -7,7 +7,7 @@ exports[`<CarInfoLoader /> should render the component and matches it against st
     data-testid="CarInfoLoader"
   >
     <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-12"
     >
       <span
         class="MuiSkeleton-root MuiSkeleton-rect MuiSkeleton-pulse"
@@ -16,7 +16,7 @@ exports[`<CarInfoLoader /> should render the component and matches it against st
       />
     </div>
     <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-7"
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-7"
     >
       <span
         class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-pulse"
@@ -32,7 +32,7 @@ exports[`<CarInfoLoader /> should render the component and matches it against st
       />
     </div>
     <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5"
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-5"
     >
       <span
         class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-pulse"

@@ -65,14 +65,14 @@ const CarList: React.FC<CarListProps> = ({
       container
       spacing={2}
     >
-      <Grid item xs={12}>
+      <Grid item md={12} xs={12}>
         <Typography variant="h5" gutterBottom>
           {translate('features.CarList.headerText')}
         </Typography>
       </Grid>
       {hasCars ? (
         <>
-          <Grid item xs={8}>
+          <Grid item md={8} xs={12}>
             <Typography variant="body1">
               {translate('features.CarList.subHeaderText', {
                 CARS_COUNT: carsCount?.toString(),
@@ -80,13 +80,13 @@ const CarList: React.FC<CarListProps> = ({
               })}
             </Typography>
           </Grid>
-          <Grid item xs={4}>
+          <Grid item md={4} xs={12}>
             <MileageSorter sort={sort} />
           </Grid>
-          <Grid item xs={12}>
+          <Grid item md={12} xs={12}>
             <CarCards cars={cars} isLoading={isCarListLoading} />
           </Grid>
-          <Grid item xs={12}>
+          <Grid item md={12} xs={12}>
             <Pagination
               currentPage={Number(page)}
               totalPage={totalPageCount}
@@ -96,7 +96,7 @@ const CarList: React.FC<CarListProps> = ({
           </Grid>
         </>
       ) : (
-        <Grid item xs={12}>
+        <Grid item md={12} xs={12}>
           <Typography variant="body1">
             {translate('features.CarList.noCarsText')}
           </Typography>

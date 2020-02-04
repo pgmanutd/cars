@@ -37,12 +37,12 @@ const CarsPage: React.FC = () => {
         <title>{translate('pages.Cars.documentTitle')}</title>
       </Helmet>
       <Grid container spacing={4}>
-        <Grid item xs={4}>
+        <Grid item md={4} xs={12}>
           <Box className={classes.navFilterContainer}>
             <NavFilter color={color} manufacturer={manufacturer} />
           </Box>
         </Grid>
-        <Grid item xs={8}>
+        <Grid item md={8} xs={12}>
           <CarList
             sort={sort}
             page={page}

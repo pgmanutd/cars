@@ -45,7 +45,7 @@ const CarCards: React.FC<CarCardsProps> = ({
           spacing={2}
           className={classes.carContainer}
         >
-          <Grid item xs={2}>
+          <Grid item md={2} xs={12}>
             <Box className={classes.carImageContainer}>
               {car.pictureUrl ? (
                 <CardMedia
@@ -58,7 +58,7 @@ const CarCards: React.FC<CarCardsProps> = ({
               )}
             </Box>
           </Grid>
-          <Grid item xs={5}>
+          <Grid item md={5} xs={12}>
             <Typography variant="h6" gutterBottom>
               {getCarName(car)}
             </Typography>
@@ -80,7 +80,7 @@ const CarCards: React.FC<CarCardsProps> = ({
               {translate('features.CarCards.viewDetailsLinkText')}
             </Link>
           </Grid>
-          <Grid item xs={5}>
+          <Grid item md={5} xs={12}>
             <AddFavoriteCar car={car} />
           </Grid>
         </Grid>
