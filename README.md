@@ -8,7 +8,7 @@ Shows car list with their details.
 
 - Checkout [the repository](https://github.com/pgmanutd/cars).
 
-- Create `.env` file with an environment variable `REACT_APP_PROXY_SERVER` pointing to the cars api.
+- Create `.env.local` file with an environment variable `REACT_APP_PROXY_SERVER` pointing to the cars api.
 
 - Open your favorite Terminal and run these commands:
 
