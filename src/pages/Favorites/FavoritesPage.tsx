@@ -22,6 +22,7 @@ const FavoritesPage: React.FC = () => {
   );
 
   const cars = Object.values(favoriteCars);
+  const hasCars = cars.length > 0;
 
   return (
     <Container
@@ -35,7 +36,7 @@ const FavoritesPage: React.FC = () => {
       <Typography variant="h4" gutterBottom align="center">
         {translate('pages.Favorites.headerText')}
       </Typography>
-      {cars.length > 0 ? (
+      {hasCars ? (
         <CarCards cars={cars} />
       ) : (
         <Typography variant="body2" align="center">
