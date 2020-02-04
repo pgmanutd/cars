@@ -1,8 +1,9 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 
 import parseJSON from 'utils/parseJSON';
 
 const eventListenerName = 'storage';
+const customEventListenerName = 'onLocalStorageChange';
 
 const removeItemFromLocalStorage = (key: string) => {
   localStorage.removeItem(key);
@@ -20,9 +21,9 @@ const useLocalStorage = <T = {}>(
   key: string,
   initialValue: T | null = null,
 ) => {
-  const [storedItem, setStoredItem] = useState(() => {
-    return getItemFromLocalStorage(key, initialValue);
-  });
+  const [storedItem, setStoredItem] = useState(() =>
+    getItemFromLocalStorage(key, initialValue),
+  );
 
   useEffect(() => {
     const storageListener = ({ key: storageKey, newValue }: StorageEvent) => {
@@ -38,17 +39,40 @@ const useLocalStorage = <T = {}>(
     };
   }, [initialValue, key]);
 
-  const setItem = (item: T) => {
-    setStoredItem(item);
+  useEffect(() => {
+    const storageListener = ({ detail }: CustomEventInit) => {
+      if (detail.key === key) {
+        setStoredItem(detail.item);
+      }
+    };
 
-    addItemToLocalStorage(key, item);
-  };
+    window.addEventListener(customEventListenerName, storageListener);
 
-  const removeItem = () => {
-    setStoredItem(initialValue);
+    return () => {
+      window.removeEventListener(customEventListenerName, storageListener);
+    };
+  }, [initialValue, key]);
 
+  const setItem = useCallback(
+    (item: T) => {
+      addItemToLocalStorage(key, item);
+
+      window.dispatchEvent(
+        new CustomEvent(customEventListenerName, { detail: { key, item } }),
+      );
+    },
+    [key],
+  );
+
+  const removeItem = useCallback(() => {
     removeItemFromLocalStorage(key);
-  };
+
+    window.dispatchEvent(
+      new CustomEvent(customEventListenerName, {
+        detail: { key, item: initialValue },
+      }),
+    );
+  }, [key, initialValue]);
 
   return [storedItem, setItem, removeItem] as [
     T,
