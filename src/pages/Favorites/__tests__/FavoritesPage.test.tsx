@@ -1,5 +1,6 @@
 import React from 'react';
 import { wait } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 
 import { LOCAL_STORAGE_KEYS } from 'constants/appConstants';
 
@@ -43,5 +44,18 @@ describe('<FavoritesPage />', () => {
     const { renderResult } = setup();
 
     expect(renderResult.getAllByTestId('CarCard')).toHaveLength(2);
+  });
+
+  it('should remove that particular <CarCards /> when its "Remove" button is clicked', () => {
+    localStorage.setItem(
+      LOCAL_STORAGE_KEYS.favoriteCars,
+      '{"17596":{"stockNumber":17596,"manufacturerName":"Fiat","modelName":"127","color":"white","mileage":{"number":115674,"unit":"km"},"fuelType":"Diesel","pictureUrl":"car.svg"},"28589":{"stockNumber":28589,"manufacturerName":"Fiat","modelName":"850 T/900 T/-E","color":"white","mileage":{"number":115035,"unit":"km"},"fuelType":"Diesel","pictureUrl":"car.svg"}}',
+    );
+
+    const { renderResult } = setup();
+
+    userEvent.click(renderResult.getAllByText('Remove')[0]);
+
+    expect(renderResult.getAllByTestId('CarCard')).toHaveLength(1);
   });
 });
