@@ -85,38 +85,7 @@ describe('<NavFilter />', () => {
     };
   };
 
-  it('should render the component and matches it against stored snapshot for success response', async () => {
-    const { renderResult } = await setupForSuccessResponse();
-
-    expect(renderResult.asFragment()).toMatchSnapshot();
-  });
-
-  it('should change location path to selected values on "Filter" button press', async () => {
-    const {
-      renderResult,
-      history,
-      successColorsResponse,
-      successManufacturerResponse,
-    } = await setupForSuccessResponse();
-
-    const color = successColorsResponse.colors[0];
-    const manufacturer = successManufacturerResponse.manufacturers[0].name;
-
-    userEvent.click(renderResult.getByText('All car colors'));
-    userEvent.click(renderResult.getByText(color));
-    userEvent.click(renderResult.getByText('All manufacturers'));
-    userEvent.click(renderResult.getByText(manufacturer));
-
-    userEvent.click(renderResult.getByText('Filter'));
-
-    const searchParams = new URLSearchParams(history.location.search);
-
-    expect(searchParams.toString()).toBe(
-      `filters.color=${color}&filters.manufacturer=${manufacturer}`,
-    );
-  });
-
-  it('should render the component and matches it against stored snapshot for failed response', async () => {
+  const setupForFailedResponse = async () => {
     const color = 'white';
     const manufacturer = 'Audi';
     const errorResponse = new Error('Some error');
@@ -135,6 +104,77 @@ describe('<NavFilter />', () => {
       renderResult.queryByTestId('NavFilterButtonSkeleton'),
     );
 
-    expect(renderResult.asFragment()).toMatchSnapshot();
+    return {
+      renderResult,
+    };
+  };
+
+  describe('for success response', () => {
+    it('should render color <Label />', async () => {
+      const { renderResult } = await setupForSuccessResponse();
+
+      expect(renderResult.getByLabelText('Color')).toBeInTheDocument();
+    });
+
+    it('should render color <Select />', async () => {
+      const { renderResult } = await setupForSuccessResponse();
+
+      expect(renderResult.getByText('All car colors')).toBeInTheDocument();
+    });
+
+    it('should render manufacturer <Label />', async () => {
+      const { renderResult } = await setupForSuccessResponse();
+
+      expect(renderResult.getByLabelText('Manufacturer')).toBeInTheDocument();
+    });
+
+    it('should render manufacturer <Select />', async () => {
+      const { renderResult } = await setupForSuccessResponse();
+
+      expect(renderResult.getByText('All manufacturers')).toBeInTheDocument();
+    });
+
+    it('should change location path to selected values on "Filter" button press', async () => {
+      const {
+        renderResult,
+        history,
+        successColorsResponse,
+        successManufacturerResponse,
+      } = await setupForSuccessResponse();
+
+      const color = successColorsResponse.colors[0];
+      const manufacturer = successManufacturerResponse.manufacturers[0].name;
+
+      userEvent.click(renderResult.getByText('All car colors'));
+      userEvent.click(renderResult.getByText(color));
+      userEvent.click(renderResult.getByText('All manufacturers'));
+      userEvent.click(renderResult.getByText(manufacturer));
+
+      userEvent.click(renderResult.getByText('Filter'));
+
+      const searchParams = new URLSearchParams(history.location.search);
+
+      expect(searchParams.toString()).toBe(
+        `filters.color=${color}&filters.manufacturer=${manufacturer}`,
+      );
+    });
+  });
+
+  describe('for failed response', () => {
+    it('should render render color skeleton', async () => {
+      const { renderResult } = await setupForFailedResponse();
+
+      expect(
+        renderResult.getByTestId('NavFilterColorSkeleton'),
+      ).toBeInTheDocument();
+    });
+
+    it('should render render manufacturer skeleton ', async () => {
+      const { renderResult } = await setupForFailedResponse();
+
+      expect(
+        renderResult.getByTestId('NavFilterManufacturerSkeleton'),
+      ).toBeInTheDocument();
+    });
   });
 });
