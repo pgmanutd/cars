@@ -106,4 +106,8 @@ const CarList: React.FC<CarListProps> = ({
   );
 };
 
+// NOTE: Using memo to avoid unnecessary rerenders of this component.
+// Only used "memo" for components which actually accepts any props and used
+// it for rendering
+// https://kentcdodds.com/blog/usememo-and-usecallback
 export default memo(CarList);

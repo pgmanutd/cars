@@ -34,6 +34,9 @@ const TranslateProvider: React.FC<TranslateProviderProps> = ({
       replaceAll(translations?.[translateKey] ?? translateKey, mappedObject),
     [translations],
   );
+
+  // NOTE: Using useMemo to avoid unnecessary rerenders of consumers.
+  // https://kentcdodds.com/blog/usememo-and-usecallback
   const providerValue = useMemo(() => ({ translate }), [translate]);
 
   return (
@@ -43,4 +46,8 @@ const TranslateProvider: React.FC<TranslateProviderProps> = ({
   );
 };
 
+// NOTE: Using memo to avoid unnecessary rerenders of this component.
+// Only used "memo" for components which actually accepts any props and used
+// it for rendering
+// https://kentcdodds.com/blog/usememo-and-usecallback
 export default memo(TranslateProvider);

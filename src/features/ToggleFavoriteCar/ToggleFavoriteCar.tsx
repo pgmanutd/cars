@@ -40,6 +40,8 @@ const ToggleFavoriteCar: React.FC<ToggleFavoriteCarProps> = ({
     ? removeCarFromFavorites(car)
     : addCarToFavorites(car);
 
+  // NOTE: Using useCallback to avoid unnecessary rerenders of Button component
+  // https://kentcdodds.com/blog/usememo-and-usecallback
   const handleFavoriteCarsClick = useCallback(() => {
     _compose(setFavoriteCars, toggleFavoriteCar)(favoriteCars);
   }, [toggleFavoriteCar, favoriteCars, setFavoriteCars]);
@@ -70,4 +72,8 @@ const ToggleFavoriteCar: React.FC<ToggleFavoriteCarProps> = ({
   );
 };
 
+// NOTE: Using memo to avoid unnecessary rerenders of this component.
+// Only used "memo" for components which actually accepts any props and used
+// it for rendering
+// https://kentcdodds.com/blog/usememo-and-usecallback
 export default memo(ToggleFavoriteCar);

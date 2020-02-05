@@ -39,11 +39,15 @@ const NavFilter: React.FC<NavFilterProps> = ({
   const [currentColor, setCurrentColor] = useState(color);
   const [currentManufacturer, setCurrentManufacturer] = useState(manufacturer);
 
+  // NOTE: Using useCallback to avoid unnecessary rerenders of Select component
+  // https://kentcdodds.com/blog/usememo-and-usecallback
   const handleCurrentColorChange = useCallback(
     _compose(setCurrentColor, pickTargetValue),
     [],
   );
 
+  // NOTE: Using useCallback to avoid unnecessary rerenders of Select component
+  // https://kentcdodds.com/blog/usememo-and-usecallback
   const handleCurrentManufacturerChange = useCallback(
     _compose(setCurrentManufacturer, pickTargetValue),
     [],
@@ -145,4 +149,8 @@ const NavFilter: React.FC<NavFilterProps> = ({
   );
 };
 
+// NOTE: Using memo to avoid unnecessary rerenders of this component.
+// Only used "memo" for components which actually accepts any props and used
+// it for rendering
+// https://kentcdodds.com/blog/usememo-and-usecallback
 export default memo(NavFilter);

@@ -53,6 +53,9 @@ const useLocalStorage = <T = {}>(
     };
   }, [initialValue, key]);
 
+  // NOTE: Using useCallback to avoid unnecessary rerenders of components
+  // which uses setItem
+  // https://kentcdodds.com/blog/usememo-and-usecallback
   const setItem = useCallback(
     (item: T) => {
       addItemToLocalStorage(key, item);
@@ -64,6 +67,9 @@ const useLocalStorage = <T = {}>(
     [key],
   );
 
+  // NOTE: Using useCallback to avoid unnecessary rerenders of components
+  // which uses removeItem
+  // https://kentcdodds.com/blog/usememo-and-usecallback
   const removeItem = useCallback(() => {
     removeItemFromLocalStorage(key);
 

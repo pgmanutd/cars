@@ -34,6 +34,8 @@ const MileageSorter: React.FC<MileageSorterProps> = ({
     [QUERY_KEYS.sort]: sort,
   });
 
+  // NOTE: Using useCallback to avoid unnecessary rerenders of Select component
+  // https://kentcdodds.com/blog/usememo-and-usecallback
   const handleSortChange = useCallback(
     (event: React.ChangeEvent<{ value: unknown }>) => {
       const updatedSortParams = new URLSearchParams(sortParams);
@@ -78,4 +80,8 @@ const MileageSorter: React.FC<MileageSorterProps> = ({
   );
 };
 
+// NOTE: Using memo to avoid unnecessary rerenders of this component.
+// Only used "memo" for components which actually accepts any props and used
+// it for rendering
+// https://kentcdodds.com/blog/usememo-and-usecallback
 export default memo(MileageSorter);
