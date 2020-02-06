@@ -10,7 +10,7 @@ import Footer from 'features/Footer';
 const App: React.FC = () => (
   <Box data-testid="App">
     <StrictMode>
-      <TranslateProvider language="en">
+      <TranslateProvider>
         <ErrorBoundary>
           <Header />
           <MainLayout />

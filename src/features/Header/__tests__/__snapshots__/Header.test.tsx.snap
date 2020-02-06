@@ -22,24 +22,71 @@ exports[`<Header /> should render the component and matches it against stored sn
       </a>
       <nav>
         <a
-          class="MuiTypography-root MuiLink-root MuiLink-underlineHover makeStyles-link-4 MuiTypography-colorTextPrimary"
+          class="MuiTypography-root MuiLink-root MuiLink-underlineHover makeStyles-toolBarChildren-4 MuiTypography-colorTextPrimary"
           href="#"
         >
           Purchase
         </a>
         <a
-          class="MuiTypography-root MuiLink-root MuiLink-underlineHover makeStyles-link-4 MuiTypography-colorTextPrimary"
+          class="MuiTypography-root MuiLink-root MuiLink-underlineHover makeStyles-toolBarChildren-4 MuiTypography-colorTextPrimary"
           href="/favorites"
         >
           My Orders
         </a>
         <a
-          class="MuiTypography-root MuiLink-root MuiLink-underlineHover makeStyles-link-4 MuiTypography-colorTextPrimary"
+          class="MuiTypography-root MuiLink-root MuiLink-underlineHover makeStyles-toolBarChildren-4 MuiTypography-colorTextPrimary"
           href="#"
         >
           Sell
         </a>
       </nav>
+      <div
+        class="MuiBox-root MuiBox-root-87 makeStyles-toolBarChildren-4"
+      >
+        <div
+          class="MuiFormControl-root makeStyles-formControl-88"
+          data-testid="LanguageSelector"
+        >
+          <label
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled"
+            data-shrink="true"
+            id="LanguageSelectorLabel"
+          >
+            Language
+          </label>
+          <div
+            class="MuiInputBase-root MuiInput-root MuiInput-underline makeStyles-selectEmpty-89 MuiInputBase-formControl MuiInput-formControl"
+          >
+            <div
+              aria-haspopup="listbox"
+              aria-labelledby="LanguageSelectorLabel LanguageSelectorLabelSelect"
+              class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
+              id="LanguageSelectorLabelSelect"
+              role="button"
+              tabindex="0"
+            >
+              <em>
+                English
+              </em>
+            </div>
+            <input
+              type="hidden"
+              value="en"
+            />
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSelect-icon"
+              focusable="false"
+              role="presentation"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M7 10l5 5 5-5z"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
     </div>
   </header>
 </DocumentFragment>

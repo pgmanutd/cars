@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<LanguageSelector /> should render the component and matches it against stored snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="MuiFormControl-root makeStyles-formControl-1"
+    data-testid="LanguageSelector"
+  >
+    <label
+      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled"
+      data-shrink="true"
+      id="LanguageSelectorLabel"
+    >
+      Language
+    </label>
+    <div
+      class="MuiInputBase-root MuiInput-root MuiInput-underline makeStyles-selectEmpty-2 MuiInputBase-formControl MuiInput-formControl"
+    >
+      <div
+        aria-haspopup="listbox"
+        aria-labelledby="LanguageSelectorLabel LanguageSelectorLabelSelect"
+        class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
+        id="LanguageSelectorLabelSelect"
+        role="button"
+        tabindex="0"
+      >
+        <em>
+          English
+        </em>
+      </div>
+      <input
+        type="hidden"
+        value="en"
+      />
+      <svg
+        aria-hidden="true"
+        class="MuiSvgIcon-root MuiSelect-icon"
+        focusable="false"
+        role="presentation"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M7 10l5 5 5-5z"
+        />
+      </svg>
+    </div>
+  </div>
+</DocumentFragment>
+`;

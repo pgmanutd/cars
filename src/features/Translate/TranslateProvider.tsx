@@ -1,34 +1,38 @@
 import React, { memo, useCallback, useMemo } from 'react';
 
-import replaceAll from 'utils/replaceAll';
+import { LOCAL_STORAGE_KEYS } from 'constants/appConstants';
+
+import replaceAll, { ReplaceAllMappedObject } from 'utils/replaceAll';
+
+import useLocalStorage from 'hooks/useLocalStorage';
 
 import TranslateContext from './TranslateContext';
 
-import enLanguage from './translations/en.json';
-import deLanguage from './translations/de.json';
-
-const languages = {
-  en: enLanguage,
-  de: deLanguage,
-};
+import { Language } from './types';
+import { DEFAULT_LANGUAGE, LANGUAGES_MAP } from './translateConstants';
 
 export interface TranslateProviderProps {
   children: React.ReactNode;
-  language?: keyof typeof languages;
+  initialLanguage?: Language;
 }
 
 const TranslateProvider: React.FC<TranslateProviderProps> = ({
+  children,
   // NOTE: `defaultProps` rule to be deprecated on function components
   // https://github.com/yannickcr/eslint-plugin-react/issues/2396
-  language = 'en',
-  children,
+  initialLanguage = DEFAULT_LANGUAGE,
 }) => {
-  const translations = languages[language] as {
+  const [language, setLanguage] = useLocalStorage<Language>(
+    LOCAL_STORAGE_KEYS.language,
+    initialLanguage,
+  );
+
+  const translations = LANGUAGES_MAP[language] as {
     [key: string]: string;
   };
 
   const translate = useCallback<
-    (translateKey: string, mappedObject?: { [key: string]: string }) => string
+    (translateKey: string, mappedObject?: ReplaceAllMappedObject) => string
   >(
     (translateKey, mappedObject = {}) =>
       replaceAll(translations?.[translateKey] ?? translateKey, mappedObject),
@@ -37,7 +41,15 @@ const TranslateProvider: React.FC<TranslateProviderProps> = ({
 
   // NOTE: Using useMemo to avoid unnecessary rerenders of consumers.
   // https://kentcdodds.com/blog/usememo-and-usecallback
-  const providerValue = useMemo(() => ({ translate }), [translate]);
+  const providerValue = useMemo(
+    () => ({
+      translate,
+      language,
+      languages: Object.keys(LANGUAGES_MAP) as Language[],
+      setLanguage,
+    }),
+    [translate, language, setLanguage],
+  );
 
   return (
     <TranslateContext.Provider value={providerValue}>

@@ -9,6 +9,7 @@ export const QUERY_KEYS = {
 
 export const LOCAL_STORAGE_KEYS = {
   favoriteCars: 'favoriteCars',
+  language: 'language',
 };
 
 export const DEFAULT_QUERY_VALUES = {

@@ -1,6 +1,8 @@
+export type ReplaceAllMappedObject = { [key: string]: string };
+
 const replaceAll = (
   value: string,
-  mappedObject: { [key: string]: string } = {},
+  mappedObject: ReplaceAllMappedObject = {},
 ) => {
   const keys = Object.keys(mappedObject);
 
