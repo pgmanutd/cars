@@ -2,7 +2,7 @@
 
 exports[`<ToggleFavoriteCar /> should render the component and matches it against stored snapshot 1`] = `
 <DocumentFragment>
-  <div
+  <section
     class="MuiBox-root MuiBox-root-4 makeStyles-root-1"
     data-testid="ToggleFavoriteCar"
   >
@@ -29,6 +29,6 @@ exports[`<ToggleFavoriteCar /> should render the component and matches it agains
         />
       </button>
     </div>
-  </div>
+  </section>
 </DocumentFragment>
 `;

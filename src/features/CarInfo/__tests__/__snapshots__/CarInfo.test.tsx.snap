@@ -89,7 +89,7 @@ exports[`<CarInfo /> should render the component and matches it against stored s
     <div
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-5"
     >
-      <div
+      <section
         class="MuiBox-root MuiBox-root-152 makeStyles-root-150"
         data-testid="ToggleFavoriteCar"
       >
@@ -116,7 +116,7 @@ exports[`<CarInfo /> should render the component and matches it against stored s
             />
           </button>
         </div>
-      </div>
+      </section>
     </div>
   </section>
 </DocumentFragment>

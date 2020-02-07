@@ -50,6 +50,7 @@ const ToggleFavoriteCar: React.FC<ToggleFavoriteCarProps> = ({
     <Box
       data-testid="ToggleFavoriteCar"
       {...restProps}
+      component="section"
       className={classes.root}
     >
       <Typography variant="body2">
