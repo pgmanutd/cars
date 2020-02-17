@@ -14,6 +14,14 @@ describe('<App />', () => {
     };
   };
 
+  it('should render <Header />', async () => {
+    const { renderResult } = setup();
+
+    await wait(() =>
+      expect(renderResult.getByTestId('Header')).toBeInTheDocument(),
+    );
+  });
+
   it('should render <MainLayout />', async () => {
     const { renderResult } = setup();
 

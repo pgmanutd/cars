@@ -25,6 +25,7 @@ export interface CarListProps {
   page: PageQuery;
   color: ColorQuery;
   manufacturer: ManufacturerQuery;
+  paginationBasePath?: string;
 }
 
 const CarList: React.FC<CarListProps> = ({
@@ -32,6 +33,7 @@ const CarList: React.FC<CarListProps> = ({
   page,
   color,
   manufacturer,
+  paginationBasePath = routePaths.cars,
   ...restProps
 }) => {
   const { translate } = useTranslate();
@@ -90,7 +92,7 @@ const CarList: React.FC<CarListProps> = ({
             <Pagination
               currentPage={Number(page)}
               totalPage={totalPageCount}
-              basePath={routePaths.cars}
+              basePath={paginationBasePath}
               queryKey={QUERY_KEYS.page}
             />
           </Grid>

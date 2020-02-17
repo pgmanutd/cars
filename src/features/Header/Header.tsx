@@ -24,13 +24,15 @@ const Header: React.FC = props => {
       className={classes.root}
     >
       <Toolbar className={classes.toolbar}>
-        <Link
-          color="textPrimary"
-          href={routePaths.cars}
-          className={classes.toolbarLogo}
-        >
-          <AppLogo />
-        </Link>
+        <Box className={classes.toolbarLogoContainer}>
+          <Link
+            color="textPrimary"
+            href={routePaths.cars}
+            className={classes.toolbarLogo}
+          >
+            <AppLogo />
+          </Link>
+        </Box>
         <nav>
           <Link
             color="textPrimary"

@@ -40,7 +40,7 @@ describe('<TranslateProvider />', () => {
     };
   };
 
-  describe('when provider is not present', () => {
+  describe('when provider is present', () => {
     const setupWithProvider = () => {
       const { consumer, ...rest } = setup();
 

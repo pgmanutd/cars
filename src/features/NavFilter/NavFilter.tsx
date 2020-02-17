@@ -26,11 +26,13 @@ import { useStyles } from './navFilterStyles';
 export interface NavFilterProps {
   color: ColorQuery;
   manufacturer: ManufacturerQuery;
+  basePath?: string;
 }
 
 const NavFilter: React.FC<NavFilterProps> = ({
   color,
   manufacturer,
+  basePath = routePaths.cars,
   ...restProps
 }) => {
   const classes = useStyles();
@@ -140,7 +142,7 @@ const NavFilter: React.FC<NavFilterProps> = ({
           variant="contained"
           color="primary"
           size="large"
-          to={appendBasePath(routePaths.cars, filterButtonParams)}
+          to={appendBasePath(basePath, filterButtonParams)}
         >
           {translate('features.NavFilter.filterButtonText')}
         </Button>

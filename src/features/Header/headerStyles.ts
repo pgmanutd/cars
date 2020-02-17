@@ -13,8 +13,11 @@ export const useStyles = makeStyles((theme: Theme) =>
       flexWrap: 'wrap',
       justifyContent: 'flex-end',
     },
-    toolbarLogo: {
+    toolbarLogoContainer: {
       flexGrow: 1,
+    },
+    toolbarLogo: {
+      display: 'inline-block',
       margin: theme.spacing(1, 1.5),
     },
     toolBarChildren: {

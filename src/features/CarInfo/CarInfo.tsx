@@ -31,14 +31,14 @@ const CarInfo: React.FC<CarInfoProps> = ({ stockNumber, ...restProps }) => {
     url: apiPaths.carDetails({ stockNumber }),
   });
 
+  if (error) {
+    return <Redirect to={routePaths.notFound} />;
+  }
+
   const { isCarInfoLoading, car } = getCarInfo({
     isLoading,
     data,
   });
-
-  if (error) {
-    return <Redirect to={routePaths.notFound} />;
-  }
 
   if (isCarInfoLoading) {
     return <CarInfoLoader />;

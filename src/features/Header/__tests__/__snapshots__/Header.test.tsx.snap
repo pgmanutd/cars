@@ -9,42 +9,46 @@ exports[`<Header /> should render the component and matches it against stored sn
     <div
       class="MuiToolbar-root MuiToolbar-regular makeStyles-toolbar-2 MuiToolbar-gutters"
     >
-      <a
-        class="MuiTypography-root MuiLink-root MuiLink-underlineHover makeStyles-toolbarLogo-3 MuiTypography-colorTextPrimary"
-        href="/"
+      <div
+        class="MuiBox-root MuiBox-root-48 makeStyles-toolbarLogoContainer-3"
       >
-        <div
-          class="MuiCardMedia-root makeStyles-root-82"
-          data-testid="AppLogo"
-          style="background-image: url(logo.png);"
-          title="AppLogo"
-        />
-      </a>
+        <a
+          class="MuiTypography-root MuiLink-root MuiLink-underlineHover makeStyles-toolbarLogo-4 MuiTypography-colorTextPrimary"
+          href="/"
+        >
+          <div
+            class="MuiCardMedia-root makeStyles-root-85"
+            data-testid="AppLogo"
+            style="background-image: url(logo.png);"
+            title="AppLogo"
+          />
+        </a>
+      </div>
       <nav>
         <a
-          class="MuiTypography-root MuiLink-root MuiLink-underlineHover makeStyles-toolBarChildren-4 MuiTypography-colorTextPrimary"
+          class="MuiTypography-root MuiLink-root MuiLink-underlineHover makeStyles-toolBarChildren-5 MuiTypography-colorTextPrimary"
           href="#"
         >
           Purchase
         </a>
         <a
-          class="MuiTypography-root MuiLink-root MuiLink-underlineHover makeStyles-toolBarChildren-4 MuiTypography-colorTextPrimary"
+          class="MuiTypography-root MuiLink-root MuiLink-underlineHover makeStyles-toolBarChildren-5 MuiTypography-colorTextPrimary"
           href="/favorites"
         >
           My Orders
         </a>
         <a
-          class="MuiTypography-root MuiLink-root MuiLink-underlineHover makeStyles-toolBarChildren-4 MuiTypography-colorTextPrimary"
+          class="MuiTypography-root MuiLink-root MuiLink-underlineHover makeStyles-toolBarChildren-5 MuiTypography-colorTextPrimary"
           href="#"
         >
           Sell
         </a>
       </nav>
       <div
-        class="MuiBox-root MuiBox-root-87 makeStyles-toolBarChildren-4"
+        class="MuiBox-root MuiBox-root-89 makeStyles-toolBarChildren-5"
       >
         <div
-          class="MuiFormControl-root makeStyles-formControl-88"
+          class="MuiFormControl-root makeStyles-formControl-90"
           data-testid="LanguageSelector"
         >
           <label
@@ -55,7 +59,7 @@ exports[`<Header /> should render the component and matches it against stored sn
             Language
           </label>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline makeStyles-selectEmpty-89 MuiInputBase-formControl MuiInput-formControl"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline makeStyles-selectEmpty-91 MuiInputBase-formControl MuiInput-formControl"
           >
             <div
               aria-haspopup="listbox"

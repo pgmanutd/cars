@@ -20,10 +20,12 @@ import { useStyles } from './mileageSorterStyles';
 
 export interface MileageSorterProps {
   sort: SortQuery;
+  basePath?: string;
 }
 
 const MileageSorter: React.FC<MileageSorterProps> = ({
   sort,
+  basePath = routePaths.cars,
   ...restProps
 }) => {
   const classes = useStyles();
@@ -42,11 +44,9 @@ const MileageSorter: React.FC<MileageSorterProps> = ({
 
       updatedSortParams.set(QUERY_KEYS.sort, pickTargetValue(event) as string);
 
-      history.push(
-        appendBasePath(routePaths.cars, updatedSortParams?.toString()),
-      );
+      history.push(appendBasePath(basePath, updatedSortParams?.toString()));
     },
-    [history, sortParams],
+    [history, sortParams, basePath],
   );
 
   return (
