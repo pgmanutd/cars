@@ -3,21 +3,21 @@
 exports[`<Header /> should render the component and matches it against stored snapshot 1`] = `
 <DocumentFragment>
   <header
-    class="MuiPaper-root MuiAppBar-root MuiAppBar-positionFixed makeStyles-root-1 MuiAppBar-colorDefault mui-fixed MuiPaper-elevation0"
+    class="MuiPaper-root MuiAppBar-root MuiAppBar-positionFixed MuiAppBar-colorDefault makeStyles-root-1 mui-fixed MuiPaper-elevation0"
     data-testid="Header"
   >
     <div
       class="MuiToolbar-root MuiToolbar-regular makeStyles-toolbar-2 MuiToolbar-gutters"
     >
       <div
-        class="MuiBox-root MuiBox-root-48 makeStyles-toolbarLogoContainer-3"
+        class="MuiBox-root MuiBox-root-50 makeStyles-toolbarLogoContainer-3"
       >
         <a
           class="MuiTypography-root MuiLink-root MuiLink-underlineHover makeStyles-toolbarLogo-4 MuiTypography-colorTextPrimary"
           href="/"
         >
           <div
-            class="MuiCardMedia-root makeStyles-root-85"
+            class="MuiCardMedia-root makeStyles-root-87"
             data-testid="AppLogo"
             style="background-image: url(logo.png);"
             title="AppLogo"
@@ -45,10 +45,10 @@ exports[`<Header /> should render the component and matches it against stored sn
         </a>
       </nav>
       <div
-        class="MuiBox-root MuiBox-root-89 makeStyles-toolBarChildren-5"
+        class="MuiBox-root MuiBox-root-91 makeStyles-toolBarChildren-5"
       >
         <div
-          class="MuiFormControl-root makeStyles-formControl-90"
+          class="MuiFormControl-root makeStyles-formControl-92"
           data-testid="LanguageSelector"
         >
           <label
@@ -59,7 +59,7 @@ exports[`<Header /> should render the component and matches it against stored sn
             Language
           </label>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline makeStyles-selectEmpty-91 MuiInputBase-formControl MuiInput-formControl"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline makeStyles-selectEmpty-93 MuiInputBase-formControl MuiInput-formControl"
           >
             <div
               aria-haspopup="listbox"
