@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import React from 'react';
 import Box from '@material-ui/core/Box';
 import Grid from '@material-ui/core/Grid';
 import CardMedia from '@material-ui/core/CardMedia';
@@ -91,8 +91,4 @@ const CarCards: React.FC<CarCardsProps> = ({
   );
 };
 
-// NOTE: Using memo to avoid unnecessary rerenders of this component.
-// Only used "memo" for components which actually accepts any props and used
-// it for rendering
-// https://kentcdodds.com/blog/usememo-and-usecallback
-export default memo(CarCards);
+export default CarCards;

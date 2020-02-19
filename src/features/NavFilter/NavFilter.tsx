@@ -1,4 +1,4 @@
-import React, { memo, useState, useCallback } from 'react';
+import React, { useState } from 'react';
 import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
 import FormControl from '@material-ui/core/FormControl';
@@ -41,18 +41,10 @@ const NavFilter: React.FC<NavFilterProps> = ({
   const [currentColor, setCurrentColor] = useState(color);
   const [currentManufacturer, setCurrentManufacturer] = useState(manufacturer);
 
-  // NOTE: Using useCallback to avoid unnecessary rerenders of Select component
-  // https://kentcdodds.com/blog/usememo-and-usecallback
-  const handleCurrentColorChange = useCallback(
-    _compose(setCurrentColor, pickTargetValue),
-    [],
-  );
-
-  // NOTE: Using useCallback to avoid unnecessary rerenders of Select component
-  // https://kentcdodds.com/blog/usememo-and-usecallback
-  const handleCurrentManufacturerChange = useCallback(
-    _compose(setCurrentManufacturer, pickTargetValue),
-    [],
+  const handleCurrentColorChange = _compose(setCurrentColor, pickTargetValue);
+  const handleCurrentManufacturerChange = _compose(
+    setCurrentManufacturer,
+    pickTargetValue,
   );
 
   const {
@@ -151,8 +143,4 @@ const NavFilter: React.FC<NavFilterProps> = ({
   );
 };
 
-// NOTE: Using memo to avoid unnecessary rerenders of this component.
-// Only used "memo" for components which actually accepts any props and used
-// it for rendering
-// https://kentcdodds.com/blog/usememo-and-usecallback
-export default memo(NavFilter);
+export default NavFilter;

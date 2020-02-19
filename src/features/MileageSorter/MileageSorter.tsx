@@ -1,4 +1,4 @@
-import React, { memo, useCallback } from 'react';
+import React, { useCallback } from 'react';
 import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
 import FormControl from '@material-ui/core/FormControl';
@@ -80,8 +80,4 @@ const MileageSorter: React.FC<MileageSorterProps> = ({
   );
 };
 
-// NOTE: Using memo to avoid unnecessary rerenders of this component.
-// Only used "memo" for components which actually accepts any props and used
-// it for rendering
-// https://kentcdodds.com/blog/usememo-and-usecallback
-export default memo(MileageSorter);
+export default MileageSorter;

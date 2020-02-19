@@ -1,4 +1,4 @@
-import React, { memo, useCallback } from 'react';
+import React, { useCallback } from 'react';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import Button from '@material-ui/core/Button';
@@ -73,8 +73,4 @@ const ToggleFavoriteCar: React.FC<ToggleFavoriteCarProps> = ({
   );
 };
 
-// NOTE: Using memo to avoid unnecessary rerenders of this component.
-// Only used "memo" for components which actually accepts any props and used
-// it for rendering
-// https://kentcdodds.com/blog/usememo-and-usecallback
-export default memo(ToggleFavoriteCar);
+export default ToggleFavoriteCar;

@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import React from 'react';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 
@@ -108,8 +108,4 @@ const CarList: React.FC<CarListProps> = ({
   );
 };
 
-// NOTE: Using memo to avoid unnecessary rerenders of this component.
-// Only used "memo" for components which actually accepts any props and used
-// it for rendering
-// https://kentcdodds.com/blog/usememo-and-usecallback
-export default memo(CarList);
+export default CarList;

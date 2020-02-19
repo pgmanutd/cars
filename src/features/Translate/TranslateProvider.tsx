@@ -1,4 +1,4 @@
-import React, { memo, useCallback, useMemo } from 'react';
+import React, { useMemo } from 'react';
 
 import { LOCAL_STORAGE_KEYS } from 'constants/appConstants';
 
@@ -27,29 +27,25 @@ const TranslateProvider: React.FC<TranslateProviderProps> = ({
     initialLanguage,
   );
 
-  const translations = LANGUAGES_MAP[language] as {
-    [key: string]: string;
-  };
-
-  const translate = useCallback<
-    (translateKey: string, mappedObject?: ReplaceAllMappedObject) => string
-  >(
-    (translateKey, mappedObject = {}) =>
-      replaceAll(translations?.[translateKey] ?? translateKey, mappedObject),
-    [translations],
-  );
-
   // NOTE: Using useMemo to avoid unnecessary rerenders of consumers.
   // https://kentcdodds.com/blog/usememo-and-usecallback
-  const providerValue = useMemo(
-    () => ({
+  const providerValue = useMemo(() => {
+    const translations = LANGUAGES_MAP[language] as {
+      [key: string]: string;
+    };
+
+    const translate = (
+      translateKey: string,
+      mappedObject: ReplaceAllMappedObject = {},
+    ) => replaceAll(translations?.[translateKey] ?? translateKey, mappedObject);
+
+    return {
       translate,
       language,
       languages: Object.keys(LANGUAGES_MAP) as Language[],
       setLanguage,
-    }),
-    [translate, language, setLanguage],
-  );
+    };
+  }, [language, setLanguage]);
 
   return (
     <TranslateContext.Provider value={providerValue}>
@@ -58,8 +54,4 @@ const TranslateProvider: React.FC<TranslateProviderProps> = ({
   );
 };
 
-// NOTE: Using memo to avoid unnecessary rerenders of this component.
-// Only used "memo" for components which actually accepts any props and used
-// it for rendering
-// https://kentcdodds.com/blog/usememo-and-usecallback
-export default memo(TranslateProvider);
+export default TranslateProvider;
