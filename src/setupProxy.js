@@ -1,5 +1,5 @@
 /* eslint-disable import/no-extraneous-dependencies, @typescript-eslint/no-var-requires */
-const proxy = require('http-proxy-middleware');
+const { createProxyMiddleware } = require('http-proxy-middleware');
 /* eslint-enable import/no-extraneous-dependencies, @typescript-eslint/no-var-requires */
 
 const API_BASE_PATH = '/api';
@@ -7,7 +7,7 @@ const API_BASE_PATH = '/api';
 module.exports = app => {
   app.use(
     API_BASE_PATH,
-    proxy({
+    createProxyMiddleware({
       target: process.env.REACT_APP_PROXY_SERVER,
       changeOrigin: true,
       pathRewrite: {
