@@ -42,7 +42,9 @@ const LanguageSelector: React.FC = props => {
         {languages.map(languageKey => (
           <MenuItem key={languageKey} value={languageKey}>
             <em>
-              {translate(`features.LanguageSelector.${languageKey}Language`)}
+              {translate<string>(
+                `features.LanguageSelector.${languageKey}Language`,
+              )}
             </em>
           </MenuItem>
         ))}

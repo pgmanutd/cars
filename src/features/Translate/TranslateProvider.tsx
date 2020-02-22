@@ -2,18 +2,17 @@ import React, { useMemo } from 'react';
 
 import { LOCAL_STORAGE_KEYS } from 'constants/appConstants';
 
-import replaceAll, { ReplaceAllMappedObject } from 'utils/replaceAll';
+import replaceAll from 'utils/replaceAll';
 
 import useLocalStorage from 'hooks/useLocalStorage';
 
-import TranslateContext from './TranslateContext';
+import TranslateContext, { DefaultContext } from './TranslateContext';
 
-import { Language } from './types';
 import { DEFAULT_LANGUAGE, LANGUAGES_MAP } from './translateConstants';
 
 export interface TranslateProviderProps {
   children: React.ReactNode;
-  initialLanguage?: Language;
+  initialLanguage?: DefaultContext['language'];
 }
 
 const TranslateProvider: React.FC<TranslateProviderProps> = ({
@@ -22,7 +21,7 @@ const TranslateProvider: React.FC<TranslateProviderProps> = ({
   // https://github.com/yannickcr/eslint-plugin-react/issues/2396
   initialLanguage = DEFAULT_LANGUAGE,
 }) => {
-  const [language, setLanguage] = useLocalStorage<Language>(
+  const [language, setLanguage] = useLocalStorage<DefaultContext['language']>(
     LOCAL_STORAGE_KEYS.language,
     initialLanguage,
   );
@@ -34,15 +33,15 @@ const TranslateProvider: React.FC<TranslateProviderProps> = ({
       [key: string]: string;
     };
 
-    const translate = (
-      translateKey: string,
-      mappedObject: ReplaceAllMappedObject = {},
+    const translate: DefaultContext['translate'] = (
+      translateKey,
+      mappedObject = {},
     ) => replaceAll(translations?.[translateKey] ?? translateKey, mappedObject);
 
     return {
       translate,
       language,
-      languages: Object.keys(LANGUAGES_MAP) as Language[],
+      languages: Object.keys(LANGUAGES_MAP) as DefaultContext['languages'],
       setLanguage,
     };
   }, [language, setLanguage]);

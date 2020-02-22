@@ -19,7 +19,7 @@ describe('<TranslateProvider />', () => {
       <TranslateContext.Consumer>
         {({ translate, language, languages, setLanguage }) => (
           <>
-            <span>{translate('mockKey')}</span>
+            <span>{translate<string>('mockKey')}</span>
             <span>Current language: {language}</span>
             {languages.map(languageKey => (
               <span key={languageKey}>Languages: {languageKey}</span>

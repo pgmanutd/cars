@@ -28,6 +28,8 @@ describe('#useTranslate', () => {
   it('should use translate and gets the translated value', () => {
     const { result, translateKey, translatedValue } = setup();
 
-    expect(result.current.translate(translateKey)).toBe(translatedValue);
+    expect(result.current.translate<string>(translateKey)).toBe(
+      translatedValue,
+    );
   });
 });
