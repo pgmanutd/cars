@@ -7,7 +7,7 @@ const useSetURLQuery = (
   const query = useQuery();
   const params = new URLSearchParams(replaceExistingQuery ? undefined : query);
 
-  Object.keys(newQuery).forEach(newQueryKey => {
+  Object.keys(newQuery).forEach((newQueryKey) => {
     params.set(newQueryKey, newQuery[newQueryKey]);
   });
 

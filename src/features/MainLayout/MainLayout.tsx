@@ -15,7 +15,7 @@ import NotFound from 'pages/NotFound';
 
 import { useStyles } from './mainLayoutStyles';
 
-const MainLayout: React.FC = props => {
+const MainLayout: React.FC = (props) => {
   const classes = useStyles();
 
   return (

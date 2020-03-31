@@ -95,7 +95,7 @@ const NavFilter: React.FC<NavFilterProps> = ({
           <MenuItem value="">
             <em>{translate('features.NavFilter.defaultColorText')}</em>
           </MenuItem>
-          {colorsResponseValue.map(colorValue => (
+          {colorsResponseValue.map((colorValue) => (
             <MenuItem key={colorValue} value={colorValue}>
               {colorValue}
             </MenuItem>

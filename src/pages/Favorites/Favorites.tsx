@@ -6,7 +6,7 @@ const FavoritesPage = lazy(() =>
   import(/* webpackChunkName: "FavoritesPage" */ './FavoritesPage'),
 );
 
-const Favorites: React.FC = props => (
+const Favorites: React.FC = (props) => (
   <Suspense fallback={<FavoritesLoader />}>
     <FavoritesPage {...props} />
   </Suspense>

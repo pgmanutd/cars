@@ -36,7 +36,6 @@ exports[`<MileageSorter /> should render the component and matches it against st
         aria-hidden="true"
         class="MuiSvgIcon-root MuiSelect-icon"
         focusable="false"
-        role="presentation"
         viewBox="0 0 24 24"
       >
         <path

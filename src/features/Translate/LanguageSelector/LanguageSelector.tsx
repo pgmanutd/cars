@@ -11,7 +11,7 @@ import useTranslate from '../useTranslate';
 
 import { useStyles } from './languageSelectorStyles';
 
-const LanguageSelector: React.FC = props => {
+const LanguageSelector: React.FC = (props) => {
   const classes = useStyles();
   const { translate, language, languages, setLanguage } = useTranslate();
 
@@ -39,7 +39,7 @@ const LanguageSelector: React.FC = props => {
         displayEmpty
         className={classes.selectEmpty}
       >
-        {languages.map(languageKey => (
+        {languages.map((languageKey) => (
           <MenuItem key={languageKey} value={languageKey}>
             <em>
               {translate<string>(

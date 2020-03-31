@@ -4,7 +4,7 @@ const { createProxyMiddleware } = require('http-proxy-middleware');
 
 const API_BASE_PATH = '/api';
 
-module.exports = app => {
+module.exports = (app) => {
   app.use(
     API_BASE_PATH,
     createProxyMiddleware({

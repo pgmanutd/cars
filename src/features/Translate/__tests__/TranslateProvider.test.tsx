@@ -21,7 +21,7 @@ describe('<TranslateProvider />', () => {
           <>
             <span>{translate<string>('mockKey')}</span>
             <span>Current language: {language}</span>
-            {languages.map(languageKey => (
+            {languages.map((languageKey) => (
               <span key={languageKey}>Languages: {languageKey}</span>
             ))}
             <button onClick={() => setLanguage(updateLanguage)}>

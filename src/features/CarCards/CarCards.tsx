@@ -37,7 +37,7 @@ const CarCards: React.FC<CarCardsProps> = ({
 
   return (
     <Box data-testid="CarCards" {...restProps} component="section">
-      {cars.map(car => (
+      {cars.map((car) => (
         <Grid
           data-testid="CarCard"
           {...restProps}

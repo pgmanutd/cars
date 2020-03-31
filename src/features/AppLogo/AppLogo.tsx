@@ -5,7 +5,7 @@ import Logo from 'assets/images/logo.png';
 
 import { useStyles } from './appLogoStyles';
 
-const AppLogo: React.FC = props => {
+const AppLogo: React.FC = (props) => {
   const classes = useStyles();
 
   return (

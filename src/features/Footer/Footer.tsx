@@ -9,7 +9,7 @@ import { useTranslate } from 'features/Translate';
 
 import { useStyles } from './footerStyles';
 
-const Footer: React.FC = props => {
+const Footer: React.FC = (props) => {
   const classes = useStyles();
   const { translate } = useTranslate();
 

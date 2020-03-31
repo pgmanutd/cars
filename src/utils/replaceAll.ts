@@ -12,7 +12,7 @@ const replaceAll = (
 
   const regex = new RegExp(keys.join('|'), 'gi');
 
-  return value.replace(regex, matched => {
+  return value.replace(regex, (matched) => {
     return mappedObject[matched];
   });
 };

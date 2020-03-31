@@ -11,7 +11,7 @@ import AppLogo from 'features/AppLogo';
 
 import { useStyles } from './headerStyles';
 
-const Header: React.FC = props => {
+const Header: React.FC = (props) => {
   const classes = useStyles();
   const { translate } = useTranslate();
 

@@ -6,7 +6,7 @@ const CarsPage = lazy(() =>
   import(/* webpackChunkName: "CarsPage" */ './CarsPage'),
 );
 
-const Cars: React.FC = props => (
+const Cars: React.FC = (props) => (
   <Suspense fallback={<CarsLoader />}>
     <CarsPage {...props} />
   </Suspense>
