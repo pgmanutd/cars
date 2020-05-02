@@ -1,5 +1,5 @@
 import React from 'react';
-import { wait } from '@testing-library/react';
+import { waitFor } from '@testing-library/react';
 
 import { renderWithProviders } from 'utils/testUtils';
 
@@ -17,7 +17,7 @@ describe('<App />', () => {
   it('should render <Header />', async () => {
     const { renderResult } = setup();
 
-    await wait(() =>
+    await waitFor(() =>
       expect(renderResult.getByTestId('Header')).toBeInTheDocument(),
     );
   });
@@ -25,7 +25,7 @@ describe('<App />', () => {
   it('should render <MainLayout />', async () => {
     const { renderResult } = setup();
 
-    await wait(() =>
+    await waitFor(() =>
       expect(renderResult.getByTestId('MainLayout')).toBeInTheDocument(),
     );
   });
@@ -33,7 +33,7 @@ describe('<App />', () => {
   it('should render <Footer />', async () => {
     const { renderResult } = setup();
 
-    await wait(() =>
+    await waitFor(() =>
       expect(renderResult.getByTestId('Footer')).toBeInTheDocument(),
     );
   });

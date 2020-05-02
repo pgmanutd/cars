@@ -1,5 +1,5 @@
 import React from 'react';
-import { wait } from '@testing-library/react';
+import { waitFor } from '@testing-library/react';
 
 import { renderWithProviders } from 'utils/testUtils';
 
@@ -23,7 +23,7 @@ describe('<Favorites />', () => {
   it('should render <FavoritesPage /> when loaded', async () => {
     const { renderResult } = setup();
 
-    await wait(() =>
+    await waitFor(() =>
       expect(renderResult.getByTestId('FavoritesPage')).toBeInTheDocument(),
     );
   });

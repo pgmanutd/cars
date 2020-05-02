@@ -1,5 +1,5 @@
 import React from 'react';
-import { waitForElement } from '@testing-library/react';
+import { waitFor } from '@testing-library/react';
 
 import { renderWithProviders } from 'utils/testUtils';
 
@@ -66,7 +66,7 @@ describe('<CarList />', () => {
 
     const { renderResult } = setup({ sort, page, color, manufacturer });
 
-    await waitForElement(() => renderResult.queryByText('Available Cars'));
+    await waitFor(() => renderResult.queryByText('Available Cars'));
 
     expect(renderResult.getAllByTestId('CarCard')).toHaveLength(1);
   });
@@ -85,7 +85,7 @@ describe('<CarList />', () => {
 
     const { renderResult } = setup({ sort, page, color, manufacturer });
 
-    await waitForElement(() => renderResult.queryByText('Available Cars'));
+    await waitFor(() => renderResult.queryByText('Available Cars'));
 
     expect(renderResult.getByText('No cars found.')).toBeInTheDocument();
   });
@@ -103,7 +103,7 @@ describe('<CarList />', () => {
 
     const { renderResult } = setup({ sort, page, color, manufacturer });
 
-    await waitForElement(() => renderResult.queryByTestId('CarListLoader'));
+    await waitFor(() => renderResult.queryByTestId('CarListLoader'));
 
     expect(renderResult.queryByTestId('CarCard')).not.toBeInTheDocument();
   });

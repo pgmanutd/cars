@@ -1,5 +1,5 @@
 import React from 'react';
-import { waitForElement } from '@testing-library/react';
+import { waitFor } from '@testing-library/react';
 import { Route } from 'react-router-dom';
 
 import { renderWithProviders } from 'utils/testUtils';
@@ -60,7 +60,7 @@ describe('<CarInfo />', () => {
 
     const { renderResult } = setup({ stockNumber });
 
-    await waitForElement(() => renderResult.queryByTestId('CarInfoFeatures'));
+    await waitFor(() => renderResult.queryByTestId('CarInfoFeatures'));
 
     expect(renderResult.asFragment()).toMatchSnapshot();
   });
@@ -75,9 +75,7 @@ describe('<CarInfo />', () => {
 
     const { renderResult } = setup({ stockNumber });
 
-    await waitForElement(() =>
-      renderResult.queryByTestId('CarInfoImageSkeleton'),
-    );
+    await waitFor(() => renderResult.queryByTestId('CarInfoImageSkeleton'));
 
     expect(renderResult.asFragment()).toMatchSnapshot();
   });
@@ -92,7 +90,7 @@ describe('<CarInfo />', () => {
 
     const { renderResult, history } = setup({ stockNumber });
 
-    await waitForElement(() => renderResult.queryByTestId('NotFound'));
+    await waitFor(() => renderResult.queryByTestId('NotFound'));
 
     expect(history.location.pathname).toBe(routePaths.notFound);
   });

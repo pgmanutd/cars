@@ -1,5 +1,5 @@
 import React from 'react';
-import { wait } from '@testing-library/react';
+import { waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
 import { LOCAL_STORAGE_KEYS } from 'constants/appConstants';
@@ -24,7 +24,7 @@ describe('<FavoritesPage />', () => {
   it('should render document title "Favorites"', async () => {
     setup();
 
-    await wait(() => expect(document.title).toEqual('Favorites'));
+    await waitFor(() => expect(document.title).toEqual('Favorites'));
   });
 
   it('should show "No favorite cars present." when no favorite cars are present in local storage', () => {

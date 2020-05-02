@@ -5,6 +5,9 @@
 import '@testing-library/jest-dom/extend-expect';
 
 import _noop from 'lodash/fp/noop';
+import MutationObserver from '@sheerun/mutationobserver-shim';
+
+window.MutationObserver = MutationObserver;
 
 require('jest-localstorage-mock');
 

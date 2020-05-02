@@ -1,5 +1,5 @@
 import React from 'react';
-import { waitForElement } from '@testing-library/react';
+import { waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { Route } from 'react-router-dom';
 
@@ -75,7 +75,7 @@ describe('<NavFilter />', () => {
       manufacturer,
     });
 
-    await waitForElement(() => renderResult.queryByTestId('NavFilterButton'));
+    await waitFor(() => renderResult.queryByTestId('NavFilterButton'));
 
     return {
       renderResult,
@@ -100,9 +100,7 @@ describe('<NavFilter />', () => {
       manufacturer,
     });
 
-    await waitForElement(() =>
-      renderResult.queryByTestId('NavFilterButtonSkeleton'),
-    );
+    await waitFor(() => renderResult.queryByTestId('NavFilterButtonSkeleton'));
 
     return {
       renderResult,

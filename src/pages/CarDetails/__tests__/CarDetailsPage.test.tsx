@@ -1,5 +1,5 @@
 import React from 'react';
-import { wait, waitForElement } from '@testing-library/react';
+import { waitFor } from '@testing-library/react';
 import { Route } from 'react-router-dom';
 
 import routePaths from 'constants/routePaths';
@@ -33,13 +33,13 @@ describe('<CarDetailsPage />', () => {
   it('should render document title "Car Details"', async () => {
     setup();
 
-    await wait(() => expect(document.title).toEqual('Car Details'));
+    await waitFor(() => expect(document.title).toEqual('Car Details'));
   });
 
   it('should render <CarInfo />', async () => {
     const { renderResult } = setup();
 
-    await waitForElement(() => renderResult.queryByTestId('CarInfoFeatures'));
+    await waitFor(() => renderResult.queryByTestId('CarInfoFeatures'));
 
     expect(renderResult.getByTestId('CarInfo')).toBeInTheDocument();
   });

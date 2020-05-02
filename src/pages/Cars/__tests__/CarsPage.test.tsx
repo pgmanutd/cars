@@ -1,5 +1,5 @@
 import React from 'react';
-import { wait, waitForElement } from '@testing-library/react';
+import { waitFor } from '@testing-library/react';
 import { Route } from 'react-router-dom';
 
 import { QUERY_KEYS } from 'constants/appConstants';
@@ -37,13 +37,13 @@ describe('<CarsPage />', () => {
   it('should render document title "Cars"', async () => {
     setup();
 
-    await wait(() => expect(document.title).toEqual('Cars'));
+    await waitFor(() => expect(document.title).toEqual('Cars'));
   });
 
   it('should render <NavFilter /> component', async () => {
     const { renderResult } = setup();
 
-    await waitForElement(() => renderResult.queryByTestId('NavFilterButton'));
+    await waitFor(() => renderResult.queryByTestId('NavFilterButton'));
 
     expect(renderResult.getByTestId('NavFilter')).toBeInTheDocument();
   });
@@ -51,7 +51,7 @@ describe('<CarsPage />', () => {
   it('should render <CarList /> component', async () => {
     const { renderResult } = setup();
 
-    await waitForElement(() => renderResult.queryByText('Available Cars'));
+    await waitFor(() => renderResult.queryByText('Available Cars'));
 
     expect(renderResult.getByTestId('CarList')).toBeInTheDocument();
   });

@@ -1,5 +1,5 @@
 import React from 'react';
-import { wait } from '@testing-library/react';
+import { waitFor } from '@testing-library/react';
 
 import { renderWithProviders } from 'utils/testUtils';
 
@@ -23,6 +23,6 @@ describe('<NotFound />', () => {
   it('should render document title "404 - Not Found"', async () => {
     setup();
 
-    await wait(() => expect(document.title).toEqual('404 - Not Found'));
+    await waitFor(() => expect(document.title).toEqual('404 - Not Found'));
   });
 });

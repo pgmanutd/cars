@@ -1,5 +1,5 @@
 import React from 'react';
-import { wait } from '@testing-library/react';
+import { waitFor } from '@testing-library/react';
 
 import { renderWithTranslate } from 'utils/testUtils';
 
@@ -17,7 +17,7 @@ describe('<MainLayout />', () => {
   it('should render <CarsPage /> initially', async () => {
     const { renderResult } = setup();
 
-    await wait(() =>
+    await waitFor(() =>
       expect(renderResult.getByTestId('CarsPage')).toBeInTheDocument(),
     );
   });

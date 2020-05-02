@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
-import { wait } from '@testing-library/react';
+import { waitFor } from '@testing-library/react';
 
 import routePaths from 'constants/routePaths';
 
@@ -44,6 +44,6 @@ describe('<ScrollToTop />', () => {
 
     history.push(routePaths.notFound);
 
-    await wait(() => expect(window.scrollTo).toHaveBeenCalledTimes(2));
+    await waitFor(() => expect(window.scrollTo).toHaveBeenCalledTimes(2));
   });
 });
